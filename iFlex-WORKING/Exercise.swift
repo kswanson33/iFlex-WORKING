@@ -6,7 +6,7 @@
 //  Copyright © 2018 Kendra Swanson, Christina Stellwagen, Carla Beghin, Benjamin Gu. All rights reserved.
 //
 
-import Foundation
+import Foundation //hello this is my contribution
 import UIKit
 
 struct Exercise: Codable {
