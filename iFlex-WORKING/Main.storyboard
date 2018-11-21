@@ -13,7 +13,7 @@
         <!--Login Screen-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="loginScreen" id="BYZ-38-t0r" customClass="loginScreen" customModule="mmm" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginScreen" id="BYZ-38-t0r" customClass="loginScreen" customModule="iFlex_WORKING" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,133 +57,40 @@
             </objects>
             <point key="canvasLocation" x="-398" y="-103"/>
         </scene>
-        <!--Item 2-->
-        <scene sceneID="NLl-4W-sQE">
-            <objects>
-                <viewController storyboardIdentifier="favoritesScreen" id="RND-fM-oC6" customClass="favoritesScreen" customModule="mmm" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="2Xf-Yc-mez">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="6kw-nH-YdN"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="wEa-7G-1Cy"/>
-                    <connections>
-                        <segue destination="30S-nq-kc1" kind="show" id="Td4-FC-wkT"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2FQ-3z-j8f" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1865" y="330"/>
-        </scene>
-        <!--Pick Your Workout Screen-->
-        <scene sceneID="zH2-hM-MUP">
-            <objects>
-                <viewController id="30S-nq-kc1" customClass="pickYourWorkoutScreen" customModule="mmm" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="NMB-Pn-1Q7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="2Yi-ZU-2oL"/>
-                    </view>
-                    <connections>
-                        <segue destination="Olm-6b-tmG" kind="show" id="N43-WT-BII"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="N5W-B3-8HA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2718" y="342"/>
-        </scene>
-        <!--Your Exercises Screen-->
-        <scene sceneID="6hX-KF-dk5">
-            <objects>
-                <viewController id="Olm-6b-tmG" customClass="yourExercisesScreen" customModule="mmm" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="jfB-JB-Fys">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Gkr-mn-1rJ"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YEr-X4-1nX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3662" y="343"/>
-        </scene>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="iMC-bJ-DgJ">
             <objects>
-                <viewController id="ix2-QX-Yru" customClass="profIleScreen" customModule="mmm" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ix2-QX-Yru" customClass="profIleScreen" customModule="iFlex_WORKING" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H7E-sF-h3h">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="dID-7v-HSt"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="EER-A4-Cgi"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fKg-Qb-532" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1865" y="1155"/>
-        </scene>
-        <!--createNewWorkoutTO_MERGE-->
-        <scene sceneID="t3w-pr-VJj">
-            <objects>
-                <viewControllerPlaceholder storyboardName="createNewWorkoutTO_MERGE" id="X9y-Eq-ghr" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lHo-dh-cip" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1385" y="-405"/>
-        </scene>
-        <!--Item 1-->
-        <scene sceneID="kmL-KA-JzV">
-            <objects>
-                <viewController id="InG-gq-eas" customClass="browseNowScreen" customModule="mmm" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="LKo-NJ-Mrh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDO-LQ-8Yj">
-                                <rect key="frame" x="217" y="32" width="142" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Create New Workout"/>
-                                <connections>
-                                    <segue destination="X9y-Eq-ghr" kind="show" id="5yw-6T-XKv"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Favorites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CRf-41-qBE">
-                                <rect key="frame" x="153" y="70" width="69" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n73-At-ayA">
+                                <rect key="frame" x="149" y="108" width="77" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XbS-6Q-mHk">
-                                <rect key="frame" x="134" y="265" width="106" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="A Workout Item"/>
-                                <connections>
-                                    <segue destination="LXc-zm-l2r" kind="show" id="Exh-V3-zJZ"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="bSg-b8-wM9"/>
+                        <viewLayoutGuide key="safeArea" id="dID-7v-HSt"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="Sxd-hy-ghZ"/>
-                    <connections>
-                        <segue destination="30S-nq-kc1" kind="show" id="vu4-qs-9XW"/>
-                    </connections>
+                    <tabBarItem key="tabBarItem" title="Profile" id="EER-A4-Cgi"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MAt-Tk-4i6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fKg-Qb-532" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1864.8" y="-332.38380809595208"/>
+            <point key="canvasLocation" x="1470" y="718"/>
         </scene>
         <!--FavoriteWorkouts-->
-        <scene sceneID="D3z-hY-TFG">
+        <scene sceneID="i0X-BI-PeN">
             <objects>
-                <viewControllerPlaceholder storyboardName="FavoriteWorkouts" id="LXc-zm-l2r" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SeY-kW-OBV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardIdentifier="Favorites" storyboardName="FavoriteWorkouts" id="3SS-af-LJL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favorites" id="llY-od-qbG"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sFQ-PQ-5y2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2300" y="-739"/>
+            <point key="canvasLocation" x="1406" y="108"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Kuf-yn-PrW">
@@ -196,8 +103,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="InG-gq-eas" kind="relationship" relationship="viewControllers" id="ATz-wF-EBn"/>
-                        <segue destination="RND-fM-oC6" kind="relationship" relationship="viewControllers" id="Pen-2W-kEu"/>
+                        <segue destination="3SS-af-LJL" kind="relationship" relationship="viewControllers" id="wET-cA-SzK"/>
+                        <segue destination="boq-ab-ted" kind="relationship" relationship="viewControllers" id="Z4Y-8u-oDS"/>
                         <segue destination="ix2-QX-Yru" kind="relationship" relationship="viewControllers" id="Ymq-2C-vr8"/>
                     </connections>
                 </tabBarController>
@@ -208,7 +115,7 @@
         <!--New User Screen-->
         <scene sceneID="QJQ-vt-8Xd">
             <objects>
-                <viewController storyboardIdentifier="newUserScreen" id="VaE-lC-ilk" customClass="newUserScreen" customModule="mmm" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="newUserScreen" id="VaE-lC-ilk" customClass="newUserScreen" customModule="iFlex_WORKING" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aTV-Le-l6x">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -251,9 +158,18 @@
             </objects>
             <point key="canvasLocation" x="-399" y="753"/>
         </scene>
+        <!--Browse-->
+        <scene sceneID="8av-aB-6EI">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Browse" storyboardName="Browse" id="boq-ab-ted" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Browse" id="Vif-oK-w6r"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xcP-WK-qhC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1407" y="268"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="04u-fY-mJA"/>
-        <segue reference="vu4-qs-9XW"/>
     </inferredMetricsTieBreakers>
 </document>

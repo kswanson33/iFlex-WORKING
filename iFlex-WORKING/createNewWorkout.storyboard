@@ -13,7 +13,7 @@
         <!--Create New View Controller-->
         <scene sceneID="M7X-Oy-4zw">
             <objects>
-                <viewController id="2kh-DA-NBc" customClass="CreateNewViewController" customModule="mmm" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2kh-DA-NBc" customClass="CreateNewViewController" customModule="iFlex_WORKING" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WT2-DC-3Ny">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -164,9 +164,6 @@
                                 <rect key="frame" x="177" y="541" width="37" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Done"/>
-                                <connections>
-                                    <segue destination="2kh-DA-NBc" kind="show" id="3Vl-RP-Zl9"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -196,7 +193,4 @@
             <point key="canvasLocation" x="-111.2" y="-88.605697151424295"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="3Vl-RP-Zl9"/>
-    </inferredMetricsTieBreakers>
 </document>
