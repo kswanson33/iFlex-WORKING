@@ -8,16 +8,16 @@
 
 import UIKit
 
-/*class browseNowScreen: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate  {
+class browseNowScreen: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate  {
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
             return Workouts.count
         }
         
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            let newCell = collectionView.dequeueReusableCell(withReuseIdentifier: "exerCell", for: indexPath) //as! exCell
+            let newCell = collectionView.dequeueReusableCell(withReuseIdentifier: "exerCell", for: indexPath) as! exCell
             
             
-            //newCell.title.text = Workouts[indexPath.row].title
+            newCell.title.text = Workouts[indexPath.row].title
             
             
             
@@ -32,8 +32,8 @@ import UIKit
         
         override func viewDidLoad() {
             super.viewDidLoad()
-            var Wrkout1 = Workout(title: "A", time: TimeInterval(), exercises: [], difficulty: 1, tags: [], priv: false, numOfExercises: 5, sharedWith: [], description: "hello", icon: WorkoutTarget.core)
-            var Wrkout2 = Workout(title: "B", time: TimeInterval(), exercises: [], difficulty: 1, tags: [], priv: false, numOfExercises: 5, sharedWith: [], description: "hello", icon: WorkoutTarget.core)
+            var Wrkout1 = Workout(title: "A", time: 0, exercises: [], difficulty: 1, tags: [], priv: false, numOfExercises: 5, sharedWith: [], description: "hello", icon: WorkoutTarget.core)
+            var Wrkout2 = Workout(title: "B", time: 0, exercises: [], difficulty: 1, tags: [], priv: false, numOfExercises: 5, sharedWith: [], description: "hello", icon: WorkoutTarget.core)
             Workouts = [Wrkout1, Wrkout2]
             workoutCollection.delegate = self
             workoutCollection.dataSource = self
@@ -46,9 +46,10 @@ import UIKit
             // Dispose of any resources that can be recreated.
         }
         
-        @IBOutlet weak var workoutCollection: UICollectionView!
         
+    @IBOutlet weak var workoutCollection: UICollectionView!
+    
         
-    }*/
+    }
     
     //add second screen that takes in data, and fetch local data to populate cells use loadlocal to get local data, add to favorites
