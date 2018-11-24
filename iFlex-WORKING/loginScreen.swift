@@ -16,7 +16,23 @@ class loginScreen: UIViewController {
             let indVC = self.storyboard?.instantiateViewController(withIdentifier: "favoritesScreen") as! favoritesScreen
             self.navigationController!.pushViewController(indVC, animated : true)
         }
+        print("hello")
+
         // Do any additional setup after loading the view.
+        
+        let path = Bundle.main.path(forResource: "fullWorkout", ofType: "txt")
+        guard  let data = try? Data(contentsOf: URL(fileURLWithPath: path!), options: []) else {return}
+        do {
+            let wo1 = try [JSONDecoder().decode(Workout.self, from: data)]
+            print ("problem yet")
+            print(wo1[0].title)
+            print(wo1[0].exercises[1].exercise.name)
+            //HERE IS A WORKING WORKOUT LOADED IN FROM THE TEXT FILE ATTACHED PLEASE STORE THIS SOMEWHERE IF YOU WANT TO RUN TESTING
+        } catch let error{
+            print("here")
+            print(error.localizedDescription)
+        }
+        
     }
 
     @IBOutlet weak var loginButton: UIButton!

@@ -22,7 +22,7 @@ class CreateNewViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        draftWorkout = Workout(title: "", time: TimeInterval(), exercises: [], difficulty: 0, tags: [], priv: true, numOfExercises: 0, sharedWith: [], description: "", icon: WorkoutTarget.upper)
+        draftWorkout = Workout(title: "", time: 0, exercises: [], difficulty: 0, tags: [], priv: true, numOfExercises: 0, sharedWith: [], description: "", icon: WorkoutTarget.upper)
     }
     
     /* Sets difficulty level of draftWorkout */

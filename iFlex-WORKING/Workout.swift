@@ -11,7 +11,7 @@ import UIKit
 
 struct Workout: Codable {
     var title: String
-    var time: TimeInterval      // specified in seconds -- is there a better data type?
+    var time: Int      // specified in seconds -- is there a better data type?
     var exercises: [MyExercise]    // array of pairs: (exercise, number of reps)
     var difficulty: Int         // TODO: make into an enum
     var tags: [String]
