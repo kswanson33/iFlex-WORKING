@@ -27,6 +27,7 @@
 		24AB623D21A4D32300ACC513 /* createNewWorkout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24AB623C21A4D32200ACC513 /* createNewWorkout.storyboard */; };
 		24AB623F21A4D32900ACC513 /* CreateNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB623E21A4D32800ACC513 /* CreateNewViewController.swift */; };
 		24B9B76221A4E55C003B020F /* Browse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24B9B76121A4E55C003B020F /* Browse.storyboard */; };
+		9F07821F21A8C634007E7A61 /* fullWorkout.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9F07821E21A8C633007E7A61 /* fullWorkout.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		24AB623C21A4D32200ACC513 /* createNewWorkout.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = createNewWorkout.storyboard; sourceTree = "<group>"; };
 		24AB623E21A4D32800ACC513 /* CreateNewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewViewController.swift; sourceTree = "<group>"; };
 		24B9B76121A4E55C003B020F /* Browse.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Browse.storyboard; sourceTree = "<group>"; };
+		9F07821E21A8C633007E7A61 /* fullWorkout.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = fullWorkout.txt; path = ../../../fullWorkout.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 				24AB623221A4D2DF00ACC513 /* newUserScreen.swift */,
 				24AB623421A4D2EA00ACC513 /* User.swift */,
 				24AB61FA21A4D27B00ACC513 /* ViewController.swift */,
+				9F07821E21A8C633007E7A61 /* fullWorkout.txt */,
 				24AB623621A4D30200ACC513 /* Workout.swift */,
 				24AB623821A4D31500ACC513 /* Main.storyboard */,
 				24AB623A21A4D31900ACC513 /* FavoriteWorkouts.storyboard */,
@@ -271,6 +274,7 @@
 				24AB622B21A4D2C200ACC513 /* Favorites.plist in Resources */,
 				24AB620321A4D27C00ACC513 /* LaunchScreen.storyboard in Resources */,
 				24B9B76221A4E55C003B020F /* Browse.storyboard in Resources */,
+				9F07821F21A8C634007E7A61 /* fullWorkout.txt in Resources */,
 				24AB620021A4D27C00ACC513 /* Assets.xcassets in Resources */,
 				24AB623D21A4D32300ACC513 /* createNewWorkout.storyboard in Resources */,
 				24AB623921A4D31500ACC513 /* Main.storyboard in Resources */,
