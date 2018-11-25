@@ -1,0 +1,138 @@
+{
+    "title": "Lower Lift",
+    "time": 60,
+	"exercises": [
+		{
+			"exercise": {
+				"name": "Foot Elevated Split Squat",
+				"instructionalVideo": "https://youtu.be/NpzqPBBn1qo",
+				"directions": "The foot elevated squat is an exercise that helps strengthen your knees and isolate your quads. You must elevate your back foot and then do a split squat. This should be weighted. If you have issues with balance you may hold onto a pole to steady yourself and hold weight in one hand.",
+				"equipment": ["step or bench", "dumbells", "optional: pole to steady self"],
+				"muscleGroups": [
+					"hamstrings",
+					"quads",
+					"abductors",
+					"glutes"
+				],
+				"difficulty": 4,
+				"commonMistakes": "Keep your knee over your toes, do not bend too much over the toes. Also keep your back straight and abs tight.",
+				"substitutions": "lunges, step-ups, and single leg romanian dead lifts",
+				"icon": "quads"
+			},
+			"weight": 25,
+			"reps": 8,
+			"sets": 3
+		},
+		{
+			"exercise": {
+				"name": "Barbell Romanian Deadlift",
+				"instructionalVideo": "https://youtu.be/XxM-QNjznF0",
+				"directions": "The barbell romanian deadlift focuses on isolating your hamstrings and glutes. With a slight bend in your knees safely pick up the barbell and stand up straight. With a straight back and tight core hinge at the hips until you feel a slight pull in the back of your legs, then push your hips forward to straighten. You should not move your legs throughout this exercise.",
+				"equipment": ["barbell"],
+				"muscleGroups": [
+					"lowerBack",
+					"glutes", 
+					"hamstrings"
+				],
+				"difficulty": 3,
+				"commonMistakes": "Do not arch your back.",
+				"substitutions": "good mornings, dumbell romanian deadlifts", 
+				"icon": "hamstrings"
+			},
+			"weight": 60,
+			"reps": 10,
+			"sets": 3   
+		},
+		{
+			"exercise": {
+				"name": "Front Dumbell Squat with Ankle Extension",
+				"instructionalVideo": "https://youtu.be/kiki_7Rdl_s",
+				"directions": "Lift two dumbells to your shoulders and lower yourself into a squat. At the bottom explode up and on to your toes.",
+				"equipment": ["dumbells", "optional: chair"],
+				"muscleGroups": [
+					"glutes", 
+					"quads", 
+					"calves"
+				],
+				"difficulty": 3,
+				"commonMistakes": "Do not arch your back and keep your knees from going over your toes.",
+				"substitutions": "goblet squat, front squat",
+				"icon": "quads"
+			},
+			"weight": 15,
+			"reps": 10,
+			"sets": 3
+		},
+		{
+			"exercise": {
+				"name": "Bosu Plantar Flex Hip Ups",
+				"instructionalVideo": "https://youtu.be/TA9OfDPNvCg",
+				"directions": "Place your feet on the Bosu ball and do glute thrusts, can add weight if desired.",
+				"equipment": ["Bosu ball", "optional: weight plate"],
+				"muscleGroups": [
+					"core",
+					"abductors", 
+					"glutes", 
+					"hamstrings"
+				],
+				"difficulty": 3,
+				"commonMistakes": "Don't perform these too quickly.",
+				"substitutions": "glute thrusters", 
+				"icon": "glutes"
+			},
+			"weight": 25,
+			"reps": 10,
+			"sets": 3
+		},
+		{
+			"exercise": {
+				"name": "Standing Calf Raises",
+				"instructionalVideo": "https://youtu.be/XE_av0Vxcsk",
+				"directions": "Position yourself on a step so that the top half of your feet are on the step and the heel drops down, with one dumbell in each hand lift yourself onto your toes and back down.",
+				"equipment": ["dumbells", "step"],
+				"muscleGroups": [
+					"calves"
+				],
+				"difficulty": 3,
+				"commonMistakes": "Do these with both legs simultaneously.",
+				"substitutions": "jump rope, downward dog", 
+				"icon": "calves"
+			},
+			"weight": 25,
+			"reps": 10,
+			"sets": 3
+		},
+		{
+			"exercise": {
+				"name": "Standing Hip Flexion",
+				"instructionalVideo": "https://youtu.be/PQAePRjGomM",
+				"directions": "Put a foot on the bench and the other on the ground. With your foot flexed lift it off the bench and hold. Return to the bench and repeat.",
+				"equipment": ["step"],
+				"muscleGroups": [
+					"calves",
+					"hips",
+					"quads"
+				],
+				"difficulty": 3,
+				"commonMistakes": "",
+				"substitutions": "hip flexor stretch", 
+				"icon": "hips"
+			},
+			"weight": 0,
+			"reps": 10,
+			"sets": 3
+		}
+	
+	],
+	"difficulty": 3,
+	"tags" : [
+		"quads",
+		"glutes",
+		"hamstrings" 
+    ],
+	"priv": false, 
+    "numOfExercises": 6,
+	"sharedWith" : [],
+	"description": "This workout is part of the ultimate athlete project",
+	"icon": "lower"
+    }
