@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		245F333921AB4DE700B9A547 /* full-workout.txt in Resources */ = {isa = PBXBuildFile; fileRef = 245F333821AB4DE600B9A547 /* full-workout.txt */; };
+		243DCA0221AB5A44009EB608 /* full-workout.txt in Resources */ = {isa = PBXBuildFile; fileRef = 243DCA0121AB5A44009EB608 /* full-workout.txt */; };
 		24AB61F921A4D27B00ACC513 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB61F821A4D27B00ACC513 /* AppDelegate.swift */; };
 		24AB61FB21A4D27B00ACC513 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB61FA21A4D27B00ACC513 /* ViewController.swift */; };
 		24AB620021A4D27C00ACC513 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24AB61FF21A4D27C00ACC513 /* Assets.xcassets */; };
@@ -48,7 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		245F333821AB4DE600B9A547 /* full-workout.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "full-workout.txt"; sourceTree = SOURCE_ROOT; };
+		243DCA0121AB5A44009EB608 /* full-workout.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "full-workout.txt"; sourceTree = "<group>"; };
 		24AB61F521A4D27B00ACC513 /* iFlex-WORKING.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iFlex-WORKING.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24AB61F821A4D27B00ACC513 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24AB61FA21A4D27B00ACC513 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -135,7 +135,7 @@
 				24AB623221A4D2DF00ACC513 /* newUserScreen.swift */,
 				24AB623421A4D2EA00ACC513 /* User.swift */,
 				24AB61FA21A4D27B00ACC513 /* ViewController.swift */,
-				245F333821AB4DE600B9A547 /* full-workout.txt */,
+				243DCA0121AB5A44009EB608 /* full-workout.txt */,
 				24AB623621A4D30200ACC513 /* Workout.swift */,
 				24AB623821A4D31500ACC513 /* Main.storyboard */,
 				24AB623A21A4D31900ACC513 /* FavoriteWorkouts.storyboard */,
@@ -275,7 +275,7 @@
 				24AB620321A4D27C00ACC513 /* LaunchScreen.storyboard in Resources */,
 				24B9B76221A4E55C003B020F /* Browse.storyboard in Resources */,
 				24AB620021A4D27C00ACC513 /* Assets.xcassets in Resources */,
-				245F333921AB4DE700B9A547 /* full-workout.txt in Resources */,
+				243DCA0221AB5A44009EB608 /* full-workout.txt in Resources */,
 				24AB623D21A4D32300ACC513 /* createNewWorkout.storyboard in Resources */,
 				24AB623921A4D31500ACC513 /* Main.storyboard in Resources */,
 				24AB623B21A4D31900ACC513 /* FavoriteWorkouts.storyboard in Resources */,
