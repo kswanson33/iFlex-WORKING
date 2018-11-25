@@ -51,5 +51,5 @@ class browseNowScreen: UIViewController, UICollectionViewDataSource, UICollectio
     
         
     }
-    
+
     //add second screen that takes in data, and fetch local data to populate cells use loadlocal to get local data, add to favorites

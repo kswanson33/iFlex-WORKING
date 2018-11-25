@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		243DCA0221AB5A44009EB608 /* full-workout.txt in Resources */ = {isa = PBXBuildFile; fileRef = 243DCA0121AB5A44009EB608 /* full-workout.txt */; };
+		243DCA0421AB5C60009EB608 /* CellContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243DCA0321AB5C5F009EB608 /* CellContent.swift */; };
 		24AB61F921A4D27B00ACC513 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB61F821A4D27B00ACC513 /* AppDelegate.swift */; };
 		24AB61FB21A4D27B00ACC513 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB61FA21A4D27B00ACC513 /* ViewController.swift */; };
 		24AB620021A4D27C00ACC513 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24AB61FF21A4D27C00ACC513 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		243DCA0121AB5A44009EB608 /* full-workout.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "full-workout.txt"; sourceTree = "<group>"; };
+		243DCA0321AB5C5F009EB608 /* CellContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellContent.swift; sourceTree = "<group>"; };
 		24AB61F521A4D27B00ACC513 /* iFlex-WORKING.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iFlex-WORKING.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24AB61F821A4D27B00ACC513 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24AB61FA21A4D27B00ACC513 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 			children = (
 				24AB61F821A4D27B00ACC513 /* AppDelegate.swift */,
 				24AB622621A4D2B300ACC513 /* browseNowScreen.swift */,
+				243DCA0321AB5C5F009EB608 /* CellContent.swift */,
 				24AB622821A4D2BA00ACC513 /* Exercise.swift */,
 				24AB622A21A4D2C200ACC513 /* Favorites.plist */,
 				24AB622C21A4D2C800ACC513 /* favoritesScreen.swift */,
@@ -314,6 +317,7 @@
 				24AB623121A4D2D900ACC513 /* loginScreen.swift in Sources */,
 				24AB623321A4D2DF00ACC513 /* newUserScreen.swift in Sources */,
 				24AB623F21A4D32900ACC513 /* CreateNewViewController.swift in Sources */,
+				243DCA0421AB5C60009EB608 /* CellContent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
