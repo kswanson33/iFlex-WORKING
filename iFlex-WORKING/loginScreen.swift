@@ -20,7 +20,7 @@ class loginScreen: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        let path = Bundle.main.path(forResource: "fullWorkout", ofType: "txt")
+        let path = Bundle.main.path(forResource: "full-workout", ofType: "txt")
         guard  let data = try? Data(contentsOf: URL(fileURLWithPath: path!), options: []) else {return}
         do {
             let wo1 = try [JSONDecoder().decode(Workout.self, from: data)]
