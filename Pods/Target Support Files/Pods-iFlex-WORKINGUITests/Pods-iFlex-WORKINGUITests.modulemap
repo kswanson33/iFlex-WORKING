@@ -1,0 +1,6 @@
+framework module Pods_iFlex_WORKINGUITests {
+  umbrella header "Pods-iFlex-WORKINGUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
