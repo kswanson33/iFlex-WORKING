@@ -19,10 +19,17 @@ class CreateNewViewController: UIViewController {
     @IBOutlet var publicToggle: UISwitch!
     /* Text field to get workout title */
     @IBOutlet var titleField: UITextField!
+    /* Text field to get workout description */
+    @IBOutlet var descriptionField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         draftWorkout = Workout(title: "", time: 0, exercises: [], difficulty: 0, tags: [], priv: true, numOfExercises: 0, sharedWith: [], description: "", icon: WorkoutTarget.upper)
+        
+        // Currently sets title, difficulty, private, description
+        // TODO: Set time, icon, sharedWith, tags
+        
+        // Next view takes care of: exercises, number of exercises
     }
     
     /* Sets difficulty level of draftWorkout */
@@ -45,8 +52,15 @@ class CreateNewViewController: UIViewController {
     @IBAction func setDraftWorkoutTitle(_ sender: Any) {
         // change this to update whenever field is modified?
         draftWorkout.title = titleField.text!
-        print(draftWorkout.title)
+        //print(draftWorkout.title)
     }
+    
+    /* Sets draft workout description */
+    @IBAction func setDescription(_ sender: Any) {
+        draftWorkout.description = descriptionField.text!
+        //print(draftWorkout.description)
+    }
+    
     
     /* Pass draft workout to AddExercises view */
     /* Source: https://learnappmaking.com/pass-data-between-view-controllers-swift-how-to/ */
