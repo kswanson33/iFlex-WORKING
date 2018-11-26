@@ -115,22 +115,95 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n73-At-ayA">
-                                <rect key="frame" x="149" y="108" width="77" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHc-HE-VGK">
+                                <rect key="frame" x="116" y="20" width="142" height="33"/>
+                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="25"/>
+                                <color key="textColor" red="0.99527956920000005" green="0.99970722999999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mia Count" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="voF-am-IF6">
+                                <rect key="frame" x="66" y="377" width="243" height="30"/>
+                                <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stats:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ssl-nV-ZUw">
+                                <rect key="frame" x="66" y="417" width="243" height="23"/>
+                                <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIe-rL-r8t">
+                                <rect key="frame" x="65" y="457" width="64.5" height="20"/>
+                                <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Height:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VME-YK-LNb">
+                                <rect key="frame" x="65" y="488" width="105" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Age: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3x-xK-Tz5">
+                                <rect key="frame" x="65" y="519" width="105" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5ft 7in" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9S-Vg-bB1">
+                                <rect key="frame" x="203" y="488" width="105" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="22" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RjJ-3I-jMD">
+                                <rect key="frame" x="203" y="519" width="105" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" placeholderIntrinsicWidth="245" placeholderIntrinsicHeight="246" image="profile_blank" translatesAutoresizingMaskIntoConstraints="NO" id="oCy-tM-r8a">
+                                <rect key="frame" x="65" y="91" width="245" height="246"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="131 lbs" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxh-T4-fU4">
+                                <rect key="frame" x="247" y="457" width="63" height="23"/>
+                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.55549009680000005" green="0.67025182139999995" blue="0.75414506000000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qHc-HE-VGK" firstAttribute="top" secondItem="dID-7v-HSt" secondAttribute="top" id="5bs-YL-rpU"/>
+                            <constraint firstItem="oCy-tM-r8a" firstAttribute="leading" secondItem="dID-7v-HSt" secondAttribute="leading" constant="65" id="DxP-Fg-8Ki"/>
+                            <constraint firstItem="dID-7v-HSt" firstAttribute="trailing" secondItem="Ssl-nV-ZUw" secondAttribute="trailing" constant="66" id="EIb-Ca-Boc"/>
+                            <constraint firstItem="yIe-rL-r8t" firstAttribute="leading" secondItem="dID-7v-HSt" secondAttribute="leading" constant="65" id="NWD-CB-faI"/>
+                            <constraint firstItem="voF-am-IF6" firstAttribute="leading" secondItem="dID-7v-HSt" secondAttribute="leading" constant="66" id="OPf-Hu-NNP"/>
+                            <constraint firstItem="oCy-tM-r8a" firstAttribute="top" secondItem="qHc-HE-VGK" secondAttribute="bottom" constant="38" id="SKa-4Y-B4h"/>
+                            <constraint firstItem="dID-7v-HSt" firstAttribute="trailing" secondItem="qHc-HE-VGK" secondAttribute="trailing" constant="117" id="Y4O-Hm-VRT"/>
+                            <constraint firstItem="Ssl-nV-ZUw" firstAttribute="top" secondItem="voF-am-IF6" secondAttribute="bottom" constant="10" id="ew0-Ux-fR7"/>
+                            <constraint firstItem="voF-am-IF6" firstAttribute="top" secondItem="oCy-tM-r8a" secondAttribute="bottom" constant="40" id="i4r-gP-a6v"/>
+                            <constraint firstItem="yIe-rL-r8t" firstAttribute="top" secondItem="Ssl-nV-ZUw" secondAttribute="bottom" constant="17" id="kkC-Vq-Ymk"/>
+                            <constraint firstItem="dID-7v-HSt" firstAttribute="trailing" secondItem="dxh-T4-fU4" secondAttribute="trailing" constant="65" id="lMG-Ld-BNf"/>
+                            <constraint firstItem="dxh-T4-fU4" firstAttribute="top" secondItem="Ssl-nV-ZUw" secondAttribute="bottom" constant="17" id="lUY-9g-cOs"/>
+                            <constraint firstItem="dID-7v-HSt" firstAttribute="trailing" secondItem="oCy-tM-r8a" secondAttribute="trailing" constant="65" id="lui-oe-fUI"/>
+                            <constraint firstItem="qHc-HE-VGK" firstAttribute="leading" secondItem="dID-7v-HSt" secondAttribute="leading" constant="116" id="opE-cP-Zs5"/>
+                            <constraint firstItem="Ssl-nV-ZUw" firstAttribute="leading" secondItem="dID-7v-HSt" secondAttribute="leading" constant="66" id="ufi-J8-npy"/>
+                            <constraint firstItem="dID-7v-HSt" firstAttribute="trailing" secondItem="voF-am-IF6" secondAttribute="trailing" constant="66" id="yJe-kh-x3c"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="dID-7v-HSt"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="EER-A4-Cgi"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="icons8-personal-trainer-30" id="EER-A4-Cgi"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fKg-Qb-532" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1470" y="718"/>
+            <point key="canvasLocation" x="1469.5999999999999" y="717.39130434782612"/>
         </scene>
         <!--FavoriteWorkouts-->
         <scene sceneID="i0X-BI-PeN">
@@ -150,7 +223,8 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8H0-uS-OK6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.91445698630000005" green="0.96795302110000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.0" green="0.014777161969999999" blue="0.027821370089999999" alpha="0.70597787919999999" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="3SS-af-LJL" kind="relationship" relationship="viewControllers" id="wET-cA-SzK"/>
@@ -254,6 +328,10 @@
             <point key="canvasLocation" x="1407" y="268"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-personal-trainer-30" width="30" height="30"/>
+        <image name="profile_blank" width="980" height="982"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="04u-fY-mJA"/>
     </inferredMetricsTieBreakers>
