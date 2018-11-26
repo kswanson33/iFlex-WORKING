@@ -15,7 +15,7 @@ struct User: Codable {
 
 // for debug purposes
 func printUser(_ user: User) {
-    print("Username: \(user.userName)\nWorkouts: ")
+    print("Username: \(user.userName!)\nWorkouts: ")
     for w in user.favorites! {
         printWorkout(w)
     }

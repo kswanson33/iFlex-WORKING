@@ -39,3 +39,8 @@ enum MuscleGroup: String, Codable {
     case upperBack
 }
 
+func printMyExercise(_ e: MyExercise) {
+    print("\t\tName: \(e.exercise.name)")
+    print("\t\t\tDifficulty: \(e.exercise.difficulty)")
+    //print("\t\t\tDescription: \(e.exercise.directions)")
+}

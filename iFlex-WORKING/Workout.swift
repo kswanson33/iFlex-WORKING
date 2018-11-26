@@ -31,8 +31,11 @@ enum WorkoutTarget: String, Codable {
 }
 
 func printWorkout(_ workout: Workout) {
-    print("\tTitle: \(w.title)\n\tExercises: ")
-    for e in w.exercises {
-        print("\t\tName: \(e.exercise.name)")
+    print("\tTitle: \(workout.title)")
+    print("\t\tDifficulty: \(workout.difficulty)")
+    print("\t\tDescription: \(workout.description)")
+    print("\tExercises: ")
+    for e in workout.exercises {
+        printMyExercise(e)
     }
 }

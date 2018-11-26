@@ -62,8 +62,6 @@ class CreateNewViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBOutlet var setDraftWorkoutTitle: UITextField!
-    
     /*
     // MARK: - Navigation
 
