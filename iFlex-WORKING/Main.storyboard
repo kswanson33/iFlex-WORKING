@@ -18,33 +18,83 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxW-07-U6b">
-                                <rect key="frame" x="168" y="222" width="38" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Login"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxW-07-U6b">
+                                <rect key="frame" x="134" y="323" width="107" height="40"/>
+                                <color key="backgroundColor" red="0.030662516131997108" green="0.059411421418190002" blue="0.026390315964818001" alpha="0.25390625" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="28"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U3a-uD-5qf"/>
                                     <segue destination="EBs-rc-67m" kind="show" id="aNF-pV-Snv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xN5-8I-jHe">
-                                <rect key="frame" x="150" y="271" width="75" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="New User?"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ep6-xN-pzD">
+                                <rect key="frame" x="77" y="239" width="220" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ymj-YH-mbI">
+                                <rect key="frame" x="77" y="269" width="114" height="24"/>
+                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="18"/>
+                                <color key="textColor" red="0.99527956920000005" green="0.99970722999999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" text="New to iFLEX?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bP-tI-Bnd">
+                                <rect key="frame" x="116" y="468" width="142" height="26.5"/>
+                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="20"/>
+                                <color key="textColor" red="0.99527956920000005" green="0.99970722999999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xME-uO-9jZ">
+                                <rect key="frame" x="121" y="65" width="132" height="104.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="iFLEX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZ5-1Y-3sv">
+                                        <rect key="frame" x="0.0" y="0.0" width="132" height="104.5"/>
+                                        <fontDescription key="fontDescription" name="KohinoorBangla-Light" family="Kohinoor Bangla" pointSize="56"/>
+                                        <color key="textColor" red="0.99527956920000005" green="0.99970722999999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xN5-8I-jHe">
+                                <rect key="frame" x="92" y="502" width="190" height="32"/>
+                                <color key="backgroundColor" red="0.033950876444578171" green="0.079063765704631805" blue="0.046040847897529602" alpha="0.2518872893258427" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="20"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Create an Account">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="newUserPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZAj-pX-pvp"/>
                                     <segue destination="VaE-lC-ilk" kind="show" id="Deo-ua-kkl"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ep6-xN-pzD">
-                                <rect key="frame" x="139" y="152" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.55549009684302209" green="0.67025182141249662" blue="0.7541450600436681" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ymj-YH-mbI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="77" id="1dO-eA-FaF"/>
+                            <constraint firstItem="xN5-8I-jHe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="92" id="9ld-lu-AsG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xN5-8I-jHe" secondAttribute="bottom" constant="133" id="CQE-DD-2Dv"/>
+                            <constraint firstItem="xN5-8I-jHe" firstAttribute="top" secondItem="9bP-tI-Bnd" secondAttribute="bottom" constant="7.5" id="GVQ-Ll-evd"/>
+                            <constraint firstItem="hxW-07-U6b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="134" id="HlA-BA-WSY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ymj-YH-mbI" secondAttribute="trailing" constant="184" id="IfY-8t-jwJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ep6-xN-pzD" secondAttribute="trailing" constant="78" id="LJC-QR-EO5"/>
+                            <constraint firstItem="Ep6-xN-pzD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="77" id="RkR-zb-iH2"/>
+                            <constraint firstItem="IZ5-1Y-3sv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="d5R-a0-xIF"/>
+                            <constraint firstItem="9bP-tI-Bnd" firstAttribute="top" secondItem="hxW-07-U6b" secondAttribute="bottom" constant="105" id="djc-1H-DTv"/>
+                            <constraint firstItem="Ep6-xN-pzD" firstAttribute="top" secondItem="xME-uO-9jZ" secondAttribute="bottom" constant="69.5" id="gfu-bJ-TLc"/>
+                            <constraint firstItem="hxW-07-U6b" firstAttribute="top" secondItem="ymj-YH-mbI" secondAttribute="bottom" constant="30" id="gqm-oG-Di0"/>
+                            <constraint firstItem="ymj-YH-mbI" firstAttribute="top" secondItem="Ep6-xN-pzD" secondAttribute="bottom" id="haF-7N-5mJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9bP-tI-Bnd" secondAttribute="trailing" constant="117" id="mWC-eT-CW1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hxW-07-U6b" secondAttribute="trailing" constant="134" id="t9V-sZ-rBB"/>
+                            <constraint firstItem="9bP-tI-Bnd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="116" id="tFR-3P-hsF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xN5-8I-jHe" secondAttribute="trailing" constant="93" id="tbF-nV-bif"/>
+                            <constraint firstItem="IZ5-1Y-3sv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="121" id="twZ-WO-ZUw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IZ5-1Y-3sv" secondAttribute="trailing" constant="122" id="zKu-bx-AT5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -55,7 +105,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-398" y="-103"/>
+            <point key="canvasLocation" x="-399.19999999999999" y="-103.89805097451276"/>
         </scene>
         <!--Profile-->
         <scene sceneID="iMC-bJ-DgJ">
@@ -120,32 +170,67 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U7H-Le-BEN">
-                                <rect key="frame" x="139" y="158" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U7H-Le-BEN">
+                                <rect key="frame" x="73" y="263" width="228" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VC0-I9-Pgd">
-                                <rect key="frame" x="129" y="206" width="117" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Create New User"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAz-fJ-Br0">
+                                <rect key="frame" x="153" y="477" width="69" height="33"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.25" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="RJw-3T-hhz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" text="New username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1A-4R-JYZ">
+                                <rect key="frame" x="73" y="293" width="128" height="24"/>
+                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="18"/>
+                                <color key="textColor" red="0.99527956920000005" green="0.99970722999999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="999" text="iFLEX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BaO-1Q-H8O">
+                                <rect key="frame" x="121" y="65" width="132" height="98"/>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Light" family="Kohinoor Bangla" pointSize="56"/>
+                                <color key="textColor" red="0.99527956920000005" green="0.99970722999999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VC0-I9-Pgd">
+                                <rect key="frame" x="79" y="387" width="216" height="37"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.25" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="25"/>
+                                <state key="normal" title="Create New User">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="createButtonPressed:" destination="VaE-lC-ilk" eventType="touchUpInside" id="irJ-Ky-zj6"/>
                                     <segue destination="EBs-rc-67m" kind="show" id="04u-fY-mJA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAz-fJ-Br0">
-                                <rect key="frame" x="163" y="244" width="48" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Cancel"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="RJw-3T-hhz"/>
-                                </connections>
-                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.55549009680000005" green="0.67025182139999995" blue="0.75414506000000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Z1A-4R-JYZ" firstAttribute="leading" secondItem="ZIb-if-CUa" secondAttribute="leading" constant="73" id="423-fX-0GR"/>
+                            <constraint firstItem="ZIb-if-CUa" firstAttribute="trailing" secondItem="VC0-I9-Pgd" secondAttribute="trailing" constant="80" id="8cE-Ub-k0Z"/>
+                            <constraint firstItem="BaO-1Q-H8O" firstAttribute="top" secondItem="ZIb-if-CUa" secondAttribute="top" constant="45" id="8kf-38-FT8"/>
+                            <constraint firstItem="BaO-1Q-H8O" firstAttribute="leading" secondItem="ZIb-if-CUa" secondAttribute="leading" constant="121" id="9on-9s-Cns"/>
+                            <constraint firstItem="U7H-Le-BEN" firstAttribute="leading" secondItem="ZIb-if-CUa" secondAttribute="leading" constant="73" id="AQj-BL-HKa"/>
+                            <constraint firstItem="ZIb-if-CUa" firstAttribute="bottom" secondItem="hAz-fJ-Br0" secondAttribute="bottom" constant="157" id="DWR-d6-yOY"/>
+                            <constraint firstItem="Z1A-4R-JYZ" firstAttribute="top" secondItem="U7H-Le-BEN" secondAttribute="bottom" id="GZd-DO-a39"/>
+                            <constraint firstItem="ZIb-if-CUa" firstAttribute="trailing" secondItem="BaO-1Q-H8O" secondAttribute="trailing" constant="122" id="JGy-aB-C3Z"/>
+                            <constraint firstItem="ZIb-if-CUa" firstAttribute="trailing" secondItem="Z1A-4R-JYZ" secondAttribute="trailing" constant="174" id="JHx-mq-qwT"/>
+                            <constraint firstItem="hAz-fJ-Br0" firstAttribute="leading" secondItem="ZIb-if-CUa" secondAttribute="leading" constant="153" id="JnB-3j-yWz"/>
+                            <constraint firstItem="ZIb-if-CUa" firstAttribute="trailing" secondItem="U7H-Le-BEN" secondAttribute="trailing" constant="74" id="OaG-xh-WeF"/>
+                            <constraint firstItem="hAz-fJ-Br0" firstAttribute="top" secondItem="VC0-I9-Pgd" secondAttribute="bottom" constant="53" id="Qkn-0F-Coe"/>
+                            <constraint firstItem="U7H-Le-BEN" firstAttribute="top" secondItem="BaO-1Q-H8O" secondAttribute="bottom" constant="100" id="UkJ-A4-RaR"/>
+                            <constraint firstItem="VC0-I9-Pgd" firstAttribute="top" secondItem="Z1A-4R-JYZ" secondAttribute="bottom" constant="70" id="Zhg-9W-CQk"/>
+                            <constraint firstItem="ZIb-if-CUa" firstAttribute="trailing" secondItem="hAz-fJ-Br0" secondAttribute="trailing" constant="153" id="fFz-tf-c1h"/>
+                            <constraint firstItem="VC0-I9-Pgd" firstAttribute="leading" secondItem="ZIb-if-CUa" secondAttribute="leading" constant="79" id="sW3-Xo-LeL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ZIb-if-CUa"/>
                     </view>
                     <navigationItem key="navigationItem" id="1iO-R6-yvl"/>
@@ -156,7 +241,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8qm-OV-4kT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-399" y="753"/>
+            <point key="canvasLocation" x="-399.19999999999999" y="752.47376311844084"/>
         </scene>
         <!--Browse-->
         <scene sceneID="8av-aB-6EI">
