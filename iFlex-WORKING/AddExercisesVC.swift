@@ -2,8 +2,8 @@
 //  AddExercisesVC.swift
 //  iFlex-WORKING
 //
-//  Created by Kendra Swanson on 11/26/18.
-//  Copyright © 2018 Kendra Swanson. All rights reserved.
+//  Created by Kendra Swanson, Christina Stellwagen, Carla Beghin, Zayid Oyelami, Benji Gu on 11/26/18.
+//  Copyright © 2018 Kendra Swanson, Christina Stellwagen, Carla Beghin, Zayid Oyelami, Benji Gu. All rights reserved.
 //
 
 import UIKit

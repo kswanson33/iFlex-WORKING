@@ -1,9 +1,9 @@
 //
 //  User.swift
-//  Storyboards
+//  iFlex-WORKING
 //
-//  Created by labuser on 11/13/18.
-//  Copyright © 2018 CSE438. All rights reserved.
+//  Created by Kendra Swanson, Christina Stellwagen, Carla Beghin, Zayid Oyelami, Benji Gu on 11/26/18.
+//  Copyright © 2018 Kendra Swanson, Christina Stellwagen, Carla Beghin, Zayid Oyelami, Benji Gu. All rights reserved.
 //
 
 import Foundation

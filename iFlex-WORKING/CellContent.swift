@@ -2,8 +2,8 @@
 //  CellContent.swift
 //  iFlex-WORKING
 //
-//  Created by Christina Stellwagen on 11/24/18.
-//  Copyright © 2018 Kendra Swanson. All rights reserved.
+//  Created by Kendra Swanson, Christina Stellwagen, Carla Beghin, Zayid Oyelami, Benji Gu on 11/26/18.
+//  Copyright © 2018 Kendra Swanson, Christina Stellwagen, Carla Beghin, Zayid Oyelami, Benji Gu. All rights reserved.
 //
 
 import Foundation
