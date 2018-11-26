@@ -11,7 +11,7 @@ import Foundation
 
 //let path = Bundle.main.path(forResource: "Favorites", ofType: "plist")
 
-/* Writes a new user to local plist - ASYNCHRONOUS */
+/* Writes a new user to local plist */
 func writeNewUser(_ user: User) {
     // called on login
     //DispatchQueue.global(qos: .background).async {

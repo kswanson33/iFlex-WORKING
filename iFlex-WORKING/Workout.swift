@@ -30,3 +30,9 @@ enum WorkoutTarget: String, Codable {
     case fullBody
 }
 
+func printWorkout(_ workout: Workout) {
+    print("\tTitle: \(w.title)\n\tExercises: ")
+    for e in w.exercises {
+        print("\t\tName: \(e.exercise.name)")
+    }
+}

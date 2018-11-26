@@ -51,7 +51,7 @@ class loginScreen: UIViewController {
         //check if we are able to connect to the database
         //do we want any validation on the text field
         if true { //if let u = returnUser(username) {
-            let u = User(id: 20, favorites: [], userName: "User2")
+            let u = User(id: 20, favorites: [], userName: textField.text!)
             writeNewUser(u)
             /*let indVC = self.storyboard?.instantiateViewController(withIdentifier: "favoritesScreen") as! favoritesScreen
             self.navigationController!.pushViewController(indVC, animated : true)*/

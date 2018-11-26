@@ -12,3 +12,11 @@ struct User: Codable {
     var favorites: [Workout]?
     let userName: String!
 }
+
+// for debug purposes
+func printUser(_ user: User) {
+    print("Username: \(user.userName)\nWorkouts: ")
+    for w in user.favorites! {
+        printWorkout(w)
+    }
+}

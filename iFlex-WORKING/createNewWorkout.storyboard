@@ -112,16 +112,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0D-jg-foM">
-                                <rect key="frame" x="178" y="589" width="34" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rrA-t1-E6x">
+                                <rect key="frame" x="172" y="607" width="48" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Save"/>
+                                <state key="normal" title="Cancel"/>
                                 <connections>
-                                    <segue destination="hsK-rA-n6S" kind="showDetail" id="0XG-Vp-6Bc"/>
+                                    <segue destination="hsK-rA-n6S" kind="show" id="prk-j7-utA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oO4-nl-ju1">
-                                <rect key="frame" x="140" y="523" width="112" height="30"/>
+                                <rect key="frame" x="140" y="547" width="112" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Select Exercises"/>
                                 <connections>
@@ -149,12 +149,12 @@
                 <viewControllerPlaceholder storyboardName="TabBar" id="hsK-rA-n6S" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hdm-1G-k0I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="755" y="357"/>
+            <point key="canvasLocation" x="1190" y="363"/>
         </scene>
-        <!--View Controller-->
+        <!--Add ExercisesVC-->
         <scene sceneID="FCp-P6-MHU">
             <objects>
-                <viewController id="r1F-zi-Z11" sceneMemberID="viewController">
+                <viewController id="r1F-zi-Z11" customClass="AddExercisesVC" customModule="iFlex_WORKING" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DBL-Rq-i3v">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -170,6 +170,18 @@
                                 <rect key="frame" x="172" y="280" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Yes!"/>
+                                <connections>
+                                    <action selector="TEMP_BUTTON:" destination="r1F-zi-Z11" eventType="touchUpInside" id="pIE-x6-lsx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0D-jg-foM">
+                                <rect key="frame" x="172" y="540" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButton:" destination="r1F-zi-Z11" eventType="touchUpInside" id="ABm-VQ-r2m"/>
+                                    <segue destination="hsK-rA-n6S" kind="showDetail" id="0XG-Vp-6Bc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -199,4 +211,7 @@
             <point key="canvasLocation" x="-111.2" y="-88.605697151424295"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="prk-j7-utA"/>
+    </inferredMetricsTieBreakers>
 </document>

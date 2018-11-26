@@ -48,6 +48,15 @@ class CreateNewViewController: UIViewController {
         print(draftWorkout.title)
     }
     
+    /* Pass draft workout to AddExercises view */
+    /* Source: https://learnappmaking.com/pass-data-between-view-controllers-swift-how-to/ */
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is AddExercisesVC {
+            let vc = segue.destination as? AddExercisesVC
+            vc?.draftWorkout = self.draftWorkout
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1B9A3DAB32AF6F92B4E02843 /* Pods_iFlex_WORKING.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D7DE545A0849E1E40CDDB2 /* Pods_iFlex_WORKING.framework */; };
 		24071D4E21AC72310012426F /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24071D4D21AC72310012426F /* TabBar.storyboard */; };
+		24071D5021AC7DC70012426F /* AddExercisesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24071D4F21AC7DC70012426F /* AddExercisesVC.swift */; };
 		243DCA0221AB5A44009EB608 /* full-workout.txt in Resources */ = {isa = PBXBuildFile; fileRef = 243DCA0121AB5A44009EB608 /* full-workout.txt */; };
 		243DCA0421AB5C60009EB608 /* CellContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243DCA0321AB5C5F009EB608 /* CellContent.swift */; };
 		24AB61F921A4D27B00ACC513 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB61F821A4D27B00ACC513 /* AppDelegate.swift */; };
@@ -57,6 +58,7 @@
 /* Begin PBXFileReference section */
 		015CB8447F05136B7174D0EE /* Pods_iFlex_WORKINGUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iFlex_WORKINGUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24071D4D21AC72310012426F /* TabBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		24071D4F21AC7DC70012426F /* AddExercisesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExercisesVC.swift; sourceTree = "<group>"; };
 		243DCA0121AB5A44009EB608 /* full-workout.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "full-workout.txt"; sourceTree = "<group>"; };
 		243DCA0321AB5C5F009EB608 /* CellContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellContent.swift; sourceTree = "<group>"; };
 		24AB61F521A4D27B00ACC513 /* iFlex-WORKING.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iFlex-WORKING.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,21 +153,22 @@
 				24AB61F821A4D27B00ACC513 /* AppDelegate.swift */,
 				24AB622621A4D2B300ACC513 /* browseNowScreen.swift */,
 				243DCA0321AB5C5F009EB608 /* CellContent.swift */,
-				24AB622821A4D2BA00ACC513 /* Exercise.swift */,
 				24AB622A21A4D2C200ACC513 /* Favorites.plist */,
 				24AB622C21A4D2C800ACC513 /* favoritesScreen.swift */,
 				24AB622E21A4D2D300ACC513 /* LocalDataFunctions.swift */,
 				24AB623021A4D2D900ACC513 /* loginScreen.swift */,
 				24AB623221A4D2DF00ACC513 /* newUserScreen.swift */,
+				24AB622821A4D2BA00ACC513 /* Exercise.swift */,
 				24AB623421A4D2EA00ACC513 /* User.swift */,
+				24AB623621A4D30200ACC513 /* Workout.swift */,
 				24AB61FA21A4D27B00ACC513 /* ViewController.swift */,
 				243DCA0121AB5A44009EB608 /* full-workout.txt */,
-				24AB623621A4D30200ACC513 /* Workout.swift */,
 				24AB623821A4D31500ACC513 /* Main.storyboard */,
 				24071D4D21AC72310012426F /* TabBar.storyboard */,
 				24B9B76121A4E55C003B020F /* Browse.storyboard */,
 				24AB623C21A4D32200ACC513 /* createNewWorkout.storyboard */,
 				24AB623E21A4D32800ACC513 /* CreateNewViewController.swift */,
+				24071D4F21AC7DC70012426F /* AddExercisesVC.swift */,
 				24AB61FF21A4D27C00ACC513 /* Assets.xcassets */,
 				24AB620121A4D27C00ACC513 /* LaunchScreen.storyboard */,
 				24AB620421A4D27C00ACC513 /* Info.plist */,
@@ -441,6 +444,7 @@
 			files = (
 				24AB61FB21A4D27B00ACC513 /* ViewController.swift in Sources */,
 				24AB622921A4D2BA00ACC513 /* Exercise.swift in Sources */,
+				24071D5021AC7DC70012426F /* AddExercisesVC.swift in Sources */,
 				24AB61F921A4D27B00ACC513 /* AppDelegate.swift in Sources */,
 				24AB623721A4D30200ACC513 /* Workout.swift in Sources */,
 				24AB622F21A4D2D300ACC513 /* LocalDataFunctions.swift in Sources */,
