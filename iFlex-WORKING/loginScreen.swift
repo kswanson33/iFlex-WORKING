@@ -13,8 +13,9 @@ class loginScreen: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if let user = loadLocal() {
-            let indVC = self.storyboard?.instantiateViewController(withIdentifier: "favoritesScreen") as! favoritesScreen
-            self.navigationController!.pushViewController(indVC, animated : true)
+            // This has a bug - there is no nav controller
+            /*let indVC = self.storyboard?.instantiateViewController(withIdentifier: "favoritesScreen") as! favoritesScreen
+            self.navigationController!.pushViewController(indVC, animated : true)*/
         }
         print("hello")
 

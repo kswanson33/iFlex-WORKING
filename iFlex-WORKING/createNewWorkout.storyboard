@@ -116,6 +116,9 @@
                                 <rect key="frame" x="178" y="589" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <segue destination="hsK-rA-n6S" kind="showDetail" id="0XG-Vp-6Bc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oO4-nl-ju1">
                                 <rect key="frame" x="140" y="523" width="112" height="30"/>
@@ -140,6 +143,14 @@
             </objects>
             <point key="canvasLocation" x="828" y="-88.605697151424295"/>
         </scene>
+        <!--TabBar-->
+        <scene sceneID="aSU-BS-whW">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TabBar" id="hsK-rA-n6S" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hdm-1G-k0I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="755" y="357"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="FCp-P6-MHU">
             <objects>
@@ -159,11 +170,6 @@
                                 <rect key="frame" x="172" y="280" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Yes!"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygB-j9-dUH">
-                                <rect key="frame" x="177" y="541" width="37" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Done"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

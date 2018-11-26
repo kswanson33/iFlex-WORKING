@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1B9A3DAB32AF6F92B4E02843 /* Pods_iFlex_WORKING.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D7DE545A0849E1E40CDDB2 /* Pods_iFlex_WORKING.framework */; };
+		24071D4E21AC72310012426F /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24071D4D21AC72310012426F /* TabBar.storyboard */; };
 		243DCA0221AB5A44009EB608 /* full-workout.txt in Resources */ = {isa = PBXBuildFile; fileRef = 243DCA0121AB5A44009EB608 /* full-workout.txt */; };
 		243DCA0421AB5C60009EB608 /* CellContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243DCA0321AB5C5F009EB608 /* CellContent.swift */; };
 		24AB61F921A4D27B00ACC513 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB61F821A4D27B00ACC513 /* AppDelegate.swift */; };
@@ -26,7 +27,6 @@
 		24AB623521A4D2EA00ACC513 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB623421A4D2EA00ACC513 /* User.swift */; };
 		24AB623721A4D30200ACC513 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB623621A4D30200ACC513 /* Workout.swift */; };
 		24AB623921A4D31500ACC513 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24AB623821A4D31500ACC513 /* Main.storyboard */; };
-		24AB623B21A4D31900ACC513 /* FavoriteWorkouts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24AB623A21A4D31900ACC513 /* FavoriteWorkouts.storyboard */; };
 		24AB623D21A4D32300ACC513 /* createNewWorkout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24AB623C21A4D32200ACC513 /* createNewWorkout.storyboard */; };
 		24AB623F21A4D32900ACC513 /* CreateNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB623E21A4D32800ACC513 /* CreateNewViewController.swift */; };
 		24B9B76221A4E55C003B020F /* Browse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24B9B76121A4E55C003B020F /* Browse.storyboard */; };
@@ -56,6 +56,7 @@
 
 /* Begin PBXFileReference section */
 		015CB8447F05136B7174D0EE /* Pods_iFlex_WORKINGUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iFlex_WORKINGUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		24071D4D21AC72310012426F /* TabBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		243DCA0121AB5A44009EB608 /* full-workout.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "full-workout.txt"; sourceTree = "<group>"; };
 		243DCA0321AB5C5F009EB608 /* CellContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellContent.swift; sourceTree = "<group>"; };
 		24AB61F521A4D27B00ACC513 /* iFlex-WORKING.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iFlex-WORKING.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,7 +81,6 @@
 		24AB623421A4D2EA00ACC513 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		24AB623621A4D30200ACC513 /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		24AB623821A4D31500ACC513 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		24AB623A21A4D31900ACC513 /* FavoriteWorkouts.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FavoriteWorkouts.storyboard; sourceTree = "<group>"; };
 		24AB623C21A4D32200ACC513 /* createNewWorkout.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = createNewWorkout.storyboard; sourceTree = "<group>"; };
 		24AB623E21A4D32800ACC513 /* CreateNewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewViewController.swift; sourceTree = "<group>"; };
 		24B9B76121A4E55C003B020F /* Browse.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Browse.storyboard; sourceTree = "<group>"; };
@@ -162,7 +162,7 @@
 				243DCA0121AB5A44009EB608 /* full-workout.txt */,
 				24AB623621A4D30200ACC513 /* Workout.swift */,
 				24AB623821A4D31500ACC513 /* Main.storyboard */,
-				24AB623A21A4D31900ACC513 /* FavoriteWorkouts.storyboard */,
+				24071D4D21AC72310012426F /* TabBar.storyboard */,
 				24B9B76121A4E55C003B020F /* Browse.storyboard */,
 				24AB623C21A4D32200ACC513 /* createNewWorkout.storyboard */,
 				24AB623E21A4D32800ACC513 /* CreateNewViewController.swift */,
@@ -323,6 +323,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24071D4E21AC72310012426F /* TabBar.storyboard in Resources */,
 				24AB622B21A4D2C200ACC513 /* Favorites.plist in Resources */,
 				24AB620321A4D27C00ACC513 /* LaunchScreen.storyboard in Resources */,
 				8806575F21AB96E00009EBE3 /* GoogleService-Info.plist in Resources */,
@@ -331,7 +332,6 @@
 				243DCA0221AB5A44009EB608 /* full-workout.txt in Resources */,
 				24AB623D21A4D32300ACC513 /* createNewWorkout.storyboard in Resources */,
 				24AB623921A4D31500ACC513 /* Main.storyboard in Resources */,
-				24AB623B21A4D31900ACC513 /* FavoriteWorkouts.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,8 +359,6 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-iFlex-WORKING/Pods-iFlex-WORKING-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
@@ -369,8 +367,6 @@
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
@@ -387,15 +383,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-iFlex-WORKING-checkManifestLockResult.txt",
 			);
@@ -409,15 +401,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-iFlex-WORKINGTests-checkManifestLockResult.txt",
 			);
@@ -431,15 +419,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-iFlex-WORKINGUITests-checkManifestLockResult.txt",
 			);
