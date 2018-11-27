@@ -9,37 +9,48 @@
 import UIKit
 
 class browseNowScreen: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate  {
-        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            return Workouts.count
+
+    var Workouts: [Workout] = []
+    var currentWorkout: Int = 0
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        /*let Wrkout1 = Workout(title: "A", time: 0, exercises: [], difficulty: 1, tags: [], priv: false, numOfExercises: 5, sharedWith: [], description: "hello", icon: WorkoutTarget.core)
+        let Wrkout2 = Workout(title: "B", time: 0, exercises: [], difficulty: 1, tags: [], priv: false, numOfExercises: 5, sharedWith: [], description: "hello", icon: WorkoutTarget.core)*/
+        //Workouts = [Wrkout1, Wrkout2]
+        Workouts = loadLocal()!.favorites! // load from remote
+        workoutCollection.delegate = self
+        workoutCollection.dataSource = self
+        // WorkoutTable.register(UITableViewCell.self, forCellReuseIdentifier: "exerCell")
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return Workouts.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let newCell = collectionView.dequeueReusableCell(withReuseIdentifier: "exerCell", for: indexPath) as! exCell
+        newCell.title.text = Workouts[indexPath.row].title
+        return newCell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //let secondView = WorkoutDetailView()
+        print(Workouts[indexPath.row].title)
+        currentWorkout = indexPath.row
+        //secondView.name = Workouts[indexPath.row].title
+        //secondView.time = Workouts[indexPath.row].time
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is WorkoutDetailView {
+            let vc = segue.destination as? WorkoutDetailView
+            //vc?.draftWorkout = self.draftWorkout
+            //vc.name = Workouts
+            vc?.theWorkout = Workouts[currentWorkout]
         }
-        
-        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            let newCell = collectionView.dequeueReusableCell(withReuseIdentifier: "exerCell", for: indexPath) as! exCell
-            
-            
-            newCell.title.text = Workouts[indexPath.row].title
-            
-            
-            
-            return newCell
-        }
-        
-        
-        var Workouts: [Workout] = []
-        
-        
-        
-        
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            let Wrkout1 = Workout(title: "A", time: 0, exercises: [], difficulty: 1, tags: [], priv: false, numOfExercises: 5, sharedWith: [], description: "hello", icon: WorkoutTarget.core)
-            let Wrkout2 = Workout(title: "B", time: 0, exercises: [], difficulty: 1, tags: [], priv: false, numOfExercises: 5, sharedWith: [], description: "hello", icon: WorkoutTarget.core)
-            Workouts = [Wrkout1, Wrkout2]
-            workoutCollection.delegate = self
-            workoutCollection.dataSource = self
-            //        WorkoutTable.register(UITableViewCell.self, forCellReuseIdentifier: "exerCell")
-            // Do any additional setup after loading the view, typically from a nib.
-        }
+    }
         
         override func didReceiveMemoryWarning() {
             super.didReceiveMemoryWarning()

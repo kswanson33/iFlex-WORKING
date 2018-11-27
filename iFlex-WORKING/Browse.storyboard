@@ -89,6 +89,7 @@
                                             <outlet property="favAdd" destination="Bbt-Au-tM4" id="5mJ-8g-1Vs"/>
                                             <outlet property="title" destination="c9V-4C-g3o" id="l6D-TV-VeM"/>
                                             <outlet property="workImage" destination="DFE-yk-Kq3" id="eGf-Zf-dlJ"/>
+                                            <segue destination="30S-nq-kc1" kind="show" id="TGd-2c-Zlt"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -113,10 +114,10 @@
             </objects>
             <point key="canvasLocation" x="2804" y="329.68515742128938"/>
         </scene>
-        <!--Pick Your Workout Screen-->
+        <!--Workout Detail View-->
         <scene sceneID="zH2-hM-MUP">
             <objects>
-                <viewController storyboardIdentifier="UIViewController-30S-nq-kc1" id="30S-nq-kc1" customClass="pickYourWorkoutScreen" customModule="iFlex_WORKING" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UIViewController-30S-nq-kc1" id="30S-nq-kc1" customClass="WorkoutDetailView" customModule="iFlex_WORKING" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NMB-Pn-1Q7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -217,4 +218,7 @@
             <point key="canvasLocation" x="1864.8" y="329.68515742128938"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="TGd-2c-Zlt"/>
+    </inferredMetricsTieBreakers>
 </document>

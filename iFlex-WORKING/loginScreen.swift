@@ -29,6 +29,7 @@ class loginScreen: UIViewController {
             print(wo1[0].title)
             print(wo1[0].exercises[1].exercise.name)
             //HERE IS A WORKING WORKOUT LOADED IN FROM THE TEXT FILE ATTACHED PLEASE STORE THIS SOMEWHERE IF YOU WANT TO RUN TESTING
+            writeNewWorkout(wo1[0])
         } catch let error{
             print("here")
             print(error.localizedDescription)
@@ -46,10 +47,10 @@ class loginScreen: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var userField: UITextField!
     @IBOutlet weak var newUserButton: UIButton!
-    /*
+    
     @IBAction func loginPressed(_ sender: Any) {
         print("Login pressed")
-        if textField.text == "" {
+        if userField.text == "" {
             print("No username")
             alert(title: "Invalid Input", message: "Please enter a username")
             return
@@ -58,12 +59,12 @@ class loginScreen: UIViewController {
         //check if we are able to connect to the database
         //do we want any validation on the text field
         if true { //if let u = returnUser(username) {
-            let u = User(id: 20, favorites: [], userName: textField.text!)
+            let u = User(id: 20, favorites: [], userName: userField.text!)
             writeNewUser(u)
             /*let indVC = self.storyboard?.instantiateViewController(withIdentifier: "favoritesScreen") as! favoritesScreen
             self.navigationController!.pushViewController(indVC, animated : true)*/
         } else {
-            print(textField.text!)
+            print(userField.text!)
             alert(title: "Incorrect Username", message: "Check to make sure you spelled your username correctly or you are connected to wifi")
         }
     }
@@ -76,7 +77,7 @@ class loginScreen: UIViewController {
         
         self.present(alert, animated: true)
     }
-    */
+    
     
     
     

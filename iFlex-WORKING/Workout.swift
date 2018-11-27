@@ -12,7 +12,7 @@ import Firebase
 
 struct Workout: Codable {
     var title: String
-    var time: Int      // specified in seconds -- is there a better data type?
+    var time: Int      // specified in seconds
     var exercises: [MyExercise]    // array of pairs: (exercise, number of reps)
     var difficulty: Int         // TODO: make into an enum
     var tags: [String]
