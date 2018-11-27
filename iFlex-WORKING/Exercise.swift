@@ -8,6 +8,7 @@
 
 import Foundation //hello this is my contribution
 import UIKit
+import Firebase
 
 struct Exercise: Codable {
     var name: String

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class newUserScreen: UIViewController {
 
@@ -16,12 +17,38 @@ class newUserScreen: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var userField: UITextField!
     
     @IBOutlet weak var createButton: UIButton!
     
     
     @IBAction func createButtonPressed(_ sender: Any) {
+        Auth.auth().createUser(withEmail: userField.text!, password: "passWord"){
+            user, error in
+            if error == nil {
+                let indVC = self.storyboard?.instantiateViewController(withIdentifier: "favoritesScreen") as! favoritesScreen
+                self.navigationController!.pushViewController(indVC, animated : true)
+            }
+            if error != nil {
+                if let errorCode = AuthErrorCode(rawValue: error!._code){
+                    switch errorCode{
+                    case .emailAlreadyInUse:
+                        self.alert(title: "Email is already in use", message: "Please try a different email.")
+                        self.alert(title: "Invalid input", message: "Please try a different email.")
+                    default:
+                        self.alert(title: "Error", message: "There is an error.")
+                    }
+                }
+                print(error?.localizedDescription)
+            }
+            if user != nil {
+                user?.user.sendEmailVerification() {
+                    error in
+                    print(error?.localizedDescription)
+                }
+            }
+        }
+        /*
         if let username = textField.text {
             //check if we are able to connect to the database
             //do we want any validation on the text field
@@ -41,18 +68,19 @@ class newUserScreen: UIViewController {
         }
         else{
             alert(title: "Invalid Input", message: "Please enter a username")
-        }
+        } */
     }
     
     
-    
+
     func alert(title: String, message: String)
     {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
         
-        self.present(alert, animated: true)
+        self.present(alert, animated: true, completion: nil)
+        print(self)
     }
     
     override func didReceiveMemoryWarning() {

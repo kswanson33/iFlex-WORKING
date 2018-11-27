@@ -33,13 +33,20 @@ class loginScreen: UIViewController {
             print("here")
             print(error.localizedDescription)
         }
-        
+        /*
+        // Access to root reference of database
+        let rootRef = Database.database().reference()
+        // Access to child reference of databse
+        let childRef = Database.database().reference(withPath: "grocery-items")
+        let itemsRef = rootRef.child("grocery-items")
+        let milkRef = itemsRef.child("milk")
+        */
     }
 
     @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var userField: UITextField!
     @IBOutlet weak var newUserButton: UIButton!
-    
+    /*
     @IBAction func loginPressed(_ sender: Any) {
         print("Login pressed")
         if textField.text == "" {
@@ -69,6 +76,11 @@ class loginScreen: UIViewController {
         
         self.present(alert, animated: true)
     }
+    */
+    
+    
+    
+    
     @IBAction func newUserPressed(_ sender: Any) {
         // Do not push new view onto nav controller. View already exists in storyboard, and nav controller does not exist. The transition to the next view is taken care of entirely in the storyboard.
         /*let indVC = self.storyboard?.instantiateViewController(withIdentifier: "newUserScreen") as! newUserScreen

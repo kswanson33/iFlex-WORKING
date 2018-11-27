@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import Firebase
+
 struct User: Codable {
     var id: Int?
     var favorites: [Workout]?

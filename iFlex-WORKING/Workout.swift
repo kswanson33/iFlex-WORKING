@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Firebase
 
 struct Workout: Codable {
     var title: String

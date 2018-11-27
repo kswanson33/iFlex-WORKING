@@ -100,7 +100,7 @@
                     <connections>
                         <outlet property="loginButton" destination="hxW-07-U6b" id="hM0-uW-uLw"/>
                         <outlet property="newUserButton" destination="xN5-8I-jHe" id="eeo-z4-VZ6"/>
-                        <outlet property="textField" destination="Ep6-xN-pzD" id="gY4-K5-qkV"/>
+                        <outlet property="userField" destination="Ep6-xN-pzD" id="c2d-EQ-eNo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -153,7 +153,6 @@
                                 </state>
                                 <connections>
                                     <action selector="createButtonPressed:" destination="VaE-lC-ilk" eventType="touchUpInside" id="irJ-Ky-zj6"/>
-                                    <segue destination="RMX-9W-x0q" kind="show" id="04u-fY-mJA"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -181,7 +180,8 @@
                     <navigationItem key="navigationItem" id="1iO-R6-yvl"/>
                     <connections>
                         <outlet property="createButton" destination="VC0-I9-Pgd" id="dNn-bL-Czf"/>
-                        <outlet property="textField" destination="U7H-Le-BEN" id="qwN-ne-k1W"/>
+                        <outlet property="userField" destination="U7H-Le-BEN" id="jar-4k-uSd"/>
+                        <segue destination="RMX-9W-x0q" kind="show" id="9XG-TX-Im5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8qm-OV-4kT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -198,6 +198,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="aNF-pV-Snv"/>
+        <segue reference="9XG-TX-Im5"/>
     </inferredMetricsTieBreakers>
 </document>
