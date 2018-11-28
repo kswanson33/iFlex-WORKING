@@ -123,6 +123,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="setTime:" destination="2kh-DA-NBc" eventType="editingChanged" id="DeY-NE-mPH"/>
+                                </connections>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="FlT-Iy-jXf">
                                 <rect key="frame" x="163" y="181" width="140" height="20"/>
@@ -174,10 +177,15 @@
                     </view>
                     <navigationItem key="navigationItem" id="2L3-Am-3yb"/>
                     <connections>
+                        <outlet property="coreIcon" destination="wFD-kI-q4p" id="QFf-gh-SO8"/>
                         <outlet property="descriptionField" destination="iYq-Ry-iKz" id="bjD-7M-YkZ"/>
                         <outlet property="difficultyLevel" destination="YWl-QO-EX2" id="5tO-n6-jDn"/>
+                        <outlet property="fullBodyIcon" destination="CSY-Ba-mzh" id="QTZ-dy-6dZ"/>
+                        <outlet property="lowerIcon" destination="gYR-EU-szB" id="dRa-s2-yaV"/>
                         <outlet property="publicToggle" destination="jjl-zP-BsF" id="onH-z1-ZXg"/>
+                        <outlet property="timeField" destination="H7b-52-JJn" id="KLA-5V-bi6"/>
                         <outlet property="titleField" destination="Gq6-xK-zhW" id="Hx0-yP-64d"/>
+                        <outlet property="upperIcon" destination="qmc-Mc-mco" id="jeB-XC-QOp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cgX-Og-sgb" userLabel="First Responder" sceneMemberID="firstResponder"/>

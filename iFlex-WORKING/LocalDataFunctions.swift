@@ -63,5 +63,22 @@ func writeNewWorkout(_ workout: Workout) {
     NSKeyedArchiver.archiveRootObject(data, toFile: path!)
 }
 
+func writeToPublic(_ workouts: [Workout]) {
+    let path = Bundle.main.path(forResource: "PublicWorkouts", ofType: "plist")
+    let data = try! PropertyListEncoder().encode(workouts)
+    NSKeyedArchiver.archiveRootObject(data, toFile: path!)
+}
+
+func loadFromPublic() -> [Workout] {
+    let path = Bundle.main.path(forResource: "PublicWorkouts", ofType: "plist")
+    // To make asynchonous, enclose in:
+    //DispatchQueue.global(qos: .background).async {}
+    guard let data = NSKeyedUnarchiver.unarchiveObject(withFile: path!) as? Data else {
+        return []
+    }
+    let workouts = try! PropertyListDecoder().decode([Workout].self, from: data)
+    return workouts
+}
+
 // Need a function to update user data for a single exercise
 

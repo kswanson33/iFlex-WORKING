@@ -12,28 +12,27 @@ class loginScreen: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let user = loadLocal() {
-            // This has a bug - there is no nav controller
-            /*let indVC = self.storyboard?.instantiateViewController(withIdentifier: "favoritesScreen") as! favoritesScreen
-            self.navigationController!.pushViewController(indVC, animated : true)*/
-        }
-        print("hello")
-
-        // Do any additional setup after loading the view.
-        
+        /* Load default workouts */
         let path = Bundle.main.path(forResource: "full-workout", ofType: "txt")
         guard  let data = try? Data(contentsOf: URL(fileURLWithPath: path!), options: []) else {return}
         do {
             let wo1 = try [JSONDecoder().decode(Workout.self, from: data)]
             print ("problem yet")
-            print(wo1[0].title)
-            print(wo1[0].exercises[1].exercise.name)
+            printWorkout(wo1[0])
             //HERE IS A WORKING WORKOUT LOADED IN FROM THE TEXT FILE ATTACHED PLEASE STORE THIS SOMEWHERE IF YOU WANT TO RUN TESTING
-            writeNewWorkout(wo1[0])
+            writeToPublic(wo1)
         } catch let error{
             print("here")
             print(error.localizedDescription)
         }
+        
+        /* Check if there's local data; if so, go to next screen */
+        if loadLocal() != nil {
+            // This has a bug - there is no nav controller
+            /*let indVC = self.storyboard?.instantiateViewController(withIdentifier: "favoritesScreen") as! favoritesScreen
+            self.navigationController!.pushViewController(indVC, animated : true)*/
+        }
+        
         /*
         // Access to root reference of database
         let rootRef = Database.database().reference()

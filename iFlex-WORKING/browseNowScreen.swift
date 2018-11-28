@@ -18,7 +18,7 @@ class browseNowScreen: UIViewController, UICollectionViewDataSource, UICollectio
         /*let Wrkout1 = Workout(title: "A", time: 0, exercises: [], difficulty: 1, tags: [], priv: false, numOfExercises: 5, sharedWith: [], description: "hello", icon: WorkoutTarget.core)
         let Wrkout2 = Workout(title: "B", time: 0, exercises: [], difficulty: 1, tags: [], priv: false, numOfExercises: 5, sharedWith: [], description: "hello", icon: WorkoutTarget.core)*/
         //Workouts = [Wrkout1, Wrkout2]
-        Workouts = loadLocal()!.favorites! // load from remote
+        Workouts = loadFromPublic() // load from remote
         workoutCollection.delegate = self
         workoutCollection.dataSource = self
         // WorkoutTable.register(UITableViewCell.self, forCellReuseIdentifier: "exerCell")
@@ -32,22 +32,27 @@ class browseNowScreen: UIViewController, UICollectionViewDataSource, UICollectio
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let newCell = collectionView.dequeueReusableCell(withReuseIdentifier: "exerCell", for: indexPath) as! exCell
         newCell.title.text = Workouts[indexPath.row].title
+        switch Workouts[indexPath.row].icon {
+        case .upper:
+            newCell.workImage.image = #imageLiteral(resourceName: "icons8-chest-50")
+        case .lower:
+            newCell.workImage.image = #imageLiteral(resourceName: "icons8-calves-50")
+        case .core:
+            newCell.workImage.image = #imageLiteral(resourceName: "icons8-prelum-50")
+        case .fullBody:
+            newCell.workImage.image = #imageLiteral(resourceName: "icons8-weightlifting-filled-50")
+        }
         return newCell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //let secondView = WorkoutDetailView()
         print(Workouts[indexPath.row].title)
         currentWorkout = indexPath.row
-        //secondView.name = Workouts[indexPath.row].title
-        //secondView.time = Workouts[indexPath.row].time
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is WorkoutDetailView {
             let vc = segue.destination as? WorkoutDetailView
-            //vc?.draftWorkout = self.draftWorkout
-            //vc.name = Workouts
             vc?.theWorkout = Workouts[currentWorkout]
         }
     }

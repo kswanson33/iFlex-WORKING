@@ -21,15 +21,68 @@ class CreateNewViewController: UIViewController {
     @IBOutlet var titleField: UITextField!
     /* Text field to get workout description */
     @IBOutlet var descriptionField: UITextField!
+    /* Text field to get time to complete */
+    @IBOutlet var timeField: UITextField!
+    /* Icon outlets */
+    @IBOutlet var upperIcon: UIImageView!
+    @IBOutlet var lowerIcon: UIImageView!
+    @IBOutlet var coreIcon: UIImageView!
+    @IBOutlet var fullBodyIcon: UIImageView!
+    
+    /* Tap gesture recognizer for icons */
+    /* Source: https://stackoverflow.com/questions/29202882/how-do-you-make-an-uiimageview-on-the-storyboard-clickable-swift */
+    @objc func upperTapped(gesture: UIGestureRecognizer) {
+        if (gesture.view as? UIImageView) != nil {
+            print("upper")
+            draftWorkout.icon = .upper
+        }
+    }
+    @objc func lowerTapped(gesture: UIGestureRecognizer) {
+        if (gesture.view as? UIImageView) != nil {
+            print("lower")
+            draftWorkout.icon = .lower
+        }
+    }
+    @objc func coreTapped(gesture: UIGestureRecognizer) {
+        if (gesture.view as? UIImageView) != nil {
+            print("core")
+            draftWorkout.icon = .core
+        }
+    }
+    @objc func fullBodyTapped(gesture: UIGestureRecognizer) {
+        if (gesture.view as? UIImageView) != nil {
+            print("full body")
+            draftWorkout.icon = .fullBody
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         draftWorkout = Workout(title: "", time: 0, exercises: [], difficulty: 0, tags: [], priv: true, numOfExercises: 0, sharedWith: [], description: "", icon: WorkoutTarget.upper)
         
-        // Currently sets title, difficulty, private, description
-        // TODO: Set time, icon, sharedWith, tags
+        // Currently sets title, difficulty, private, description, time, icon
+        // TODO: Set sharedWith, tags; validation; indicate which icon is currently selected; handle blank fields
         
         // Next view takes care of: exercises, number of exercises
+        
+        // create tap gesture recognizer
+        let upperTapGesture = UITapGestureRecognizer(target: self, action: #selector(CreateNewViewController.upperTapped(gesture:)))
+        // add it to the image view
+        upperIcon.addGestureRecognizer(upperTapGesture)
+        // make sure imageView can be interacted with by user
+        upperIcon.isUserInteractionEnabled = true
+        // For lower:
+        let lowerTapGesture = UITapGestureRecognizer(target: self, action: #selector(CreateNewViewController.lowerTapped(gesture:)))
+        lowerIcon.addGestureRecognizer(lowerTapGesture)
+        lowerIcon.isUserInteractionEnabled = true
+        // For core:
+        let coreTapGesture = UITapGestureRecognizer(target: self, action: #selector(CreateNewViewController.coreTapped(gesture:)))
+        coreIcon.addGestureRecognizer(coreTapGesture)
+        coreIcon.isUserInteractionEnabled = true
+        // For full body:
+        let fullBodyTapGesture = UITapGestureRecognizer(target: self, action: #selector(CreateNewViewController.fullBodyTapped(gesture:)))
+        fullBodyIcon.addGestureRecognizer(fullBodyTapGesture)
+        fullBodyIcon.isUserInteractionEnabled = true
     }
     
     /* Sets difficulty level of draftWorkout */
@@ -52,15 +105,23 @@ class CreateNewViewController: UIViewController {
     @IBAction func setDraftWorkoutTitle(_ sender: Any) {
         // change this to update whenever field is modified?
         draftWorkout.title = titleField.text!
-        //print(draftWorkout.title)
     }
     
     /* Sets draft workout description */
     @IBAction func setDescription(_ sender: Any) {
         draftWorkout.description = descriptionField.text!
-        //print(draftWorkout.description)
     }
     
+    /* Sets time to complete draft workout */
+    @IBAction func setTime(_ sender: Any) {
+        // Validation: is it an int?
+        guard let temp_time = Int(timeField.text!) else {
+            print("Invalid input")
+            return
+        }
+        draftWorkout.time = temp_time
+        print(draftWorkout.time)
+    }
     
     /* Pass draft workout to AddExercises view */
     /* Source: https://learnappmaking.com/pass-data-between-view-controllers-swift-how-to/ */

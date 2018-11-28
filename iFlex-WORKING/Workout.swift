@@ -35,6 +35,9 @@ func printWorkout(_ workout: Workout) {
     print("\tTitle: \(workout.title)")
     print("\t\tDifficulty: \(workout.difficulty)")
     print("\t\tDescription: \(workout.description)")
+    print("\t\tTime: \(workout.time)")
+    print("\t\tPrivate?: \(workout.priv)")
+    print("\t\tWorkout Target: \(workout.icon)")
     print("\tExercises: ")
     for e in workout.exercises {
         printMyExercise(e)
