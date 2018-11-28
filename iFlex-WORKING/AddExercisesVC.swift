@@ -8,21 +8,50 @@
 
 import UIKit
 
-class AddExercisesVC: UIViewController {
+class AddExercisesVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     var draftWorkout: Workout!  // passed in from prev. view
-
+    var exercises: [MyExercise] = []
+    var currentExercise = 0
+    @IBOutlet var exercisesCollectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        //print(draftWorkout)
+        setUpCollectionView()
+        
+        /* Populate exercises -- TEMP */
+        exercises = loadFromPublic()[0].exercises
     }
     
-    /* REMOVE LATER */
-    @IBAction func TEMP_BUTTON(_ sender: Any) {
-        let exercise1 = Exercise(name: "E1", instructionalVideo: "", directions: "", equipment: [], muscleGroups: [], difficulty: 1, commonMistakes: "", substitutions: "", icon: MuscleGroup.calves)
-        let myExercise1 = MyExercise(exercise: exercise1, weight: 1000, reps: 1000, sets: 0)
-        draftWorkout.exercises.append(myExercise1)
+    /* Collection view setup */
+    func setUpCollectionView() {
+        exercisesCollectionView.dataSource = self
+    }
+    
+    /* Set number of items in collection view */
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return exercises.count
+    }
+    
+    /* Design collection view cell */
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let newCell = collectionView.dequeueReusableCell(withReuseIdentifier: "DefaultExercise", for: indexPath) as! exCell
+        newCell.title.text = exercises[indexPath.row].exercise.name
+        newCell.workImage.image = #imageLiteral(resourceName: "icons8-prelum-50")
+        return newCell
+    }
+    
+    /* Action when collection view cell is clicked */
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        currentExercise = indexPath.row
+    }
+    
+    /* Uncomment when ExerciseDetailView exists */
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        /*if segue.destination is ExerciseDetailView {
+            let vc = segue.destination as? ExerciseDetailView
+            vc?.theExercise = exercises[currentExercise]
+        }*/
     }
     
     /* Write draft workout to user's favorites */

@@ -61,7 +61,7 @@ class CreateNewViewController: UIViewController {
         draftWorkout = Workout(title: "", time: 0, exercises: [], difficulty: 0, tags: [], priv: true, numOfExercises: 0, sharedWith: [], description: "", icon: WorkoutTarget.upper)
         
         // Currently sets title, difficulty, private, description, time, icon
-        // TODO: Set sharedWith, tags; validation; indicate which icon is currently selected; handle blank fields
+        // TODO: Set sharedWith, tags; validation; indicate which icon is currently selected; handle blank fields; description
         
         // Next view takes care of: exercises, number of exercises
         

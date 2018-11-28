@@ -12,6 +12,7 @@ class browseNowScreen: UIViewController, UICollectionViewDataSource, UICollectio
 
     var Workouts: [Workout] = []
     var currentWorkout: Int = 0
+    @IBOutlet weak var workoutCollection: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,15 +58,11 @@ class browseNowScreen: UIViewController, UICollectionViewDataSource, UICollectio
         }
     }
         
-        override func didReceiveMemoryWarning() {
-            super.didReceiveMemoryWarning()
-            // Dispose of any resources that can be recreated.
-        }
-        
-        
-    @IBOutlet weak var workoutCollection: UICollectionView!
-    
-        
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
+    
+}
 
     //add second screen that takes in data, and fetch local data to populate cells use loadlocal to get local data, add to favorites
