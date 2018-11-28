@@ -51,6 +51,12 @@ class browseNowScreen: UIViewController, UICollectionViewDataSource, UICollectio
         currentWorkout = indexPath.row
     }
     
+    func addToFavs(sender: UIButton){
+        print("adding?")
+        writeNewWorkout(Workouts[currentWorkout])
+        print("added?")
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is WorkoutDetailView {
             let vc = segue.destination as? WorkoutDetailView
