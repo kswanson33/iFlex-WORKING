@@ -33,16 +33,7 @@ class browseNowScreen: UIViewController, UICollectionViewDataSource, UICollectio
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let newCell = collectionView.dequeueReusableCell(withReuseIdentifier: "exerCell", for: indexPath) as! exCell
         newCell.title.text = Workouts[indexPath.row].title
-        switch Workouts[indexPath.row].icon {
-        case .upper:
-            newCell.workImage.image = #imageLiteral(resourceName: "icons8-chest-50")
-        case .lower:
-            newCell.workImage.image = #imageLiteral(resourceName: "icons8-calves-50")
-        case .core:
-            newCell.workImage.image = #imageLiteral(resourceName: "icons8-prelum-50")
-        case .fullBody:
-            newCell.workImage.image = #imageLiteral(resourceName: "icons8-weightlifting-filled-50")
-        }
+        newCell.workImage.image = workoutEnumToIcon(area: Workouts[indexPath.row].icon)
         return newCell
     }
     

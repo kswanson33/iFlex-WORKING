@@ -37,7 +37,7 @@ class AddExercisesVC: UIViewController, UICollectionViewDataSource, UICollection
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let newCell = collectionView.dequeueReusableCell(withReuseIdentifier: "DefaultExercise", for: indexPath) as! exCell
         newCell.title.text = exercises[indexPath.row].exercise.name
-        newCell.workImage.image = #imageLiteral(resourceName: "icons8-prelum-50")
+        newCell.workImage.image = exerciseEnumToIcon(area: exercises[indexPath.row].exercise.icon)
         return newCell
     }
     
