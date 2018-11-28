@@ -187,7 +187,7 @@
         <scene sceneID="ECc-si-HAG">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kIH-ew-Pik" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Browse" id="wEa-7G-1Cy"/>
+                    <tabBarItem key="tabBarItem" title="Browse" image="icons8-search-property-30" id="wEa-7G-1Cy"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cLe-i5-ia3">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -203,4 +203,7 @@
             <point key="canvasLocation" x="1864.8" y="329.68515742128938"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-search-property-30" width="30" height="30"/>
+    </resources>
 </document>
