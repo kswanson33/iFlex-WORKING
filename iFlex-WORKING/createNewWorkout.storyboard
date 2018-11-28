@@ -91,16 +91,6 @@
                                     <action selector="setDraftWorkoutTitle:" destination="2kh-DA-NBc" eventType="editingChanged" id="GU1-aA-3TI"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iYq-Ry-iKz">
-                                <rect key="frame" x="72" y="362" width="231" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="setDescription:" destination="2kh-DA-NBc" eventType="editingChanged" id="70C-GE-Dp7"/>
-                                </connections>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oO4-nl-ju1">
                                 <rect key="frame" x="131" y="526" width="112" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -167,6 +157,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Lli-zq-Fkc">
+                                <rect key="frame" x="36" y="346" width="284" height="92"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.88373679660000004" green="0.88373679660000004" blue="0.88373679660000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -178,7 +175,7 @@
                     <navigationItem key="navigationItem" id="2L3-Am-3yb"/>
                     <connections>
                         <outlet property="coreIcon" destination="wFD-kI-q4p" id="QFf-gh-SO8"/>
-                        <outlet property="descriptionField" destination="iYq-Ry-iKz" id="bjD-7M-YkZ"/>
+                        <outlet property="descriptionTextView" destination="Lli-zq-Fkc" id="Ilr-z9-Wfw"/>
                         <outlet property="difficultyLevel" destination="YWl-QO-EX2" id="5tO-n6-jDn"/>
                         <outlet property="fullBodyIcon" destination="CSY-Ba-mzh" id="QTZ-dy-6dZ"/>
                         <outlet property="lowerIcon" destination="gYR-EU-szB" id="dRa-s2-yaV"/>
@@ -242,7 +239,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PZP-Fb-11P">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PZP-Fb-11P">
                                                     <rect key="frame" x="20" y="9" width="257" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -332,6 +329,6 @@
         <image name="icons8-weightlifting-filled-50" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0XG-Vp-6Bc"/>
+        <segue reference="prk-j7-utA"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -8,7 +8,10 @@
 
 import UIKit
 
-class CreateNewViewController: UIViewController {
+// Currently sets title, difficulty, private, description, time, icon. Description text now wraps around. Icon now shows when it is selected.
+// TODO: Set sharedWith, tags; validation; handle blank fields
+
+class CreateNewViewController: UIViewController, UITextViewDelegate {
 
     /* Updated by the fields in this view */
     var draftWorkout: Workout!
@@ -19,8 +22,9 @@ class CreateNewViewController: UIViewController {
     @IBOutlet var publicToggle: UISwitch!
     /* Text field to get workout title */
     @IBOutlet var titleField: UITextField!
-    /* Text field to get workout description */
-    @IBOutlet var descriptionField: UITextField!
+    /* Text view to get workout description */
+    //@IBOutlet var descriptionField: UITextField!
+    @IBOutlet var descriptionTextView: UITextView!
     /* Text field to get time to complete */
     @IBOutlet var timeField: UITextField!
     /* Icon outlets */
@@ -29,41 +33,77 @@ class CreateNewViewController: UIViewController {
     @IBOutlet var coreIcon: UIImageView!
     @IBOutlet var fullBodyIcon: UIImageView!
     
-    /* Tap gesture recognizer for icons */
+    /* Tap gesture recognizers for icons */
     /* Source: https://stackoverflow.com/questions/29202882/how-do-you-make-an-uiimageview-on-the-storyboard-clickable-swift */
     @objc func upperTapped(gesture: UIGestureRecognizer) {
         if (gesture.view as? UIImageView) != nil {
             print("upper")
             draftWorkout.icon = .upper
+            showIconSelected(upperIcon)
         }
     }
     @objc func lowerTapped(gesture: UIGestureRecognizer) {
         if (gesture.view as? UIImageView) != nil {
             print("lower")
             draftWorkout.icon = .lower
+            showIconSelected(lowerIcon)
         }
     }
     @objc func coreTapped(gesture: UIGestureRecognizer) {
         if (gesture.view as? UIImageView) != nil {
             print("core")
             draftWorkout.icon = .core
+            showIconSelected(coreIcon)
         }
     }
     @objc func fullBodyTapped(gesture: UIGestureRecognizer) {
         if (gesture.view as? UIImageView) != nil {
             print("full body")
             draftWorkout.icon = .fullBody
+            showIconSelected(fullBodyIcon)
         }
+    }
+    
+    func showIconSelected(_ icon: UIImageView) {
+        // View that appears over icon when it is selected
+        let selected = CGRect(x: 0, y: 0, width: upperIcon.frame.width, height: upperIcon.frame.height)
+        let selectedView = UIView(frame: selected)
+        selectedView.backgroundColor = .blue
+        selectedView.alpha = 0.2
+        selectedView.tag = 101
+        
+        // Deselect any currently selected view
+        /* Source: https://stackoverflow.com/questions/28197079/swift-addsubview-and-remove-it */
+        for v in upperIcon.subviews {
+            if v.tag == 101 {
+                v.removeFromSuperview()
+            }
+        }
+        for v in lowerIcon.subviews {
+            if v.tag == 101 {
+                v.removeFromSuperview()
+            }
+        }
+        for v in coreIcon.subviews {
+            if v.tag == 101 {
+                v.removeFromSuperview()
+            }
+        }
+        for v in fullBodyIcon.subviews {
+            if v.tag == 101 {
+                v.removeFromSuperview()
+            }
+        }
+        
+        // Select current icon
+        icon.addSubview(selectedView)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        descriptionTextView.delegate = self
         draftWorkout = Workout(title: "", time: 0, exercises: [], difficulty: 0, tags: [], priv: true, numOfExercises: 0, sharedWith: [], description: "", icon: WorkoutTarget.upper)
-        
-        // Currently sets title, difficulty, private, description, time, icon
-        // TODO: Set sharedWith, tags; validation; indicate which icon is currently selected; handle blank fields; description
-        
-        // Next view takes care of: exercises, number of exercises
+        showIconSelected(upperIcon)
         
         // create tap gesture recognizer
         let upperTapGesture = UITapGestureRecognizer(target: self, action: #selector(CreateNewViewController.upperTapped(gesture:)))
@@ -107,9 +147,10 @@ class CreateNewViewController: UIViewController {
         draftWorkout.title = titleField.text!
     }
     
-    /* Sets draft workout description */
-    @IBAction func setDescription(_ sender: Any) {
-        draftWorkout.description = descriptionField.text!
+    /* Action for text view receiving description */
+    func textViewDidChange(_ textView: UITextView) {
+        draftWorkout.description = descriptionTextView.text!
+        //print(draftWorkout.description)
     }
     
     /* Sets time to complete draft workout */
