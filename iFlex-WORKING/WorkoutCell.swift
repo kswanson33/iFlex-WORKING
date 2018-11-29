@@ -21,5 +21,6 @@ class WorkoutCell: UICollectionViewCell {
     @IBOutlet weak var reps: UILabel!
     @IBOutlet weak var weight: UILabel!
     @IBOutlet weak var weightNum: UILabel!
-    
+
+
 }

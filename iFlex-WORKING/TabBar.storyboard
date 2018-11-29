@@ -324,9 +324,6 @@
                                                     <rect key="frame" x="117" y="102" width="120" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Add Today's Data"/>
-                                                    <connections>
-                                                        <action selector="addDataPressed:" destination="o5D-eN-DXm" eventType="touchUpInside" id="qNI-Cp-K9Q"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </view>
