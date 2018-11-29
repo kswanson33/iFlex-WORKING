@@ -42,6 +42,9 @@
 		8806575F21AB96E00009EBE3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8806575E21AB96E00009EBE3 /* GoogleService-Info.plist */; };
 		8806576021AB96E00009EBE3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8806575E21AB96E00009EBE3 /* GoogleService-Info.plist */; };
 		8806576121AB96E00009EBE3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8806575E21AB96E00009EBE3 /* GoogleService-Info.plist */; };
+		9F01E27A21AFD8570066C698 /* FavoriteWorkoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F01E27921AFD8570066C698 /* FavoriteWorkoutVC.swift */; };
+		9F01E27C21AFD9700066C698 /* ExerciseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F01E27B21AFD9700066C698 /* ExerciseVC.swift */; };
+		9F01E27E21AFDB670066C698 /* WorkoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F01E27D21AFDB670066C698 /* WorkoutCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +107,9 @@
 		6B3DF5390BD0DBA5C7E99C65 /* Pods-iFlex-WORKINGUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iFlex-WORKINGUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iFlex-WORKINGUITests/Pods-iFlex-WORKINGUITests.release.xcconfig"; sourceTree = "<group>"; };
 		84D7DE545A0849E1E40CDDB2 /* Pods_iFlex_WORKING.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iFlex_WORKING.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8806575E21AB96E00009EBE3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9F01E27921AFD8570066C698 /* FavoriteWorkoutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteWorkoutVC.swift; sourceTree = "<group>"; };
+		9F01E27B21AFD9700066C698 /* ExerciseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseVC.swift; sourceTree = "<group>"; };
+		9F01E27D21AFDB670066C698 /* WorkoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCell.swift; sourceTree = "<group>"; };
 		D473C32AC618954B2C073457 /* Pods-iFlex-WORKINGTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iFlex-WORKINGTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iFlex-WORKINGTests/Pods-iFlex-WORKINGTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -179,6 +185,9 @@
 				243DCA0121AB5A44009EB608 /* full-workout.txt */,
 				24AB623821A4D31500ACC513 /* Main.storyboard */,
 				24071D4D21AC72310012426F /* TabBar.storyboard */,
+				9F01E27921AFD8570066C698 /* FavoriteWorkoutVC.swift */,
+				9F01E27B21AFD9700066C698 /* ExerciseVC.swift */,
+				9F01E27D21AFDB670066C698 /* WorkoutCell.swift */,
 				24B9B76121A4E55C003B020F /* Browse.storyboard */,
 				24AB623C21A4D32200ACC513 /* createNewWorkout.storyboard */,
 				24AB623E21A4D32800ACC513 /* CreateNewViewController.swift */,
@@ -462,8 +471,11 @@
 				24071D5021AC7DC70012426F /* AddExercisesVC.swift in Sources */,
 				24AB61F921A4D27B00ACC513 /* AppDelegate.swift in Sources */,
 				24AB623721A4D30200ACC513 /* Workout.swift in Sources */,
+				9F01E27C21AFD9700066C698 /* ExerciseVC.swift in Sources */,
 				24AB622F21A4D2D300ACC513 /* LocalDataFunctions.swift in Sources */,
+				9F01E27A21AFD8570066C698 /* FavoriteWorkoutVC.swift in Sources */,
 				24AB622721A4D2B300ACC513 /* browseNowScreen.swift in Sources */,
+				9F01E27E21AFDB670066C698 /* WorkoutCell.swift in Sources */,
 				24AB623521A4D2EA00ACC513 /* User.swift in Sources */,
 				24AB622D21A4D2C800ACC513 /* favoritesScreen.swift in Sources */,
 				245A545421ADFDAE000AAE00 /* WorkoutDetailView.swift in Sources */,
