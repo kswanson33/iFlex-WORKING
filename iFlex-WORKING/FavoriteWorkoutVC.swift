@@ -14,7 +14,8 @@ class FavoriteWorkoutVC: UIViewController, UICollectionViewDelegate, UICollectio
     
     
     
-    var workout:Workout?
+    var workout: Workout?
+    @IBOutlet var workoutTitle: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,7 @@ class FavoriteWorkoutVC: UIViewController, UICollectionViewDelegate, UICollectio
                 print(error.localizedDescription)
             }
         }
+        workoutTitle.text = workout?.title
     }
     
     func collectionView(_ collectionView: UICollectionView,

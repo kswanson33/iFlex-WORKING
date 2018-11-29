@@ -337,6 +337,7 @@
                     </view>
                     <connections>
                         <outlet property="theCollectionView" destination="9BX-jG-w3U" id="dZ4-zo-E3u"/>
+                        <outlet property="workoutTitle" destination="F9Y-6T-2Bj" id="Rwg-bh-wrB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Db9-Gi-BPF" userLabel="First Responder" sceneMemberID="firstResponder"/>
