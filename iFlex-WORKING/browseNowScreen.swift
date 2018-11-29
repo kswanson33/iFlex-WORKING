@@ -49,9 +49,9 @@ class browseNowScreen: UIViewController, UICollectionViewDataSource, UICollectio
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.destination is WorkoutDetailView {
-            let vc = segue.destination as? WorkoutDetailView
-            vc?.theWorkout = Workouts[currentWorkout]
+        if segue.destination is FavoriteWorkoutVC {
+            let vc = segue.destination as? FavoriteWorkoutVC
+            vc?.workout = Workouts[currentWorkout]
         }
     }
         

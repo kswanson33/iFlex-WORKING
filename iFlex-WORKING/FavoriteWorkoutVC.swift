@@ -20,14 +20,16 @@ class FavoriteWorkoutVC: UIViewController, UICollectionViewDelegate, UICollectio
         super.viewDidLoad()
         theCollectionView.dataSource = self
         theCollectionView.delegate = self
-        let path = Bundle.main.path(forResource: "full-workout", ofType: "txt")
-        guard  let data = try? Data(contentsOf: URL(fileURLWithPath: path!), options: []) else {return}
-        do {
-            let wo1 = try [JSONDecoder().decode(Workout.self, from: data)]
-            workout = wo1[0]
-        } catch let error{
-            print("here")
-            print(error.localizedDescription)
+        if workout == nil { // populate with sample data
+            let path = Bundle.main.path(forResource: "full-workout", ofType: "txt")
+            guard  let data = try? Data(contentsOf: URL(fileURLWithPath: path!), options: []) else {return}
+            do {
+                let wo1 = try [JSONDecoder().decode(Workout.self, from: data)]
+                workout = wo1[0]
+            } catch let error{
+                print("here")
+                print(error.localizedDescription)
+            }
         }
     }
     
