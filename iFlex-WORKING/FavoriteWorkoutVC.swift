@@ -77,8 +77,12 @@ class FavoriteWorkoutVC: UIViewController, UICollectionViewDelegate, UICollectio
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "mycell", for: indexPath) as! WorkoutCell
         
         cell.backgroundColor = UIColor.red
-        if let title = workout?.exercises[indexPath.row].exercise.name{
-            cell.cellLabel.text = title
+        if let myEx = workout?.exercises[indexPath.row]{
+            cell.cellLabel.text = myEx.exercise.name
+            cell.setsNum.text = String(myEx.sets)
+            cell.repsNum.text = String(myEx.reps)
+            cell.weightNum.text = String(myEx.weight)
+            
         }
         
         return cell
