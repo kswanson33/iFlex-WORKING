@@ -117,39 +117,6 @@
                                     <action selector="setTime:" destination="2kh-DA-NBc" eventType="editingChanged" id="DeY-NE-mPH"/>
                                 </connections>
                             </textField>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="FlT-Iy-jXf">
-                                <rect key="frame" x="163" y="181" width="140" height="20"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-chest-50" translatesAutoresizingMaskIntoConstraints="NO" id="qmc-Mc-mco">
-                                        <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="20" id="B9e-x5-MDY"/>
-                                            <constraint firstAttribute="height" constant="20" id="NSR-eR-rgF"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-calves-50" translatesAutoresizingMaskIntoConstraints="NO" id="gYR-EU-szB">
-                                        <rect key="frame" x="40" y="0.0" width="20" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="20" id="JcF-BK-9R7"/>
-                                            <constraint firstAttribute="height" constant="20" id="VjD-Sh-Vzd"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-prelum-50" translatesAutoresizingMaskIntoConstraints="NO" id="wFD-kI-q4p">
-                                        <rect key="frame" x="80" y="0.0" width="20" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="20" id="kl4-l2-Wvv"/>
-                                            <constraint firstAttribute="height" constant="20" id="pXd-OB-Na8"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-weightlifting-filled-50" translatesAutoresizingMaskIntoConstraints="NO" id="CSY-Ba-mzh">
-                                        <rect key="frame" x="120" y="0.0" width="20" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="20" id="bZO-iH-vXG"/>
-                                            <constraint firstAttribute="height" constant="20" id="dGq-Al-nl5"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
-                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Make Public?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zrN-Zj-UGX">
                                 <rect key="frame" x="79" y="451" width="101" height="20.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -164,11 +131,37 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="FlT-Iy-jXf">
+                                <rect key="frame" x="153" y="175" width="180" height="30"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-chest-50" translatesAutoresizingMaskIntoConstraints="NO" id="qmc-Mc-mco">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="SSa-NV-IV1"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-calves-50" translatesAutoresizingMaskIntoConstraints="NO" id="gYR-EU-szB">
+                                        <rect key="frame" x="50" y="0.0" width="30" height="30"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-prelum-50" translatesAutoresizingMaskIntoConstraints="NO" id="wFD-kI-q4p">
+                                        <rect key="frame" x="100" y="0.0" width="30" height="30"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-weightlifting-filled-50" translatesAutoresizingMaskIntoConstraints="NO" id="CSY-Ba-mzh">
+                                        <rect key="frame" x="150" y="0.0" width="30" height="30"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="qmc-Mc-mco" firstAttribute="width" secondItem="wFD-kI-q4p" secondAttribute="width" id="amr-TV-Qli"/>
+                                    <constraint firstAttribute="height" constant="30" id="gtT-L3-TL7"/>
+                                    <constraint firstItem="qmc-Mc-mco" firstAttribute="width" secondItem="gYR-EU-szB" secondAttribute="width" id="o8E-oI-PYq"/>
+                                    <constraint firstItem="CSY-Ba-mzh" firstAttribute="width" secondItem="wFD-kI-q4p" secondAttribute="width" id="z2g-mr-nDu"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="FlT-Iy-jXf" firstAttribute="leading" secondItem="6aK-oP-J6M" secondAttribute="leading" constant="163" id="IhD-fE-eFA"/>
-                            <constraint firstItem="FlT-Iy-jXf" firstAttribute="top" secondItem="6aK-oP-J6M" secondAttribute="top" constant="117" id="nzC-Hg-pgz"/>
+                            <constraint firstItem="FlT-Iy-jXf" firstAttribute="top" secondItem="6aK-oP-J6M" secondAttribute="top" constant="111" id="53x-GW-2Lk"/>
+                            <constraint firstItem="6aK-oP-J6M" firstAttribute="trailing" secondItem="FlT-Iy-jXf" secondAttribute="trailing" constant="42" id="5l7-ew-x8p"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6aK-oP-J6M"/>
                     </view>
@@ -329,6 +322,6 @@
         <image name="icons8-weightlifting-filled-50" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="prk-j7-utA"/>
+        <segue reference="0XG-Vp-6Bc"/>
     </inferredMetricsTieBreakers>
 </document>

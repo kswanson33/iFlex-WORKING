@@ -20,7 +20,17 @@ class AddExercisesVC: UIViewController, UICollectionViewDataSource, UICollection
         setUpCollectionView()
         
         /* Populate exercises -- TEMP */
-        exercises = loadFromPublic()[0].exercises
+        let path = Bundle.main.path(forResource: "full-workout", ofType: "txt")
+        guard  let data = try? Data(contentsOf: URL(fileURLWithPath: path!), options: []) else {return}
+        do {
+            let wo1 = try [JSONDecoder().decode(Workout.self, from: data)]
+            //writeToPublic(wo1)
+            exercises = wo1[0].exercises
+        } catch let error{
+            print("here")
+            print(error.localizedDescription)
+        }
+        //exercises = wo1//loadFromPublic()[0].exercises
     }
     
     /* Collection view setup */
@@ -38,7 +48,15 @@ class AddExercisesVC: UIViewController, UICollectionViewDataSource, UICollection
         let newCell = collectionView.dequeueReusableCell(withReuseIdentifier: "DefaultExercise", for: indexPath) as! exCell
         newCell.title.text = exercises[indexPath.row].exercise.name
         newCell.workImage.image = exerciseEnumToIcon(area: exercises[indexPath.row].exercise.icon)
+        newCell.favAdd.tag = indexPath.row
+        newCell.favAdd.addTarget(self, action: #selector(addToDraftWorkout(sender:)), for: UIControlEvents.touchUpInside)
         return newCell
+    }
+    
+    @IBAction func addToDraftWorkout(sender: AnyObject) -> Void {
+        let myEx = exercises[sender.tag!]
+        print(myEx.exercise.name)
+        draftWorkout.exercises.append(myEx)
     }
     
     /* Action when collection view cell is clicked */

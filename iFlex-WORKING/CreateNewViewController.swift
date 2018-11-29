@@ -68,6 +68,7 @@ class CreateNewViewController: UIViewController, UITextViewDelegate {
         // View that appears over icon when it is selected
         let selected = CGRect(x: 0, y: 0, width: upperIcon.frame.width, height: upperIcon.frame.height)
         let selectedView = UIView(frame: selected)
+        selectedView.layer.cornerRadius = 5
         selectedView.backgroundColor = .blue
         selectedView.alpha = 0.2
         selectedView.tag = 101
