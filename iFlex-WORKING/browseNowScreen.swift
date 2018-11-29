@@ -19,11 +19,11 @@ class browseNowScreen: UIViewController, UICollectionViewDataSource, UICollectio
         /*let Wrkout1 = Workout(title: "A", time: 0, exercises: [], difficulty: 1, tags: [], priv: false, numOfExercises: 5, sharedWith: [], description: "hello", icon: WorkoutTarget.core)
         let Wrkout2 = Workout(title: "B", time: 0, exercises: [], difficulty: 1, tags: [], priv: false, numOfExercises: 5, sharedWith: [], description: "hello", icon: WorkoutTarget.core)*/
         //Workouts = [Wrkout1, Wrkout2]
-        Workouts = loadFromPublic() // load from remote
+        
+        Workouts = loadLocal()!.favorites! // delete this and uncomment the line below when that function exists
+        //Workouts = loadFromDatabase()
         workoutCollection.delegate = self
         workoutCollection.dataSource = self
-        // WorkoutTable.register(UITableViewCell.self, forCellReuseIdentifier: "exerCell")
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

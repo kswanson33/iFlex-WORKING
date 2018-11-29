@@ -99,10 +99,10 @@
             </objects>
             <point key="canvasLocation" x="2804" y="329.68515742128938"/>
         </scene>
-        <!--Workout Detail View-->
+        <!--Favorite WorkoutVC-->
         <scene sceneID="zH2-hM-MUP">
             <objects>
-                <viewController storyboardIdentifier="UIViewController-30S-nq-kc1" id="30S-nq-kc1" customClass="WorkoutDetailView" customModule="iFlex_WORKING" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UIViewController-30S-nq-kc1" id="30S-nq-kc1" customClass="FavoriteWorkoutVC" customModule="iFlex_WORKING" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NMB-Pn-1Q7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

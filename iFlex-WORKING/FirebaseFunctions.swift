@@ -9,15 +9,15 @@
 import Foundation
 import Firebase
 
-func writeWorkoutToDatabase(_ Workout: Workout) {
+func writeWorkoutToDatabase(_ workout: Workout) {
     // Access the "unicorns" child reference and then access (create) a unique child reference within it and finally set its value
     let ref = Database.database().reference()
-    let workoutRef = ref.child("Workouts").child(Workout.title)
-    workoutRef.setValue(Workout.toAnyObject())
+    let workoutRef = ref.child("Workouts").child(workout.title)
+    workoutRef.setValue(workout.toAnyObject())
     print("Start of Database function")
-    for e in Workout.exercises{
-         workoutRef.child(e.exercise.name).setValue(e.exercise.toAnyObject())
-        print(e.re)
+    for e in workout.exercises{
+        workoutRef.child(e.exercise.name).setValue(e.exercise.toAnyObject())
+        print(e.reps)
         //print(e.exercise.toAnyObject())
     }
 }
