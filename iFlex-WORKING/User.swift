@@ -21,4 +21,6 @@ func printUser(_ user: User) {
     for w in user.favorites! {
         printWorkout(w)
     }
+ 
 }
+

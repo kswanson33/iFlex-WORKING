@@ -44,3 +44,4 @@ func exerciseEnumToIcon(area: MuscleGroup) -> UIImage {
         return #imageLiteral(resourceName: "icons8-torso-50")
     }
 }
+

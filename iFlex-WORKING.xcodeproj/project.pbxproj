@@ -36,6 +36,9 @@
 		24B9B76221A4E55C003B020F /* Browse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24B9B76121A4E55C003B020F /* Browse.storyboard */; };
 		28910B46B3DA0866EFFE012C /* Pods_iFlex_WORKINGTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 482A59A985B61D86CEFF82EB /* Pods_iFlex_WORKINGTests.framework */; };
 		4A0D8E6434584384B239DD43 /* Pods_iFlex_WORKINGUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 015CB8447F05136B7174D0EE /* Pods_iFlex_WORKINGUITests.framework */; };
+		6897D8C221AFCCE10076F3EB /* FirebaseFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6897D8C121AFCCE10076F3EB /* FirebaseFunctions.swift */; };
+		6897D8C321AFCCE10076F3EB /* FirebaseFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6897D8C121AFCCE10076F3EB /* FirebaseFunctions.swift */; };
+		6897D8C421AFCCE10076F3EB /* FirebaseFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6897D8C121AFCCE10076F3EB /* FirebaseFunctions.swift */; };
 		8806575F21AB96E00009EBE3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8806575E21AB96E00009EBE3 /* GoogleService-Info.plist */; };
 		8806576021AB96E00009EBE3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8806575E21AB96E00009EBE3 /* GoogleService-Info.plist */; };
 		8806576121AB96E00009EBE3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8806575E21AB96E00009EBE3 /* GoogleService-Info.plist */; };
@@ -97,6 +100,7 @@
 		4943C5361EC5A42BA3FA8FB8 /* Pods-iFlex-WORKING.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iFlex-WORKING.release.xcconfig"; path = "Pods/Target Support Files/Pods-iFlex-WORKING/Pods-iFlex-WORKING.release.xcconfig"; sourceTree = "<group>"; };
 		55B646CB2F1AACBD40C0A8B3 /* Pods-iFlex-WORKING.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iFlex-WORKING.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iFlex-WORKING/Pods-iFlex-WORKING.debug.xcconfig"; sourceTree = "<group>"; };
 		576AFBF3B0D258DD3C98CECD /* Pods-iFlex-WORKINGTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iFlex-WORKINGTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iFlex-WORKINGTests/Pods-iFlex-WORKINGTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6897D8C121AFCCE10076F3EB /* FirebaseFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFunctions.swift; sourceTree = "<group>"; };
 		6B3DF5390BD0DBA5C7E99C65 /* Pods-iFlex-WORKINGUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iFlex-WORKINGUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iFlex-WORKINGUITests/Pods-iFlex-WORKINGUITests.release.xcconfig"; sourceTree = "<group>"; };
 		84D7DE545A0849E1E40CDDB2 /* Pods_iFlex_WORKING.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iFlex_WORKING.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8806575E21AB96E00009EBE3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -162,12 +166,13 @@
 				245A545321ADFDAE000AAE00 /* WorkoutDetailView.swift */,
 				24AB622C21A4D2C800ACC513 /* favoritesScreen.swift */,
 				24AB622E21A4D2D300ACC513 /* LocalDataFunctions.swift */,
+				6897D8C121AFCCE10076F3EB /* FirebaseFunctions.swift */,
 				244A015821AF2CF900DD004A /* UsefulFunctions.swift */,
 				24AB623021A4D2D900ACC513 /* loginScreen.swift */,
 				245A545521AE4C4F000AAE00 /* PublicWorkouts.plist */,
 				24AB623221A4D2DF00ACC513 /* newUserScreen.swift */,
-				24AB622821A4D2BA00ACC513 /* Exercise.swift */,
 				24AB623421A4D2EA00ACC513 /* User.swift */,
+				24AB622821A4D2BA00ACC513 /* Exercise.swift */,
 				24AB623621A4D30200ACC513 /* Workout.swift */,
 				24AB61FA21A4D27B00ACC513 /* ViewController.swift */,
 				24071D4F21AC7DC70012426F /* AddExercisesVC.swift */,
@@ -464,6 +469,7 @@
 				245A545421ADFDAE000AAE00 /* WorkoutDetailView.swift in Sources */,
 				24AB623121A4D2D900ACC513 /* loginScreen.swift in Sources */,
 				24AB623321A4D2DF00ACC513 /* newUserScreen.swift in Sources */,
+				6897D8C221AFCCE10076F3EB /* FirebaseFunctions.swift in Sources */,
 				24AB623F21A4D32900ACC513 /* CreateNewViewController.swift in Sources */,
 				244A015921AF2CF900DD004A /* UsefulFunctions.swift in Sources */,
 				243DCA0421AB5C60009EB608 /* CellContent.swift in Sources */,
@@ -474,6 +480,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6897D8C321AFCCE10076F3EB /* FirebaseFunctions.swift in Sources */,
 				24AB620E21A4D27C00ACC513 /* iFlex_WORKINGTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,6 +489,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6897D8C421AFCCE10076F3EB /* FirebaseFunctions.swift in Sources */,
 				24AB621921A4D27C00ACC513 /* iFlex_WORKINGUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

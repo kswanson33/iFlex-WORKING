@@ -17,10 +17,13 @@ class loginScreen: UIViewController {
         guard  let data = try? Data(contentsOf: URL(fileURLWithPath: path!), options: []) else {return}
         do {
             let wo1 = try [JSONDecoder().decode(Workout.self, from: data)]
-            print ("problem yet")
-            printWorkout(wo1[0])
+            print ("Exercise 1 of Workout 1")
+            print(wo1[0].exercises[0])
+            print ("Exercise 1 of Workout 2")
+            print(wo1[0].exercises[1])
             //HERE IS A WORKING WORKOUT LOADED IN FROM THE TEXT FILE ATTACHED PLEASE STORE THIS SOMEWHERE IF YOU WANT TO RUN TESTING
-            writeToPublic(wo1)
+           // writeToPublic(wo1)
+            writeWorkoutToDatabase(wo1[0])
         } catch let error{
             print("here")
             print(error.localizedDescription)

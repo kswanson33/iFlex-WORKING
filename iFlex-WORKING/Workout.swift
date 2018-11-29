@@ -22,7 +22,57 @@ struct Workout: Codable {
     var description: String
     var icon: WorkoutTarget
     
+    //Standard init
+    init(title: String, time: Int,exercises: [MyExercise], difficulty: Int, tags: [String], priv: Bool, numOfExercises: Int, sharedWith: [String], description: String, icon: WorkoutTarget){
+        self.title = title
+        self.time = time
+        self.exercises = exercises
+        self.difficulty = difficulty
+        self.tags = tags
+        self.priv = priv
+        self.numOfExercises = numOfExercises
+        self.sharedWith = sharedWith
+        self.description = description
+        self.icon = icon
+    }
+    
+    // Init for reading from Database snapshot
+    init(snapshot: DataSnapshot) {
+        let snapshotValue = snapshot.value as! [String: AnyObject]
+        title = snapshotValue["title"] as! String
+        time  = snapshotValue["time "] as! Int
+        exercises = snapshotValue["exercises"] as! [MyExercise]
+        difficulty = snapshotValue["difficulty"] as! Int
+        tags = snapshotValue["tags"] as! [String]
+        priv = snapshotValue["priv"] as! Bool
+        difficulty = snapshotValue["difficulty"] as! Int
+        numOfExercises = snapshotValue["numOfExercises"] as! Int
+        sharedWith = snapshotValue["sharedWith"] as! [String]
+        description = snapshotValue["description"] as! String
+        icon = snapshotValue["icon"] as! WorkoutTarget
+    }
+    
+    // Func converting model for easier writing to database
+    func toAnyObject() -> Any {
+        return [
+            "title" : title,
+            "time" : time,
+            //"exercises" : exercises,
+            "difficulty" : difficulty,
+            "tags" : tags,
+            "priv" : priv,
+            "numOfExercises" : numOfExercises,
+            "sharedWith" : sharedWith,
+            "description" : description,
+            //"icon" : icon
+        ]
+    }
+
 }
+
+
+
+
 //enums too!!!! structs
 enum WorkoutTarget: String, Codable {
     case upper
@@ -30,6 +80,7 @@ enum WorkoutTarget: String, Codable {
     case core
     case fullBody
 }
+
 
 func printWorkout(_ workout: Workout) {
     print("\tTitle: \(workout.title)")
@@ -43,3 +94,5 @@ func printWorkout(_ workout: Workout) {
         printMyExercise(e)
     }
 }
+
+
