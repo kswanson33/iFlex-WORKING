@@ -33,7 +33,6 @@
 		24AB623921A4D31500ACC513 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24AB623821A4D31500ACC513 /* Main.storyboard */; };
 		24AB623D21A4D32300ACC513 /* createNewWorkout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24AB623C21A4D32200ACC513 /* createNewWorkout.storyboard */; };
 		24AB623F21A4D32900ACC513 /* CreateNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB623E21A4D32800ACC513 /* CreateNewViewController.swift */; };
-		24B9B76221A4E55C003B020F /* Browse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24B9B76121A4E55C003B020F /* Browse.storyboard */; };
 		28910B46B3DA0866EFFE012C /* Pods_iFlex_WORKINGTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 482A59A985B61D86CEFF82EB /* Pods_iFlex_WORKINGTests.framework */; };
 		4A0D8E6434584384B239DD43 /* Pods_iFlex_WORKINGUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 015CB8447F05136B7174D0EE /* Pods_iFlex_WORKINGUITests.framework */; };
 		6897D8C221AFCCE10076F3EB /* FirebaseFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6897D8C121AFCCE10076F3EB /* FirebaseFunctions.swift */; };
@@ -97,7 +96,6 @@
 		24AB623821A4D31500ACC513 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		24AB623C21A4D32200ACC513 /* createNewWorkout.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = createNewWorkout.storyboard; sourceTree = "<group>"; };
 		24AB623E21A4D32800ACC513 /* CreateNewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewViewController.swift; sourceTree = "<group>"; };
-		24B9B76121A4E55C003B020F /* Browse.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Browse.storyboard; sourceTree = "<group>"; };
 		47F9843CBCD1B42E955638D9 /* Pods-iFlex-WORKINGUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iFlex-WORKINGUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iFlex-WORKINGUITests/Pods-iFlex-WORKINGUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		482A59A985B61D86CEFF82EB /* Pods_iFlex_WORKINGTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iFlex_WORKINGTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4943C5361EC5A42BA3FA8FB8 /* Pods-iFlex-WORKING.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iFlex-WORKING.release.xcconfig"; path = "Pods/Target Support Files/Pods-iFlex-WORKING/Pods-iFlex-WORKING.release.xcconfig"; sourceTree = "<group>"; };
@@ -168,7 +166,9 @@
 			children = (
 				24AB61F821A4D27B00ACC513 /* AppDelegate.swift */,
 				24AB622621A4D2B300ACC513 /* browseNowScreen.swift */,
+				9F01E27921AFD8570066C698 /* FavoriteWorkoutVC.swift */,
 				243DCA0321AB5C5F009EB608 /* CellContent.swift */,
+				9F01E27D21AFDB670066C698 /* WorkoutCell.swift */,
 				245A545321ADFDAE000AAE00 /* WorkoutDetailView.swift */,
 				24AB622C21A4D2C800ACC513 /* favoritesScreen.swift */,
 				24AB622E21A4D2D300ACC513 /* LocalDataFunctions.swift */,
@@ -181,16 +181,13 @@
 				24AB622821A4D2BA00ACC513 /* Exercise.swift */,
 				24AB623621A4D30200ACC513 /* Workout.swift */,
 				24AB61FA21A4D27B00ACC513 /* ViewController.swift */,
+				24AB623E21A4D32800ACC513 /* CreateNewViewController.swift */,
 				24071D4F21AC7DC70012426F /* AddExercisesVC.swift */,
 				243DCA0121AB5A44009EB608 /* full-workout.txt */,
 				24AB623821A4D31500ACC513 /* Main.storyboard */,
 				24071D4D21AC72310012426F /* TabBar.storyboard */,
-				9F01E27921AFD8570066C698 /* FavoriteWorkoutVC.swift */,
-				9F01E27B21AFD9700066C698 /* ExerciseVC.swift */,
-				9F01E27D21AFDB670066C698 /* WorkoutCell.swift */,
-				24B9B76121A4E55C003B020F /* Browse.storyboard */,
 				24AB623C21A4D32200ACC513 /* createNewWorkout.storyboard */,
-				24AB623E21A4D32800ACC513 /* CreateNewViewController.swift */,
+				9F01E27B21AFD9700066C698 /* ExerciseVC.swift */,
 				24AB620121A4D27C00ACC513 /* LaunchScreen.storyboard */,
 				24AB622A21A4D2C200ACC513 /* Favorites.plist */,
 				24AB620421A4D27C00ACC513 /* Info.plist */,
@@ -353,7 +350,6 @@
 				24AB622B21A4D2C200ACC513 /* Favorites.plist in Resources */,
 				24AB620321A4D27C00ACC513 /* LaunchScreen.storyboard in Resources */,
 				8806575F21AB96E00009EBE3 /* GoogleService-Info.plist in Resources */,
-				24B9B76221A4E55C003B020F /* Browse.storyboard in Resources */,
 				245A545621AE4C4F000AAE00 /* PublicWorkouts.plist in Resources */,
 				24AB620021A4D27C00ACC513 /* Assets.xcassets in Resources */,
 				243DCA0221AB5A44009EB608 /* full-workout.txt in Resources */,
