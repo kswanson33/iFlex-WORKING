@@ -101,7 +101,49 @@ class FavoriteWorkoutVC: UIViewController, UICollectionViewDelegate, UICollectio
         var indexPathRow = sender.tag
         if let myEx = workout?.exercises[indexPathRow!]{
             print(myEx.exercise.name)
+            alert(title: myEx.exercise.name, message: "Please add your sets, reps, and weight below", index: indexPathRow!)
         }
+    }
+    func alert(title: String, message: String, index: Int)
+    { //used www.simplifiedios.net/ios-dialog-box-with-input/
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addTextField { (textField) in
+            textField.keyboardType = .decimalPad; textField.placeholder = "Enter Sets"
+        }
+        alert.addTextField { (textField) in
+            textField.keyboardType = .decimalPad; textField.placeholder = "Enter Reps"
+        }
+        alert.addTextField { (textField) in
+            textField.keyboardType = .decimalPad; textField.placeholder = "Enter Weight"
+        }
+        
+        let confirmAction = UIAlertAction(title: "Enter", style: .default) { (_) in
+            
+            //getting the input values from user
+            let userSets = alert.textFields?[0].text
+            let userReps = alert.textFields?[1].text
+            let userWeight = alert.textFields?[2].text
+            
+            if let sets = Int(userSets!) {
+                self.workout?.exercises[index].sets = sets
+            }
+            if let reps = Int(userReps!) {
+                self.workout?.exercises[index].reps = reps
+            }
+            if let weight = Float(userWeight!) {
+                self.workout?.exercises[index].weight = weight
+            }
+            self.theCollectionView.reloadData()
+            
+        }
+        
+        //the cancel action doing nothing
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (_) in }
+        
+        alert.addAction(confirmAction)
+        alert.addAction(cancelAction)
+        
+        self.present(alert, animated: true)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
