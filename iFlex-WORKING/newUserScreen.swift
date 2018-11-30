@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 
 class newUserScreen: UIViewController {
-
+  let loginToList = "LoginToList"
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,8 +26,9 @@ class newUserScreen: UIViewController {
         Auth.auth().createUser(withEmail: userField.text!, password: "passWord"){
             user, error in
             if error == nil {
-                let indVC = self.storyboard?.instantiateViewController(withIdentifier: "favoritesScreen") as! favoritesScreen
-                self.navigationController!.pushViewController(indVC, animated : true)
+                let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
+                let indVC = storyboard.instantiateViewController(withIdentifier: "favoritesScreen")
+                self.present(indVC, animated : true)
             }
             if error != nil {
                 if let errorCode = AuthErrorCode(rawValue: error!._code){

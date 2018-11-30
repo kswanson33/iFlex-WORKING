@@ -155,10 +155,10 @@
             </objects>
             <point key="canvasLocation" x="2587" y="-1063"/>
         </scene>
-        <!--View Controller-->
+        <!--Favorites Screen-->
         <scene sceneID="y3d-58-fk9">
             <objects>
-                <viewController id="Pdi-rA-Qtj" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="favoritesScreen" id="Pdi-rA-Qtj" customClass="favoritesScreen" customModule="iFlex_WORKING" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="maM-qI-tr3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -463,7 +463,7 @@
         <!--Favorites-->
         <scene sceneID="oe6-Ws-t0A">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4lE-kM-khj" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4lE-kM-khj" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Favorites" image="icons8-star-30" id="r1F-Yz-dvF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="b67-Jy-7WQ">
@@ -490,7 +490,7 @@
         <!--Browse Now Screen-->
         <scene sceneID="1Jg-Xk-Dq0">
             <objects>
-                <viewController storyboardIdentifier="favoritesScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zeN-Gs-qNO" customClass="browseNowScreen" customModule="iFlex_WORKING" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="zeN-Gs-qNO" customClass="browseNowScreen" customModule="iFlex_WORKING" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cmb-zp-HpK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

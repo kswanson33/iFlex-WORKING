@@ -27,7 +27,6 @@
                                 </state>
                                 <connections>
                                     <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U3a-uD-5qf"/>
-                                    <segue destination="RMX-9W-x0q" kind="show" id="aNF-pV-Snv"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ep6-xN-pzD">
@@ -186,7 +185,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8qm-OV-4kT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-399.19999999999999" y="752.47376311844084"/>
+            <point key="canvasLocation" x="-1802" y="1131"/>
         </scene>
         <!--TabBar-->
         <scene sceneID="qYh-gK-FBf">
@@ -197,7 +196,4 @@
             <point key="canvasLocation" x="682" y="246"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="9XG-TX-Im5"/>
-    </inferredMetricsTieBreakers>
 </document>

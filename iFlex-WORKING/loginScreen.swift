@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class loginScreen: UIViewController {
 
@@ -51,11 +52,30 @@ class loginScreen: UIViewController {
     @IBOutlet weak var newUserButton: UIButton!
     
     @IBAction func loginPressed(_ sender: Any) {
-        print("Login pressed")
-        if userField.text == "" {
+
+        if (userField.text?.count)! < 0 {
             print("No username")
             alert(title: "Invalid Input", message: "Please enter a username")
             return
+        }
+        else {
+  
+            Auth.auth().signIn(withEmail: userField.text!, password: "passWord") { user, error in
+            if let error = error, user == nil {
+                let alert = UIAlertController(title: "Sign In Failed",
+                                              message: error.localizedDescription,
+                                              preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "OK", style: .default))
+                
+                self.present(alert, animated: true, completion: nil)
+            }
+            if error == nil {
+                let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
+                let indVC = storyboard.instantiateViewController(withIdentifier: "favoritesScreen")
+                self.present(indVC, animated : true)
+            }
+        }
         }
         
         //check if we are able to connect to the database

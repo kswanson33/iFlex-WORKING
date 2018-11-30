@@ -8,6 +8,7 @@
 
 import UIKit
 import Foundation
+import Firebase
 
 class favoritesScreen: UIViewController {
 
@@ -28,6 +29,11 @@ class favoritesScreen: UIViewController {
                 print(error.localizedDescription)
             }
         }
+        print("Look here")
+        let ref = Database.database().reference(withPath: "Workouts")
+        ref.observe(.value, with: { snapshot in
+            print(snapshot.value as Any)
+        })
     }
 
     var myFaves: [Workout]?
