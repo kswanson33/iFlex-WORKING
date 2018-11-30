@@ -82,6 +82,10 @@ class FavoriteWorkoutVC: UIViewController, UICollectionViewDelegate, UICollectio
             cell.setsNum.text = String(myEx.sets)
             cell.repsNum.text = String(myEx.reps)
             cell.weightNum.text = String(myEx.weight)
+            var icon = myEx.exercise.icon
+            cell.Icon.image = exerciseEnumToIcon(area: icon)
+            cell.addData.tag = indexPath.row
+            cell.addData.addTarget(self, action: #selector(addUserData), for: UIControlEvents.touchUpInside)
             
         }
         
@@ -89,7 +93,12 @@ class FavoriteWorkoutVC: UIViewController, UICollectionViewDelegate, UICollectio
         
     }
     
-    
+    @IBAction func addUserData(sender: AnyObject) -> Void {
+        var indexPathRow = sender.tag
+        if let myEx = workout?.exercises[indexPathRow!]{
+            print(myEx.exercise.name)
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
