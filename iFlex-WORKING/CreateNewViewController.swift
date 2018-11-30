@@ -10,6 +10,8 @@ import UIKit
 
 // Currently sets title, difficulty, private, description, time, icon. Description text now wraps around. Icon now shows when it is selected.
 // TODO: Set sharedWith, tags; validation; handle blank fields
+// Validation: the only field that needs validating should be time to complete; use shopping calculator app to make it only accept numbers in the first place
+// Blank fields: Title definitely should not be allowed to be blank. Should others?
 
 class CreateNewViewController: UIViewController, UITextViewDelegate {
 
@@ -155,14 +157,20 @@ class CreateNewViewController: UIViewController, UITextViewDelegate {
     }
     
     /* Sets time to complete draft workout */
+    var lastInput: String? = ""     // holds last valid input for timeField
     @IBAction func setTime(_ sender: Any) {
         // Validation: is it an int?
         guard let temp_time = Int(timeField.text!) else {
-            print("Invalid input")
+            if timeField.text != "" {   // case can be triggered by empty input; this is ok
+                print("Invalid input")
+                timeField.text = lastInput
+            } else {
+                draftWorkout.time = 0
+            }
             return
         }
         draftWorkout.time = temp_time
-        print(draftWorkout.time)
+        lastInput = timeField.text
     }
     
     /* Pass draft workout to AddExercises view */
