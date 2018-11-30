@@ -16,8 +16,26 @@ class favoritesScreen: UIViewController {
         let u = User(id: 10, favorites: [], userName: "User1")
         writeNewUser(u) //stores their favorites locally (should be async)
         // Do any additional setup after loading the view.
+        //SET MYFAVES BY DOING LOCAL STUFF
+        if myFaves == nil { // populate with sample data
+            let path = Bundle.main.path(forResource: "full-workout", ofType: "txt")
+            guard  let data = try? Data(contentsOf: URL(fileURLWithPath: path!), options: []) else {return}
+            do {
+                let wo1 = try [JSONDecoder().decode(Workout.self, from: data)]
+                myFaves = wo1
+            } catch let error{
+                print("here")
+                print(error.localizedDescription)
+            }
+        }
     }
 
+    var myFaves: [Workout]?
+    
+    
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
