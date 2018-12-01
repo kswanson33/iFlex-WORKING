@@ -20,7 +20,7 @@ class browseNowScreen: UIViewController, UICollectionViewDataSource, UICollectio
         let Wrkout2 = Workout(title: "B", time: 0, exercises: [], difficulty: 1, tags: [], priv: false, numOfExercises: 5, sharedWith: [], description: "hello", icon: WorkoutTarget.core)*/
         //Workouts = [Wrkout1, Wrkout2]
         
-        Workouts = loadLocal()!.favorites! // delete this and uncomment the line below when that function exists
+        //Workouts = loadLocal()!.favorites! // delete this and uncomment the line below when that function exists
         //Workouts = loadFromDatabase()
         workoutCollection.delegate = self
         workoutCollection.dataSource = self
