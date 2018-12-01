@@ -219,6 +219,9 @@
                         <viewLayoutGuide key="safeArea" id="BE8-b5-Kpe"/>
                     </view>
                     <navigationItem key="navigationItem" id="byY-7E-Xfm"/>
+                    <connections>
+                        <outlet property="theCollectionView" destination="go1-EJ-dqU" id="mWI-py-Zfk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="laA-Aa-h8M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -227,7 +230,7 @@
         <!--Favorite WorkoutVC-->
         <scene sceneID="OTA-Zs-cdg">
             <objects>
-                <viewController id="FQC-Np-Jn1" customClass="FavoriteWorkoutVC" customModule="iFlex_WORKING" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="workoutDeets" id="FQC-Np-Jn1" customClass="FavoriteWorkoutVC" customModule="iFlex_WORKING" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bfN-n2-uXs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
