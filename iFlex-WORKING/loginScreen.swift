@@ -10,10 +10,14 @@ import UIKit
 import Firebase
 
 class loginScreen: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         /* Load default workouts */
+        // Take out in place for Firebase
+        /*
         let path = Bundle.main.path(forResource: "full-workout", ofType: "txt")
         guard  let data = try? Data(contentsOf: URL(fileURLWithPath: path!), options: []) else {return}
         do {
@@ -24,26 +28,24 @@ class loginScreen: UIViewController {
             print(wo1[0].exercises[1])
             //HERE IS A WORKING WORKOUT LOADED IN FROM THE TEXT FILE ATTACHED PLEASE STORE THIS SOMEWHERE IF YOU WANT TO RUN TESTING
            // writeToPublic(wo1)
-            writeWorkoutToDatabase(wo1[0])
+            writeWorkoutToDatabase(user:"z@k.com",wo1[0])
         } catch let error{
-            print("here")
             print(error.localizedDescription)
         }
-        // 1
+    */
+        // Check to see if user is logged in the app. Will be true unless explictly logged out or first time user.
+        // Then proceed to favorites screen.
         Auth.auth().addStateDidChangeListener() { auth, user in
-            // 2
             if user != nil {
-                // 3
                 self.performSegue(withIdentifier: "toFavsFromLogin", sender: nil)
                 self.userField.text = nil
+                let rootRef = Database.database().reference()
+                //rootRef.child("users").child((user?.email)!).setValue(["userEmail": user?.email])
+                //let wo1 = try [JSONDecoder().decode(Workout.self, from: data)]
+                //writeWorkoutToDatabase(user:"z@k.com",wo1[0])
             }
         }
-        /* Check if there's local data; if so, go to next screen */
-        if loadLocal() != nil {
-            // This has a bug - there is no nav controller
-            /*let indVC = self.storyboard?.instantiateViewController(withIdentifier: "favoritesScreen") as! favoritesScreen
-            self.navigationController!.pushViewController(indVC, animated : true)*/
-        }
+ 
         
         /*
         // Access to root reference of database
@@ -75,9 +77,6 @@ class loginScreen: UIViewController {
                 }
                 if error == nil {
                     self.performSegue(withIdentifier: "toFavsFromLogin", sender: nil)
-                    //let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
-                    //let indVC = storyboard.instantiateViewController(withIdentifier: "favoritesScreen")
-                    //self.present(indVC, animated : true)
                 }
             }
             
@@ -86,18 +85,6 @@ class loginScreen: UIViewController {
             print("No username")
             alert(title: "Invalid Input", message: "Please enter a username")
             return
-        }
-        
-        //check if we are able to connect to the database
-        //do we want any validation on the text field
-        if true { //if let u = returnUser(username) {
-           //let u = User(id: 20, favorites: [], userName: userField.text!)
-           // writeNewUser(u)
-            /*let indVC = self.storyboard?.instantiateViewController(withIdentifier: "favoritesScreen") as! favoritesScreen
-            self.navigationController!.pushViewController(indVC, animated : true)*/
-        } else {
-            print(userField.text!)
-            alert(title: "Incorrect Username", message: "Check to make sure you spelled your username correctly or you are connected to wifi")
         }
     }
     
@@ -114,11 +101,7 @@ class loginScreen: UIViewController {
     
     
     
-    @IBAction func newUserPressed(_ sender: Any) {
-        // Do not push new view onto nav controller. View already exists in storyboard, and nav controller does not exist. The transition to the next view is taken care of entirely in the storyboard.
-        /*let indVC = self.storyboard?.instantiateViewController(withIdentifier: "newUserScreen") as! newUserScreen
-        self.navigationController!.pushViewController(indVC, animated : true)*/
-    }
+
     
     
     

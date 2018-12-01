@@ -6,13 +6,17 @@
 //  Copyright © 2018 Kendra Swanson. All rights reserved.
 //
 
-import Foundation
+
 import Firebase
+import Foundation
 
 func writeWorkoutToDatabase(_ workout: Workout) {
     // Access the "unicorns" child reference and then access (create) a unique child reference within it and finally set its value
-    let ref = Database.database().reference()
-    let workoutRef = ref.child("Workouts").child(workout.title)
+    //let ref = Database.database().reference()
+    /*
+    //let workoutRef = ref.child("Workouts").child(workout.title)
+    //let usersRef = ref.child("users").child("z@k.com")
+    
     workoutRef.setValue(workout.toAnyObject())
     print("Start of Database function")
     for e in workout.exercises{
@@ -20,4 +24,5 @@ func writeWorkoutToDatabase(_ workout: Workout) {
         print(e.reps)
         //print(e.exercise.toAnyObject())
     }
+ */
 }

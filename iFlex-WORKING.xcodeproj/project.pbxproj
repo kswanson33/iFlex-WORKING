@@ -35,8 +35,6 @@
 		28910B46B3DA0866EFFE012C /* Pods_iFlex_WORKINGTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 482A59A985B61D86CEFF82EB /* Pods_iFlex_WORKINGTests.framework */; };
 		4A0D8E6434584384B239DD43 /* Pods_iFlex_WORKINGUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 015CB8447F05136B7174D0EE /* Pods_iFlex_WORKINGUITests.framework */; };
 		6897D8C221AFCCE10076F3EB /* FirebaseFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6897D8C121AFCCE10076F3EB /* FirebaseFunctions.swift */; };
-		6897D8C321AFCCE10076F3EB /* FirebaseFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6897D8C121AFCCE10076F3EB /* FirebaseFunctions.swift */; };
-		6897D8C421AFCCE10076F3EB /* FirebaseFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6897D8C121AFCCE10076F3EB /* FirebaseFunctions.swift */; };
 		68CA30CD21B215520012796D /* profileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CA30CC21B215520012796D /* profileScreen.swift */; };
 		68CA30CE21B215520012796D /* profileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CA30CC21B215520012796D /* profileScreen.swift */; };
 		68CA30CF21B215520012796D /* profileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CA30CC21B215520012796D /* profileScreen.swift */; };
@@ -490,7 +488,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6897D8C321AFCCE10076F3EB /* FirebaseFunctions.swift in Sources */,
 				24AB620E21A4D27C00ACC513 /* iFlex_WORKINGTests.swift in Sources */,
 				68CA30CE21B215520012796D /* profileScreen.swift in Sources */,
 			);
@@ -500,7 +497,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6897D8C421AFCCE10076F3EB /* FirebaseFunctions.swift in Sources */,
 				24AB621921A4D27C00ACC513 /* iFlex_WORKINGUITests.swift in Sources */,
 				68CA30CF21B215520012796D /* profileScreen.swift in Sources */,
 			);
