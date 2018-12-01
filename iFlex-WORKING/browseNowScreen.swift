@@ -24,6 +24,17 @@ class browseNowScreen: UIViewController, UICollectionViewDataSource, UICollectio
         //Workouts = loadFromDatabase()
         workoutCollection.delegate = self
         workoutCollection.dataSource = self
+        if Workouts.count == 0 { // populate with sample data
+            let path = Bundle.main.path(forResource: "full-workout", ofType: "txt")
+            guard  let data = try? Data(contentsOf: URL(fileURLWithPath: path!), options: []) else {return}
+            do {
+                let wo1 = try [JSONDecoder().decode(Workout.self, from: data)]
+                Workouts = wo1
+            } catch let error{
+                print("here")
+                print(error.localizedDescription)
+            }
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -42,10 +53,18 @@ class browseNowScreen: UIViewController, UICollectionViewDataSource, UICollectio
         currentWorkout = indexPath.row
     }
     
-    func addToFavs(sender: UIButton){
+    @IBAction func addToFavs(){
         print("adding?")
         writeNewWorkout(Workouts[currentWorkout])
-        print("added?")
+    }
+    
+    func collectionview(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath)-> UICollectionViewCell{
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "exerCell", for: indexPath) as! exCell
+        cell.favAdd.tag = indexPath.row
+        print("calling")
+        cell.favAdd.addTarget(self, action: #selector(addToFavs), for: UIControlEvents.touchUpInside)
+        print("called")
+        return cell
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
