@@ -86,15 +86,28 @@ class favoritesScreen: UIViewController, UICollectionViewDelegate, UICollectionV
         cell.backgroundColor = UIColor.red
         if let myW = myFaves?[indexPath.row]{
             cell.title.text = myW.title
+            cell.favAdd.tag = indexPath.row
+            cell.favAdd.addTarget(self, action: #selector(deleteFromFaves), for: UIControlEvents.touchUpInside)
             var icon = myW.icon
             cell.workImage.image = workoutEnumToIcon(area: icon)
 
         }
-
         return cell
-
     }
-    
+    @IBAction func deleteFromFaves(sender: AnyObject) -> Void {
+        var indexPathRow = sender.tag
+        if let myW = myFaves?[indexPathRow!]{
+            alert(title: myW.title, message: "Selected workout was deleted")
+        }
+    }
+    func alert(title: String, message: String)
+    {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
+        
+        self.present(alert, animated: true)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
