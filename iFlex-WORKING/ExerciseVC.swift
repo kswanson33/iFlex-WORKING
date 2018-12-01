@@ -32,8 +32,8 @@ class ExerciseVC: UIViewController{
                 equip.text?.append(eq + " ")
             }
             dif.text = String(e.exercise.difficulty)
-            for mc in e.exercise.muscleGroups {
-                equip.text?.append(mc + " ")
+            for m in e.exercise.muscleGroups {
+                mc.text?.append(m + " ")
             }
         }
     }
