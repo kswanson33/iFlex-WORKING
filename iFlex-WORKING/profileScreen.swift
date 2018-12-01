@@ -68,9 +68,9 @@ class profileScreen: UIViewController {
         // 1
         let user = Auth.auth().currentUser!
         
-        //let onlineRef = Database.database().reference(withPath: "online/\(user.uid)")
+        let onlineRef = Database.database().reference(withPath: "online/\(user.uid)")
         
-        /*
+        
         onlineRef.removeValue { (error, _) in
             
             // 3
@@ -86,7 +86,7 @@ class profileScreen: UIViewController {
             } catch (let error) {
                 print("Auth sign out failed: \(error)")
             }
-         */
+         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let indVC = storyboard.instantiateViewController(withIdentifier: "loginScreen")
         self.present(indVC, animated : true)
@@ -108,3 +108,4 @@ class profileScreen: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+}

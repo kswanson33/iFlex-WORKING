@@ -29,7 +29,15 @@ class loginScreen: UIViewController {
             print("here")
             print(error.localizedDescription)
         }
-        
+        // 1
+        Auth.auth().addStateDidChangeListener() { auth, user in
+            // 2
+            if user != nil {
+                // 3
+                self.performSegue(withIdentifier: "toFavsFromLogin", sender: nil)
+                self.userField.text = nil
+            }
+        }
         /* Check if there's local data; if so, go to next screen */
         if loadLocal() != nil {
             // This has a bug - there is no nav controller
@@ -83,8 +91,8 @@ class loginScreen: UIViewController {
         //check if we are able to connect to the database
         //do we want any validation on the text field
         if true { //if let u = returnUser(username) {
-            let u = User(id: 20, favorites: [], userName: userField.text!)
-            writeNewUser(u)
+           //let u = User(id: 20, favorites: [], userName: userField.text!)
+           // writeNewUser(u)
             /*let indVC = self.storyboard?.instantiateViewController(withIdentifier: "favoritesScreen") as! favoritesScreen
             self.navigationController!.pushViewController(indVC, animated : true)*/
         } else {

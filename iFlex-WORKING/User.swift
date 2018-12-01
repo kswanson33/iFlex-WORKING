@@ -10,9 +10,19 @@ import Foundation
 import Firebase
 
 struct User: Codable {
-    var id: Int?
+    var id: String
     var favorites: [Workout]?
     let userName: String!
+    
+    init(authData: Firebase.User) {
+        id = authData.uid
+        userName = authData.email!
+    }
+    
+    init(id: String, userName: String) {
+        self.id = id
+        self.userName = userName
+    }
 }
 
 // for debug purposes

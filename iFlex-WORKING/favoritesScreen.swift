@@ -11,13 +11,15 @@ import Foundation
 import Firebase
 
 class favoritesScreen: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-
+    var user: User!
+    let ref = Database.database().reference(withPath: "Workouts")
+    let usersRef = Database.database().reference(withPath: "online")
     override func viewDidLoad() {
         super.viewDidLoad()
         theCollectionView.dataSource = self
         theCollectionView.delegate = self
-        let u = User(id: 10, favorites: [], userName: "User1")
-        writeNewUser(u) //stores their favorites locally (should be async)
+        //let u = User(id: 10, favorites: [], userName: "User1")
+        //writeNewUser(u) //stores their favorites locally (should be async)
         // Do any additional setup after loading the view.
         //SET MYFAVES BY DOING LOCAL STUFF
         
@@ -35,6 +37,14 @@ class favoritesScreen: UIViewController, UICollectionViewDelegate, UICollectionV
 //        ref.observe(.value, with: { snapshot in
 //            print(snapshot.value as Any)
 //        })
+        Auth.auth().addStateDidChangeListener { auth, user in
+            guard let user = user else { return }
+            self.user = User(authData: user)
+            
+            let currentUserRef = self.usersRef.child(self.user.id)
+            currentUserRef.setValue(self.user.userName)
+            currentUserRef.onDisconnectRemoveValue()
+        }
     }
 
     var myFaves: [Workout]?
