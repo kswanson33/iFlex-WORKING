@@ -13,7 +13,7 @@
         <!--Profile-->
         <scene sceneID="iMC-bJ-DgJ">
             <objects>
-                <viewController id="ix2-QX-Yru" customClass="profIleScreen" customModule="iFlex_WORKING" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ix2-QX-Yru" customClass="profileScreen" customModule="iFlex_WORKING" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H7E-sF-h3h">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -80,13 +80,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORG-hA-hQJ">
-                                <rect key="frame" x="138" y="559" width="99" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORG-hA-hQJ">
+                                <rect key="frame" x="209" y="557" width="99" height="35"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.25052668539325845" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="23"/>
                                 <state key="normal" title="Logout">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="logOut:" destination="ix2-QX-Yru" eventType="touchUpInside" id="Bvf-R9-H4p"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MrN-nS-DfI">
+                                <rect key="frame" x="65" y="557" width="99" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.2505266854" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="23"/>
+                                <state key="normal" title="Update">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="updateUser:" destination="ix2-QX-Yru" eventType="touchUpInside" id="Rfy-oB-eSG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.55549009680000005" green="0.67025182139999995" blue="0.75414506000000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -121,10 +136,18 @@
                         <viewLayoutGuide key="safeArea" id="dID-7v-HSt"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="icons8-personal-trainer-30" id="EER-A4-Cgi"/>
+                    <connections>
+                        <outlet property="logOutButton" destination="ORG-hA-hQJ" id="BkC-3Y-lhf"/>
+                        <outlet property="updateButton" destination="MrN-nS-DfI" id="6KL-jI-2On"/>
+                        <outlet property="userAge" destination="RjJ-3I-jMD" id="lgo-Tt-k8r"/>
+                        <outlet property="userHeight" destination="g9S-Vg-bB1" id="rJH-ty-nCv"/>
+                        <outlet property="userName" destination="voF-am-IF6" id="Xj3-DF-t2a"/>
+                        <outlet property="userWeight" destination="dxh-T4-fU4" id="viE-Ft-LPZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fKg-Qb-532" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1469.5999999999999" y="717.39130434782612"/>
+            <point key="canvasLocation" x="1470" y="715"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Kuf-yn-PrW">
