@@ -14,6 +14,8 @@ class favoritesScreen: UIViewController, UICollectionViewDelegate, UICollectionV
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        theCollectionView.dataSource = self
+        theCollectionView.delegate = self
         let u = User(id: 10, favorites: [], userName: "User1")
         writeNewUser(u) //stores their favorites locally (should be async)
         // Do any additional setup after loading the view.
