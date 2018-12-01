@@ -21,9 +21,6 @@ class FavoriteWorkoutVC: UIViewController, UICollectionViewDelegate, UICollectio
         super.viewDidLoad()
         theCollectionView.dataSource = self
         theCollectionView.delegate = self
-
-    }
-    override func viewDidAppear(_ animated: Bool) {
         workoutTitle.text = workout?.title
     }
     
