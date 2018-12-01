@@ -67,7 +67,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="newUserPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZAj-pX-pvp"/>
                                     <segue destination="VaE-lC-ilk" kind="show" id="Deo-ua-kkl"/>
                                 </connections>
                             </button>
@@ -198,6 +197,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="b3Q-JU-9oO"/>
+        <segue reference="3Eb-uY-u7g"/>
     </inferredMetricsTieBreakers>
 </document>
