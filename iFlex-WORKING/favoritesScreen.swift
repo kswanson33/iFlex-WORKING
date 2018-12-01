@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 import Firebase
 
-class favoritesScreen: UIViewController {
+class favoritesScreen: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +18,7 @@ class favoritesScreen: UIViewController {
         writeNewUser(u) //stores their favorites locally (should be async)
         // Do any additional setup after loading the view.
         //SET MYFAVES BY DOING LOCAL STUFF
-        if myFaves == nil { // populate with sample data
+        
             let path = Bundle.main.path(forResource: "full-workout", ofType: "txt")
             guard  let data = try? Data(contentsOf: URL(fileURLWithPath: path!), options: []) else {return}
             do {
@@ -28,12 +28,11 @@ class favoritesScreen: UIViewController {
                 print("here")
                 print(error.localizedDescription)
             }
-        }
-        print("Look here")
-        let ref = Database.database().reference(withPath: "Workouts")
-        ref.observe(.value, with: { snapshot in
-            print(snapshot.value as Any)
-        })
+//        print("Look here")
+//        let ref = Database.database().reference(withPath: "Workouts")
+//        ref.observe(.value, with: { snapshot in
+//            print(snapshot.value as Any)
+//        })
     }
 
     var myFaves: [Workout]?
