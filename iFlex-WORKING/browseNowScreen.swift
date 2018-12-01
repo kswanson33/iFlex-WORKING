@@ -16,12 +16,19 @@ class browseNowScreen: UIViewController, UICollectionViewDataSource, UICollectio
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        /*let Wrkout1 = Workout(title: "A", time: 0, exercises: [], difficulty: 1, tags: [], priv: false, numOfExercises: 5, sharedWith: [], description: "hello", icon: WorkoutTarget.core)
-        let Wrkout2 = Workout(title: "B", time: 0, exercises: [], difficulty: 1, tags: [], priv: false, numOfExercises: 5, sharedWith: [], description: "hello", icon: WorkoutTarget.core)*/
-        //Workouts = [Wrkout1, Wrkout2]
         
-        Workouts = loadLocal()!.favorites! // delete this and uncomment the line below when that function exists
-        //Workouts = loadFromDatabase()
+        if Workouts.count == 0 {    // populate with sample data
+            let path = Bundle.main.path(forResource: "full-workout", ofType: "txt")
+            guard  let data = try? Data(contentsOf: URL(fileURLWithPath: path!), options: []) else {return}
+            do {
+                let wo1 = try [JSONDecoder().decode(Workout.self, from: data)]
+                let wo2 = Workout(title: "Second Workout", time: 0, exercises: wo1[0].exercises, difficulty: 1, tags: [], priv: false, numOfExercises: 0, sharedWith: [], description: "", icon: .upper)
+                Workouts = [wo1[0], wo2]
+            } catch let error{
+                print("here")
+                print(error.localizedDescription)
+            }
+        }
         workoutCollection.delegate = self
         workoutCollection.dataSource = self
     }
@@ -34,26 +41,30 @@ class browseNowScreen: UIViewController, UICollectionViewDataSource, UICollectio
         let newCell = collectionView.dequeueReusableCell(withReuseIdentifier: "exerCell", for: indexPath) as! exCell
         newCell.title.text = Workouts[indexPath.row].title
         newCell.workImage.image = workoutEnumToIcon(area: Workouts[indexPath.row].icon)
+        newCell.favAdd.tag = indexPath.row
+        newCell.favAdd.addTarget(self, action: #selector(addToFavs(sender:)), for: UIControlEvents.touchUpInside)
         return newCell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(Workouts[indexPath.row].title)
+        //print(Workouts[indexPath.row].title)
         currentWorkout = indexPath.row
+        let workoutVC = self.storyboard?.instantiateViewController(withIdentifier: "workoutDeets") as! FavoriteWorkoutVC
+        workoutVC.workout = Workouts[indexPath.row]
+        self.navigationController!.pushViewController(workoutVC, animated : true)
     }
     
-    func addToFavs(sender: UIButton){
-        print("adding?")
-        writeNewWorkout(Workouts[currentWorkout])
-        print("added?")
+    @objc func addToFavs(sender: UIButton){
+        print(Workouts[sender.tag].title)
+        writeNewWorkout(Workouts[sender.tag])
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is FavoriteWorkoutVC {
             let vc = segue.destination as? FavoriteWorkoutVC
             vc?.workout = Workouts[currentWorkout]
         }
-    }
+    }*/
         
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
