@@ -576,7 +576,6 @@
                                             <outlet property="favAdd" destination="bFi-u4-hlR" id="IrO-i6-mtf"/>
                                             <outlet property="title" destination="bA6-Z4-E8d" id="pgb-Ok-biw"/>
                                             <outlet property="workImage" destination="30F-2n-hjr" id="YHc-ry-YZW"/>
-                                            <segue destination="FQC-Np-Jn1" kind="show" id="AmN-6E-Xf6"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -620,7 +619,4 @@
         <image name="icons8-star-30" width="30" height="30"/>
         <image name="profile_blank" width="980" height="982"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="lJS-lb-fuj"/>
-    </inferredMetricsTieBreakers>
 </document>

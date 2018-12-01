@@ -13,7 +13,6 @@
 		243DCA0221AB5A44009EB608 /* full-workout.txt in Resources */ = {isa = PBXBuildFile; fileRef = 243DCA0121AB5A44009EB608 /* full-workout.txt */; };
 		243DCA0421AB5C60009EB608 /* CellContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243DCA0321AB5C5F009EB608 /* CellContent.swift */; };
 		244A015921AF2CF900DD004A /* UsefulFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244A015821AF2CF900DD004A /* UsefulFunctions.swift */; };
-		245A545421ADFDAE000AAE00 /* WorkoutDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245A545321ADFDAE000AAE00 /* WorkoutDetailView.swift */; };
 		245A545621AE4C4F000AAE00 /* PublicWorkouts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 245A545521AE4C4F000AAE00 /* PublicWorkouts.plist */; };
 		24AB61F921A4D27B00ACC513 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB61F821A4D27B00ACC513 /* AppDelegate.swift */; };
 		24AB61FB21A4D27B00ACC513 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AB61FA21A4D27B00ACC513 /* ViewController.swift */; };
@@ -70,7 +69,6 @@
 		243DCA0121AB5A44009EB608 /* full-workout.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "full-workout.txt"; sourceTree = "<group>"; };
 		243DCA0321AB5C5F009EB608 /* CellContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellContent.swift; sourceTree = "<group>"; };
 		244A015821AF2CF900DD004A /* UsefulFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsefulFunctions.swift; sourceTree = "<group>"; };
-		245A545321ADFDAE000AAE00 /* WorkoutDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutDetailView.swift; sourceTree = "<group>"; };
 		245A545521AE4C4F000AAE00 /* PublicWorkouts.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PublicWorkouts.plist; sourceTree = "<group>"; };
 		24AB61F521A4D27B00ACC513 /* iFlex-WORKING.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iFlex-WORKING.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24AB61F821A4D27B00ACC513 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -169,7 +167,6 @@
 				9F01E27921AFD8570066C698 /* FavoriteWorkoutVC.swift */,
 				243DCA0321AB5C5F009EB608 /* CellContent.swift */,
 				9F01E27D21AFDB670066C698 /* WorkoutCell.swift */,
-				245A545321ADFDAE000AAE00 /* WorkoutDetailView.swift */,
 				24AB622C21A4D2C800ACC513 /* favoritesScreen.swift */,
 				24AB622E21A4D2D300ACC513 /* LocalDataFunctions.swift */,
 				6897D8C121AFCCE10076F3EB /* FirebaseFunctions.swift */,
@@ -474,7 +471,6 @@
 				9F01E27E21AFDB670066C698 /* WorkoutCell.swift in Sources */,
 				24AB623521A4D2EA00ACC513 /* User.swift in Sources */,
 				24AB622D21A4D2C800ACC513 /* favoritesScreen.swift in Sources */,
-				245A545421ADFDAE000AAE00 /* WorkoutDetailView.swift in Sources */,
 				24AB623121A4D2D900ACC513 /* loginScreen.swift in Sources */,
 				24AB623321A4D2DF00ACC513 /* newUserScreen.swift in Sources */,
 				6897D8C221AFCCE10076F3EB /* FirebaseFunctions.swift in Sources */,

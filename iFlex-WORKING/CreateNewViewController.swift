@@ -9,8 +9,7 @@
 import UIKit
 
 // Currently sets title, difficulty, private, description, time, icon. Description text now wraps around. Icon now shows when it is selected.
-// TODO: Set sharedWith, tags; validation; handle blank fields
-// Validation: the only field that needs validating should be time to complete; use shopping calculator app to make it only accept numbers in the first place
+// TODO: Set sharedWith, tags; handle blank fields
 // Blank fields: Title definitely should not be allowed to be blank. Should others?
 
 class CreateNewViewController: UIViewController, UITextViewDelegate {
