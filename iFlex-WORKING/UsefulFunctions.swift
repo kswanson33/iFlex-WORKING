@@ -25,7 +25,7 @@ func workoutEnumToIcon(area: WorkoutTarget) -> UIImage {
 func exerciseEnumToIcon(area: MuscleGroup) -> UIImage {
     switch area {
     case .Abductors:
-        return #imageLiteral(resourceName: "icons8-torso-50")
+        return #imageLiteral(resourceName: "icons8-leg-50")
     case .Calves:
         return #imageLiteral(resourceName: "icons8-calves-50")
     case .Core:
@@ -33,15 +33,15 @@ func exerciseEnumToIcon(area: MuscleGroup) -> UIImage {
     case .Glutes:
         return #imageLiteral(resourceName: "icons8-leg-50")
     case .Hamstrings:
-        return #imageLiteral(resourceName: "icons8-leg-50")
+        return #imageLiteral(resourceName: "icons8-calves-50")
     case .Hips:
         return #imageLiteral(resourceName: "icons8-torso-50")
     case .LowerBack:
-        return #imageLiteral(resourceName: "icons8-torso-50")
+        return #imageLiteral(resourceName: "icons8-back-extensors-50")
     case .Quads:
-        return #imageLiteral(resourceName: "icons8-leg-50")
+        return #imageLiteral(resourceName: "icons8-quadriceps-50")
     case .UpperBack:
-        return #imageLiteral(resourceName: "icons8-torso-50")
+        return #imageLiteral(resourceName: "icons8-bodybuilder-50")
     }
 }
 
