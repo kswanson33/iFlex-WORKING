@@ -39,28 +39,28 @@ class CreateNewViewController: UIViewController, UITextViewDelegate {
     @objc func upperTapped(gesture: UIGestureRecognizer) {
         if (gesture.view as? UIImageView) != nil {
             print("upper")
-            draftWorkout.icon = .upper
+            draftWorkout.icon = .Upper
             showIconSelected(upperIcon)
         }
     }
     @objc func lowerTapped(gesture: UIGestureRecognizer) {
         if (gesture.view as? UIImageView) != nil {
             print("lower")
-            draftWorkout.icon = .lower
+            draftWorkout.icon = .Lower
             showIconSelected(lowerIcon)
         }
     }
     @objc func coreTapped(gesture: UIGestureRecognizer) {
         if (gesture.view as? UIImageView) != nil {
             print("core")
-            draftWorkout.icon = .core
+            draftWorkout.icon = .Core
             showIconSelected(coreIcon)
         }
     }
     @objc func fullBodyTapped(gesture: UIGestureRecognizer) {
         if (gesture.view as? UIImageView) != nil {
             print("full body")
-            draftWorkout.icon = .fullBody
+            draftWorkout.icon = .FullBody
             showIconSelected(fullBodyIcon)
         }
     }
@@ -104,7 +104,7 @@ class CreateNewViewController: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         descriptionTextView.delegate = self
-        draftWorkout = Workout(title: "", time: 0, exercises: [], difficulty: 0, tags: [], priv: true, numOfExercises: 0, sharedWith: [], description: "", icon: WorkoutTarget.upper)
+        draftWorkout = Workout(title: "", time: 0, exercises: [], difficulty: 0, tags: [], priv: true, numOfExercises: 0, sharedWith: [], description: "", icon: WorkoutTarget.Upper)
         showIconSelected(upperIcon)
         
         // create tap gesture recognizer

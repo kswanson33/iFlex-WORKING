@@ -11,36 +11,36 @@ import UIKit
 
 func workoutEnumToIcon(area: WorkoutTarget) -> UIImage {
     switch area {
-    case .upper:
+    case .Upper:
         return #imageLiteral(resourceName: "icons8-chest-50")
-    case .lower:
+    case .Lower:
         return #imageLiteral(resourceName: "icons8-calves-50")
-    case .core:
+    case .Core:
         return #imageLiteral(resourceName: "icons8-prelum-50")
-    case .fullBody:
+    case .FullBody:
         return #imageLiteral(resourceName: "icons8-weightlifting-filled-50")
     }
 }
 
 func exerciseEnumToIcon(area: MuscleGroup) -> UIImage {
     switch area {
-    case .abductors:
+    case .Abductors:
         return #imageLiteral(resourceName: "icons8-torso-50")
-    case .calves:
+    case .Calves:
         return #imageLiteral(resourceName: "icons8-calves-50")
-    case .core:
+    case .Core:
         return #imageLiteral(resourceName: "icons8-prelum-50")
-    case .glutes:
+    case .Glutes:
         return #imageLiteral(resourceName: "icons8-leg-50")
-    case .hamstrings:
+    case .Hamstrings:
         return #imageLiteral(resourceName: "icons8-leg-50")
-    case .hips:
+    case .Hips:
         return #imageLiteral(resourceName: "icons8-torso-50")
-    case .lowerBack:
+    case .LowerBack:
         return #imageLiteral(resourceName: "icons8-torso-50")
-    case .quads:
+    case .Quads:
         return #imageLiteral(resourceName: "icons8-leg-50")
-    case .upperBack:
+    case .UpperBack:
         return #imageLiteral(resourceName: "icons8-torso-50")
     }
 }
