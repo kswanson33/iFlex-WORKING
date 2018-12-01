@@ -27,6 +27,7 @@
                                 </state>
                                 <connections>
                                     <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U3a-uD-5qf"/>
+                                    <segue destination="RMX-9W-x0q" kind="show" id="n8G-0j-knp"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ep6-xN-pzD">
@@ -104,7 +105,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-399.19999999999999" y="-103.89805097451276"/>
+            <point key="canvasLocation" x="-1802" y="340"/>
         </scene>
         <!--New User Screen-->
         <scene sceneID="QJQ-vt-8Xd">
@@ -152,6 +153,7 @@
                                 </state>
                                 <connections>
                                     <action selector="createButtonPressed:" destination="VaE-lC-ilk" eventType="touchUpInside" id="irJ-Ky-zj6"/>
+                                    <segue destination="RMX-9W-x0q" kind="show" id="EgS-Zl-1yE"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -180,7 +182,6 @@
                     <connections>
                         <outlet property="createButton" destination="VC0-I9-Pgd" id="dNn-bL-Czf"/>
                         <outlet property="userField" destination="U7H-Le-BEN" id="jar-4k-uSd"/>
-                        <segue destination="RMX-9W-x0q" kind="show" id="9XG-TX-Im5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8qm-OV-4kT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -193,7 +194,10 @@
                 <viewControllerPlaceholder storyboardName="TabBar" id="RMX-9W-x0q" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z6e-bm-Nl8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="682" y="246"/>
+            <point key="canvasLocation" x="-462" y="1130"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="EgS-Zl-1yE"/>
+    </inferredMetricsTieBreakers>
 </document>
