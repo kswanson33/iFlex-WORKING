@@ -38,6 +38,9 @@
 		6897D8C221AFCCE10076F3EB /* FirebaseFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6897D8C121AFCCE10076F3EB /* FirebaseFunctions.swift */; };
 		6897D8C321AFCCE10076F3EB /* FirebaseFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6897D8C121AFCCE10076F3EB /* FirebaseFunctions.swift */; };
 		6897D8C421AFCCE10076F3EB /* FirebaseFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6897D8C121AFCCE10076F3EB /* FirebaseFunctions.swift */; };
+		68CA30CD21B215520012796D /* profileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CA30CC21B215520012796D /* profileScreen.swift */; };
+		68CA30CE21B215520012796D /* profileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CA30CC21B215520012796D /* profileScreen.swift */; };
+		68CA30CF21B215520012796D /* profileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CA30CC21B215520012796D /* profileScreen.swift */; };
 		8806575F21AB96E00009EBE3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8806575E21AB96E00009EBE3 /* GoogleService-Info.plist */; };
 		8806576021AB96E00009EBE3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8806575E21AB96E00009EBE3 /* GoogleService-Info.plist */; };
 		8806576121AB96E00009EBE3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8806575E21AB96E00009EBE3 /* GoogleService-Info.plist */; };
@@ -102,6 +105,7 @@
 		55B646CB2F1AACBD40C0A8B3 /* Pods-iFlex-WORKING.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iFlex-WORKING.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iFlex-WORKING/Pods-iFlex-WORKING.debug.xcconfig"; sourceTree = "<group>"; };
 		576AFBF3B0D258DD3C98CECD /* Pods-iFlex-WORKINGTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iFlex-WORKINGTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iFlex-WORKINGTests/Pods-iFlex-WORKINGTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6897D8C121AFCCE10076F3EB /* FirebaseFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFunctions.swift; sourceTree = "<group>"; };
+		68CA30CC21B215520012796D /* profileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileScreen.swift; sourceTree = "<group>"; };
 		6B3DF5390BD0DBA5C7E99C65 /* Pods-iFlex-WORKINGUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iFlex-WORKINGUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iFlex-WORKINGUITests/Pods-iFlex-WORKINGUITests.release.xcconfig"; sourceTree = "<group>"; };
 		84D7DE545A0849E1E40CDDB2 /* Pods_iFlex_WORKING.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iFlex_WORKING.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8806575E21AB96E00009EBE3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -175,20 +179,21 @@
 				6897D8C121AFCCE10076F3EB /* FirebaseFunctions.swift */,
 				244A015821AF2CF900DD004A /* UsefulFunctions.swift */,
 				24AB623021A4D2D900ACC513 /* loginScreen.swift */,
-				245A545521AE4C4F000AAE00 /* PublicWorkouts.plist */,
 				24AB623221A4D2DF00ACC513 /* newUserScreen.swift */,
+				68CA30CC21B215520012796D /* profileScreen.swift */,
 				24AB623421A4D2EA00ACC513 /* User.swift */,
 				24AB622821A4D2BA00ACC513 /* Exercise.swift */,
 				24AB623621A4D30200ACC513 /* Workout.swift */,
 				24AB61FA21A4D27B00ACC513 /* ViewController.swift */,
 				24AB623E21A4D32800ACC513 /* CreateNewViewController.swift */,
 				24071D4F21AC7DC70012426F /* AddExercisesVC.swift */,
+				9F01E27B21AFD9700066C698 /* ExerciseVC.swift */,
 				243DCA0121AB5A44009EB608 /* full-workout.txt */,
 				24AB620121A4D27C00ACC513 /* LaunchScreen.storyboard */,
 				24AB623821A4D31500ACC513 /* Main.storyboard */,
 				24071D4D21AC72310012426F /* TabBar.storyboard */,
 				24AB623C21A4D32200ACC513 /* createNewWorkout.storyboard */,
-				9F01E27B21AFD9700066C698 /* ExerciseVC.swift */,
+				245A545521AE4C4F000AAE00 /* PublicWorkouts.plist */,
 				24AB622A21A4D2C200ACC513 /* Favorites.plist */,
 				24AB620421A4D27C00ACC513 /* Info.plist */,
 				8806575E21AB96E00009EBE3 /* GoogleService-Info.plist */,
@@ -481,6 +486,7 @@
 				24AB623F21A4D32900ACC513 /* CreateNewViewController.swift in Sources */,
 				244A015921AF2CF900DD004A /* UsefulFunctions.swift in Sources */,
 				243DCA0421AB5C60009EB608 /* CellContent.swift in Sources */,
+				68CA30CD21B215520012796D /* profileScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,6 +496,7 @@
 			files = (
 				6897D8C321AFCCE10076F3EB /* FirebaseFunctions.swift in Sources */,
 				24AB620E21A4D27C00ACC513 /* iFlex_WORKINGTests.swift in Sources */,
+				68CA30CE21B215520012796D /* profileScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,6 +506,7 @@
 			files = (
 				6897D8C421AFCCE10076F3EB /* FirebaseFunctions.swift in Sources */,
 				24AB621921A4D27C00ACC513 /* iFlex_WORKINGUITests.swift in Sources */,
+				68CA30CF21B215520012796D /* profileScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
