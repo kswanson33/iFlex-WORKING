@@ -15,27 +15,24 @@ class browseNowScreen: UIViewController, UICollectionViewDataSource, UICollectio
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        /*let Wrkout1 = Workout(title: "A", time: 0, exercises: [], difficulty: 1, tags: [], priv: false, numOfExercises: 5, sharedWith: [], description: "hello", icon: WorkoutTarget.core)
-        let Wrkout2 = Workout(title: "B", time: 0, exercises: [], difficulty: 1, tags: [], priv: false, numOfExercises: 5, sharedWith: [], description: "hello", icon: WorkoutTarget.core)*/
-        //Workouts = [Wrkout1, Wrkout2]
-        
-        //Workouts = loadLocal()!.favorites! // delete this and uncomment the line below when that function exists
-        //Workouts = loadFromDatabase()
-        let Wrkout2 = Workout(title: "B", time: 0, exercises: [], difficulty: 1, tags: [], priv: false, numOfExercises: 5, sharedWith: [], description: "hello", icon: WorkoutTarget.core)
         workoutCollection.delegate = self
         workoutCollection.dataSource = self
-        if Workouts.count == 0 { // populate with sample data
+        
+        /* Populate with sample data -- remove later */
+        if Workouts.count == 0 {
             let path = Bundle.main.path(forResource: "full-workout", ofType: "txt")
             guard  let data = try? Data(contentsOf: URL(fileURLWithPath: path!), options: []) else {return}
             do {
                 let wo1 = try [JSONDecoder().decode(Workout.self, from: data)]
+                let Wrkout2 = Workout(title: "B", time: 0, exercises: [], difficulty: 1, tags: [], priv: false, numOfExercises: 5, sharedWith: [], description: "hello", icon: WorkoutTarget.Core)
                 Workouts = wo1
+                Workouts.append(Wrkout2)
             } catch let error{
                 print("here")
                 print(error.localizedDescription)
             }
         }
-        Workouts.append(Wrkout2)
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -62,10 +59,9 @@ class browseNowScreen: UIViewController, UICollectionViewDataSource, UICollectio
     
     
     @IBAction func addToFavs(_ sender: AnyObject) {
-        print("adding selected workout to favorites: ")
         let indexNum = sender.tag
-        writeNewWorkout(Workouts[indexNum!])
-    
+        print(Workouts[indexNum!].title)
+        //writeNewWorkout(Workouts[indexNum!])
     }
     
     
@@ -73,7 +69,9 @@ class browseNowScreen: UIViewController, UICollectionViewDataSource, UICollectio
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+
     }
+    
     
 }
 
