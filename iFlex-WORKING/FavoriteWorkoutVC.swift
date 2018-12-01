@@ -39,7 +39,7 @@ class FavoriteWorkoutVC: UIViewController, UICollectionViewDelegate, UICollectio
         icons.backgroundColor = color
         var st = workout?.tags[0]
         tags.text = st
-        putDescription.text = st
+        putDescription.text = workout?.description
     }
     
     @IBOutlet weak var approxTime: UILabel!
