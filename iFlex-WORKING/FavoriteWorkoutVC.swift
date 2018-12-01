@@ -22,6 +22,24 @@ class FavoriteWorkoutVC: UIViewController, UICollectionViewDelegate, UICollectio
         theCollectionView.dataSource = self
         theCollectionView.delegate = self
         workoutTitle.text = workout?.title
+        approxTime.text = workout?.time
+        var icon = myW.icon
+        icons.image = workoutEnumToIcon(area: icon)
+        var diff = workout?.difficulty
+        var color: UIColor
+        if diff? < 3 {
+            color = UIColor.green
+        }
+        else if (diff? < 4) {
+            color = UIColor.yellow
+        }
+        else {
+            color = UIColor.red
+        }
+        icons.image.backgroundColor(color)
+        icons.image.opacity(alpha: 0.5)
+        tags.text = workout?.tags
+        description.text = workout?.description
     }
     
     func collectionView(_ collectionView: UICollectionView,

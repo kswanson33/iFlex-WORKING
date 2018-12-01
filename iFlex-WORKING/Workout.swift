@@ -75,10 +75,10 @@ struct Workout: Codable {
 
 //enums too!!!! structs
 enum WorkoutTarget: String, Codable {
-    case upper
-    case lower
-    case core
-    case fullBody
+    case Upper
+    case Lower
+    case Core
+    case FullBody
 }
 
 
