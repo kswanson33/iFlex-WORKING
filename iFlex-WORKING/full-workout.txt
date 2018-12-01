@@ -130,7 +130,7 @@
 		"Glutes",
 		"Hamstrings"
     ],
-	"priv": False,
+	"priv": false,
     "numOfExercises": 6,
 	"sharedWith" : [],
 	"description": "This workout is part of the ultimate athlete project",
