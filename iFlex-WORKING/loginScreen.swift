@@ -40,7 +40,7 @@ class loginScreen: UIViewController {
                 self.performSegue(withIdentifier: "toFavsFromLogin", sender: nil)
                 self.userField.text = nil
                 let rootRef = Database.database().reference()
-                rootRef.child("users").child((user?.uid)!).setValue(["userEmail": user?.email])
+                //rootRef.child("users").child((user?.email)!).setValue(["userEmail": user?.email])
                 //let wo1 = try [JSONDecoder().decode(Workout.self, from: data)]
                 //writeWorkoutToDatabase(user:"z@k.com",wo1[0])
             }
