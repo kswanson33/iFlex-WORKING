@@ -10,11 +10,14 @@ import UIKit
 import Firebase
 
 class loginScreen: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         /* Load default workouts */
         // Take out in place for Firebase
+        /*
         let path = Bundle.main.path(forResource: "full-workout", ofType: "txt")
         guard  let data = try? Data(contentsOf: URL(fileURLWithPath: path!), options: []) else {return}
         do {
@@ -25,17 +28,21 @@ class loginScreen: UIViewController {
             print(wo1[0].exercises[1])
             //HERE IS A WORKING WORKOUT LOADED IN FROM THE TEXT FILE ATTACHED PLEASE STORE THIS SOMEWHERE IF YOU WANT TO RUN TESTING
            // writeToPublic(wo1)
-            writeWorkoutToDatabase(wo1[0])
+            writeWorkoutToDatabase(user:"z@k.com",wo1[0])
         } catch let error{
             print(error.localizedDescription)
         }
-    
+    */
         // Check to see if user is logged in the app. Will be true unless explictly logged out or first time user.
         // Then proceed to favorites screen.
         Auth.auth().addStateDidChangeListener() { auth, user in
             if user != nil {
                 self.performSegue(withIdentifier: "toFavsFromLogin", sender: nil)
                 self.userField.text = nil
+                let rootRef = Database.database().reference()
+                rootRef.child("users").child((user?.uid)!).setValue(["userEmail": user?.email])
+                //let wo1 = try [JSONDecoder().decode(Workout.self, from: data)]
+                //writeWorkoutToDatabase(user:"z@k.com",wo1[0])
             }
         }
  
