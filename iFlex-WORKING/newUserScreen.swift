@@ -23,14 +23,17 @@ class newUserScreen: UIViewController {
     
     
     @IBAction func createButtonPressed(_ sender: Any) {
+        if (userField.text!.count) > 0 {
+        
         Auth.auth().createUser(withEmail: userField.text!, password: "passWord"){
             user, error in
             if error == nil {
-                let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
-                let indVC = storyboard.instantiateViewController(withIdentifier: "favoritesScreen")
-                self.present(indVC, animated : true)
+                //let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
+                //let indVC = storyboard.instantiateViewController(withIdentifier: "favoritesScreen")
+                //self.present(indVC, animated : true)
+                self.performSegue(withIdentifier: "toFavs", sender: nil)
             }
-            if error != nil {
+            else if error != nil {
                 if let errorCode = AuthErrorCode(rawValue: error!._code){
                     switch errorCode{
                     case .emailAlreadyInUse:
@@ -48,6 +51,10 @@ class newUserScreen: UIViewController {
                     print(error?.localizedDescription)
                 }
             }
+        }
+    }
+        else {
+            self.alert(title: "Invalid Input", message: "Please try typing something in.")
         }
         /*
         if let username = textField.text {

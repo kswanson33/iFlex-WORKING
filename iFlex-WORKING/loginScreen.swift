@@ -53,29 +53,31 @@ class loginScreen: UIViewController {
     
     @IBAction func loginPressed(_ sender: Any) {
 
-        if (userField.text?.count)! < 0 {
+        if (userField.text?.count)! > 0 {
+            
+            Auth.auth().signIn(withEmail: userField.text!, password: "passWord") { user, error in
+                if let error = error, user == nil {
+                    let alert = UIAlertController(title: "Sign In Failed",
+                                                  message: error.localizedDescription,
+                                                  preferredStyle: .alert)
+                    
+                    alert.addAction(UIAlertAction(title: "OK", style: .default))
+                    
+                    self.present(alert, animated: true, completion: nil)
+                }
+                if error == nil {
+                    self.performSegue(withIdentifier: "toFavsFromLogin", sender: nil)
+                    //let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
+                    //let indVC = storyboard.instantiateViewController(withIdentifier: "favoritesScreen")
+                    //self.present(indVC, animated : true)
+                }
+            }
+            
+        }
+        else {
             print("No username")
             alert(title: "Invalid Input", message: "Please enter a username")
             return
-        }
-        else {
-  
-            Auth.auth().signIn(withEmail: userField.text!, password: "passWord") { user, error in
-            if let error = error, user == nil {
-                let alert = UIAlertController(title: "Sign In Failed",
-                                              message: error.localizedDescription,
-                                              preferredStyle: .alert)
-                
-                alert.addAction(UIAlertAction(title: "OK", style: .default))
-                
-                self.present(alert, animated: true, completion: nil)
-            }
-            if error == nil {
-                let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
-                let indVC = storyboard.instantiateViewController(withIdentifier: "favoritesScreen")
-                self.present(indVC, animated : true)
-            }
-        }
         }
         
         //check if we are able to connect to the database
