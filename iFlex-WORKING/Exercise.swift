@@ -69,15 +69,15 @@ struct Exercise: Codable {
 }
 
 enum MuscleGroup: String, Codable {
-    case hamstrings
-    case glutes
-    case quads
-    case calves
-    case hips
-    case core
-    case abductors
-    case lowerBack
-    case upperBack
+    case Hamstrings
+    case Glutes
+    case Quads
+    case Calves
+    case Hips
+    case Core
+    case Abductors
+    case LowerBack
+    case UpperBack
 }
 
 // Struct for MyExercise
