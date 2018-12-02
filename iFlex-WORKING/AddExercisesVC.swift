@@ -64,7 +64,6 @@ class AddExercisesVC: UIViewController, UICollectionViewDataSource, UICollection
             draftWorkout.exercises.append(myEx)
             // Update button
             currentButton?.setTitle("Remove From Workout", for: .normal)
-            currentButton?.setTitleColor(.red, for: .normal)
         } else {
             // Remove from workout: find correct exercise to remove
             var ind = 0
@@ -78,8 +77,6 @@ class AddExercisesVC: UIViewController, UICollectionViewDataSource, UICollection
             draftWorkout.exercises.remove(at: ind)  // remove
             // Update button
             currentButton?.setTitle("Add to Workout", for: .normal)
-            let regblue = UIColor(red: 0.0, green: 122.0/255.0, blue: 255.0/255.0, alpha: 1.0)
-            currentButton?.setTitleColor(regblue, for: .normal)
         }
     }
     
