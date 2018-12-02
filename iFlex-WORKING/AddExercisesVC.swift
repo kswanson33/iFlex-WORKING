@@ -76,7 +76,8 @@ class AddExercisesVC: UIViewController, UICollectionViewDataSource, UICollection
                 print(ex)
                 print("!!!")
                 //let indVC = IndividualMovieController()
-                let indVC = self.storyboard?.instantiateViewController(withIdentifier: "exerciseWOW") as! ExerciseVC
+                let tb = UIStoryboard(name: "TabBar", bundle: nil)
+                let indVC = tb.instantiateViewController(withIdentifier: "exerciseWOW") as! ExerciseVC
                 indVC.exercise = ex
                 self.navigationController!.pushViewController(indVC, animated : true)
                 

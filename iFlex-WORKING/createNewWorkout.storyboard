@@ -109,6 +109,9 @@
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="hsK-rA-n6S" kind="showDetail" id="yrh-2j-6Ru"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H7b-52-JJn">
                                 <rect key="frame" x="154" y="248" width="184" height="30"/>
@@ -310,10 +313,10 @@
             </objects>
             <point key="canvasLocation" x="1580" y="-89.505247376311857"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--exerciseVC-->
         <scene sceneID="9fF-ej-dFN">
             <objects>
-                <viewControllerPlaceholder id="0dh-sM-Mxs" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="TabBar" referencedIdentifier="exerciseVC" id="0dh-sM-Mxs" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xvc-Ji-2qi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2258" y="-40"/>
@@ -343,4 +346,7 @@
         <image name="icons8-prelum-50" width="50" height="50"/>
         <image name="icons8-weightlifting-filled-50" width="50" height="50"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="0XG-Vp-6Bc"/>
+    </inferredMetricsTieBreakers>
 </document>
