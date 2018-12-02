@@ -119,7 +119,7 @@ class favoritesScreen: UIViewController, UICollectionViewDelegate, UICollectionV
 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "faveCell", for: indexPath) as! exCell
 
-        cell.backgroundColor = UIColor.red
+      //  cell.backgroundColor = UIColor.red
         if let myW = myFaves?[indexPath.row]{
             cell.title.text = myW.title
             cell.favAdd.tag = indexPath.row
