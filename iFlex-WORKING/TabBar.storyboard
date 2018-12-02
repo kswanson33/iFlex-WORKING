@@ -468,128 +468,162 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cJ1-oI-Pwp">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="[Selected Exercise]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pl7-gz-cVb">
-                                                <rect key="frame" x="-2" y="21" width="328" height="41"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="20"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsFontForContentSizeCategory="YES" preferredMaxLayoutWidth="284" translatesAutoresizingMaskIntoConstraints="NO" id="vra-Zj-bGY">
-                                                <rect key="frame" x="44" y="549" width="287" height="14"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.9347025109170306" green="0.9347025109170306" blue="0.9347025109170306" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pl7-gz-cVb">
+                                                <rect key="frame" x="0.0" y="8" width="328" height="73"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="328" id="SEj-bX-ytR"/>
+                                                    <constraint firstAttribute="height" constant="73" id="p5N-Wz-qIY"/>
+                                                </constraints>
                                                 <attributedString key="attributedText">
-                                                    <fragment content=" ">
+                                                    <fragment content="[Selected Exercise]">
                                                         <attributes>
-                                                            <font key="NSFont" size="14" name="TamilSangamMN"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="20" name="Thonburi"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Common mistakes: " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r2o-mf-AIb">
-                                                <rect key="frame" x="44" y="515" width="142" height="20"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="15"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Qj-8k-Wgp">
-                                                <rect key="frame" x="44" y="474" width="287" height="14"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.9347025109170306" green="0.9347025109170306" blue="0.9347025109170306" alpha="0.25107531601123595" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Qj-8k-Wgp">
+                                                <rect key="frame" x="42" y="488" width="291" height="16"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content=" ">
                                                         <attributes>
-                                                            <font key="NSFont" size="14" name="TamilSangamMN"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            <font key="NSFont" size="16" name="TamilSangamMN"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xOd-6e-G9U">
-                                                <rect key="frame" x="44" y="446" width="86" height="20"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="15"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xOd-6e-G9U">
+                                                <rect key="frame" x="42" y="462" width="92" height="21"/>
+                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Equipment:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFf-Rh-YJB">
-                                                <rect key="frame" x="44" y="364" width="81" height="20"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="15"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Equipment:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFf-Rh-YJB">
+                                                <rect key="frame" x="42" y="400" width="86.5" height="21"/>
+                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lak-F7-1Ux">
-                                                <rect key="frame" x="44" y="398" width="287" height="14"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.93470251090000001" green="0.93470251090000001" blue="0.93470251090000001" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lak-F7-1Ux">
+                                                <rect key="frame" x="42" y="426" width="291" height="16"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content=" ">
                                                         <attributes>
-                                                            <font key="NSFont" size="14" name="TamilSangamMN"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="leftToRight" tighteningFactorForTruncation="0.0"/>
+                                                            <font key="NSFont" size="16" name="TamilSangamMN"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" spacing="143" translatesAutoresizingMaskIntoConstraints="NO" id="MlL-qP-x3c">
-                                                <rect key="frame" x="44" y="734" width="282" height="20"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="143" translatesAutoresizingMaskIntoConstraints="NO" id="MlL-qP-x3c">
+                                                <rect key="frame" x="42" y="359" width="291" height="21"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Difficulty:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6d5-cq-hf6">
-                                                        <rect key="frame" x="0.0" y="0.0" width="69.5" height="20"/>
-                                                        <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="15"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Difficulty:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6d5-cq-hf6">
+                                                        <rect key="frame" x="0.0" y="0.0" width="74" height="21"/>
+                                                        <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="[dif]" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="38p-3b-SSb">
-                                                        <rect key="frame" x="212.5" y="3" width="69.5" height="14"/>
-                                                        <color key="backgroundColor" red="0.93470251090000001" green="0.93470251090000001" blue="0.93470251090000001" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="14"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[dif]" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="38p-3b-SSb">
+                                                        <rect key="frame" x="217" y="2.5" width="74" height="16"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MFi-jh-V3F">
-                                                <rect key="frame" x="327" y="21" width="48" height="41"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MFi-jh-V3F">
+                                                <rect key="frame" x="326" y="24" width="41" height="41"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="41" id="5Og-DE-s5T"/>
+                                                    <constraint firstAttribute="width" constant="41" id="Uxv-ot-Kjx"/>
+                                                </constraints>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fum-uD-Mrz">
-                                                <rect key="frame" x="42" y="102" width="284" height="175"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fum-uD-Mrz">
+                                                <rect key="frame" x="42" y="101" width="291" height="179"/>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HME-js-KZz">
-                                                <rect key="frame" x="42" y="322" width="287" height="14"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.93470251090000001" green="0.93470251090000001" blue="0.93470251090000001" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HME-js-KZz">
+                                                <rect key="frame" x="42" y="323" width="291" height="16"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content=" ">
                                                         <attributes>
-                                                            <font key="NSFont" size="14" name="TamilSangamMN"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="leftToRight" tighteningFactorForTruncation="0.0"/>
+                                                            <font key="NSFont" size="16" name="TamilSangamMN"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Muscle groups:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grs-Cf-qZY">
-                                                <rect key="frame" x="114" y="294" width="108" height="20"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="15"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Muscle groups:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grs-Cf-qZY">
+                                                <rect key="frame" x="42" y="297" width="115" height="21"/>
+                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="284" translatesAutoresizingMaskIntoConstraints="NO" id="vra-Zj-bGY">
+                                                <rect key="frame" x="42" y="550" width="291" height="16"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content=" ">
+                                                        <attributes>
+                                                            <font key="NSFont" size="16" name="TamilSangamMN"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Common mistakes: " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r2o-mf-AIb">
+                                                <rect key="frame" x="42" y="524" width="151.5" height="21"/>
+                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.55549009680000005" green="0.67025182139999995" blue="0.75414506000000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
+                                            <constraint firstItem="Pl7-gz-cVb" firstAttribute="top" secondItem="cJ1-oI-Pwp" secondAttribute="top" constant="8" id="1NR-xP-DYy"/>
+                                            <constraint firstItem="lak-F7-1Ux" firstAttribute="leading" secondItem="cJ1-oI-Pwp" secondAttribute="leading" constant="42" id="2VI-1q-L2h"/>
+                                            <constraint firstItem="4Qj-8k-Wgp" firstAttribute="top" secondItem="xOd-6e-G9U" secondAttribute="bottom" constant="5" id="3gK-Fe-qnz"/>
+                                            <constraint firstAttribute="trailing" secondItem="4Qj-8k-Wgp" secondAttribute="trailing" constant="42" id="5ZU-8c-REe"/>
+                                            <constraint firstItem="HME-js-KZz" firstAttribute="leading" secondItem="cJ1-oI-Pwp" secondAttribute="leading" constant="42" id="7Fj-dx-bcx"/>
+                                            <constraint firstItem="Pl7-gz-cVb" firstAttribute="leading" secondItem="cJ1-oI-Pwp" secondAttribute="leading" id="7h8-7h-6U6"/>
+                                            <constraint firstItem="lak-F7-1Ux" firstAttribute="top" secondItem="OFf-Rh-YJB" secondAttribute="bottom" constant="5" id="BUO-fm-DqO"/>
+                                            <constraint firstItem="MFi-jh-V3F" firstAttribute="top" secondItem="cJ1-oI-Pwp" secondAttribute="top" constant="24" id="ClZ-km-0Rp"/>
                                             <constraint firstAttribute="height" constant="1000" id="GHX-yZ-ma9"/>
+                                            <constraint firstItem="OFf-Rh-YJB" firstAttribute="leading" secondItem="cJ1-oI-Pwp" secondAttribute="leading" constant="42" id="Gyp-1g-C8I"/>
+                                            <constraint firstAttribute="trailing" secondItem="lak-F7-1Ux" secondAttribute="trailing" constant="42" id="J87-rD-fiO"/>
+                                            <constraint firstItem="grs-Cf-qZY" firstAttribute="top" secondItem="fum-uD-Mrz" secondAttribute="bottom" constant="17" id="NKy-lQ-aOq"/>
+                                            <constraint firstAttribute="trailing" secondItem="MFi-jh-V3F" secondAttribute="trailing" constant="8" id="OYq-Uf-czX"/>
+                                            <constraint firstItem="fum-uD-Mrz" firstAttribute="leading" secondItem="cJ1-oI-Pwp" secondAttribute="leading" constant="42" id="OmI-OS-P70"/>
+                                            <constraint firstItem="xOd-6e-G9U" firstAttribute="top" secondItem="lak-F7-1Ux" secondAttribute="bottom" constant="20" id="PYL-nE-b4m"/>
+                                            <constraint firstAttribute="trailing" secondItem="MlL-qP-x3c" secondAttribute="trailing" constant="42" id="Pkb-xy-cOf"/>
+                                            <constraint firstItem="r2o-mf-AIb" firstAttribute="leading" secondItem="cJ1-oI-Pwp" secondAttribute="leading" constant="42" id="QKV-No-VgP"/>
+                                            <constraint firstItem="grs-Cf-qZY" firstAttribute="leading" secondItem="cJ1-oI-Pwp" secondAttribute="leading" constant="42" id="Tnn-bu-td6"/>
+                                            <constraint firstItem="xOd-6e-G9U" firstAttribute="leading" secondItem="cJ1-oI-Pwp" secondAttribute="leading" constant="42" id="Ub2-T9-jew"/>
+                                            <constraint firstAttribute="trailing" secondItem="HME-js-KZz" secondAttribute="trailing" constant="42" id="WoK-cY-KQy"/>
+                                            <constraint firstItem="fum-uD-Mrz" firstAttribute="top" secondItem="Pl7-gz-cVb" secondAttribute="bottom" constant="20" id="bFA-CP-z2h"/>
+                                            <constraint firstItem="MlL-qP-x3c" firstAttribute="top" secondItem="HME-js-KZz" secondAttribute="bottom" constant="20" id="ceb-oI-NSh"/>
+                                            <constraint firstItem="HME-js-KZz" firstAttribute="top" secondItem="grs-Cf-qZY" secondAttribute="bottom" constant="5" id="dTj-aI-i7e"/>
+                                            <constraint firstItem="r2o-mf-AIb" firstAttribute="top" secondItem="4Qj-8k-Wgp" secondAttribute="bottom" constant="20" id="eIE-ta-ki4"/>
+                                            <constraint firstItem="OFf-Rh-YJB" firstAttribute="top" secondItem="MlL-qP-x3c" secondAttribute="bottom" constant="20" id="g5D-pA-zDu"/>
+                                            <constraint firstAttribute="trailing" secondItem="vra-Zj-bGY" secondAttribute="trailing" constant="42" id="ksW-oF-Pnc"/>
+                                            <constraint firstAttribute="trailing" secondItem="fum-uD-Mrz" secondAttribute="trailing" constant="42" id="ljk-U2-b0y"/>
+                                            <constraint firstAttribute="bottom" secondItem="vra-Zj-bGY" secondAttribute="bottom" priority="250" constant="434" id="m9s-Na-O7R"/>
+                                            <constraint firstItem="vra-Zj-bGY" firstAttribute="top" secondItem="r2o-mf-AIb" secondAttribute="bottom" constant="5" id="nr1-bg-NbD"/>
+                                            <constraint firstItem="MlL-qP-x3c" firstAttribute="leading" secondItem="cJ1-oI-Pwp" secondAttribute="leading" constant="42" id="qpt-Ww-tfh"/>
+                                            <constraint firstItem="4Qj-8k-Wgp" firstAttribute="leading" secondItem="cJ1-oI-Pwp" secondAttribute="leading" constant="42" id="r20-m1-qUJ"/>
+                                            <constraint firstItem="vra-Zj-bGY" firstAttribute="leading" secondItem="cJ1-oI-Pwp" secondAttribute="leading" constant="42" id="tGS-87-6DY"/>
                                         </constraints>
                                     </view>
                                 </subviews>

@@ -29,11 +29,17 @@ class ExerciseVC: UIViewController{
             desc.text = String(e.exercise.directions)
             mistakes.text = e.exercise.commonMistakes
             for eq in e.exercise.equipment {
-                equip.text?.append(eq + " ")
+                if e.exercise.equipment.index(of: eq)==e.exercise.equipment.endIndex-1 {
+                     equip.text?.append(eq + " ")
+                }
+                else {
+                    equip.text?.append(eq + ", ")
+                }
+                
             }
             dif.text = String(e.exercise.difficulty)
             for m in e.exercise.muscleGroups {
-                mc.text?.append(m + " ")
+                mc.text?.append(m + "   ")
             }
         }
     }
