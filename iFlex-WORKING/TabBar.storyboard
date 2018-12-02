@@ -664,6 +664,11 @@
                                                     <constraint firstAttribute="width" constant="60" id="Uxv-ot-Kjx"/>
                                                 </constraints>
                                             </imageView>
+                                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L62-fI-taF">
+                                                <rect key="frame" x="44" y="101" width="289" height="180"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </webView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.55549009680000005" green="0.67025182139999995" blue="0.75414506000000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -729,6 +734,7 @@
                         <outlet property="label" destination="Pl7-gz-cVb" id="GF2-Hd-pOy"/>
                         <outlet property="mc" destination="HME-js-KZz" id="5Aa-iS-jSH"/>
                         <outlet property="mistakes" destination="vra-Zj-bGY" id="rA8-KH-Zac"/>
+                        <outlet property="webView" destination="L62-fI-taF" id="j79-oH-Kdl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bML-TV-W1d" userLabel="First Responder" sceneMemberID="firstResponder"/>

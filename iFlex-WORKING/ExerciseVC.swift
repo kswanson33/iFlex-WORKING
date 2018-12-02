@@ -20,6 +20,9 @@ class ExerciseVC: UIViewController{
     @IBOutlet weak var equip: UILabel!
     @IBOutlet weak var dif: UILabel!
     @IBOutlet weak var mc: UILabel!
+    @IBOutlet weak var webView: UIWebView!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +44,12 @@ class ExerciseVC: UIViewController{
             for m in e.exercise.muscleGroups {
                 mc.text?.append(m + "   ")
             }
+            getVideo(code: e.exercise.instructionalVideo)
         }
+    }
+    func getVideo(code: String) {
+        let url = URL(string: "https://www.youtube.com/embed/\(code)")
+        webView.loadRequest(URLRequest(url: url!))
     }
     
     override func didReceiveMemoryWarning() {
