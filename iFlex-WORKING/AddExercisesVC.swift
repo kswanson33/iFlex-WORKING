@@ -36,6 +36,7 @@ class AddExercisesVC: UIViewController, UICollectionViewDataSource, UICollection
     /* Collection view setup */
     func setUpCollectionView() {
         exercisesCollectionView.dataSource = self
+        exercisesCollectionView.delegate = self
     }
     
     /* Set number of items in collection view */
@@ -60,16 +61,28 @@ class AddExercisesVC: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     /* Action when collection view cell is clicked */
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        currentExercise = indexPath.row
-    }
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        currentExercise = indexPath.row
+//    }
     
-    /* Uncomment when ExerciseDetailView exists */
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        /*if segue.destination is ExerciseDetailView {
-            let vc = segue.destination as? ExerciseDetailView
-            vc?.theExercise = exercises[currentExercise]
-        }*/
+    func collectionView(_ collectionView: UICollectionView,
+                        shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        print ("here I am")
+        let numResults = (exercises.count)
+        if numResults > indexPath.row
+            {
+                
+                let ex = exercises[indexPath.row]
+                print(ex)
+                print("!!!")
+                //let indVC = IndividualMovieController()
+                let indVC = self.storyboard?.instantiateViewController(withIdentifier: "exerciseWOW") as! ExerciseVC
+                indVC.exercise = ex
+                self.navigationController!.pushViewController(indVC, animated : true)
+                
+            }
+        
+        return false
     }
     
     /* Write draft workout to user's favorites */
@@ -83,16 +96,5 @@ class AddExercisesVC: UIViewController, UICollectionViewDataSource, UICollection
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
