@@ -21,11 +21,11 @@ class favoritesScreen: UIViewController, UICollectionViewDelegate, UICollectionV
         theCollectionView.dataSource = self
         theCollectionView.delegate = self
         print("LOOK HERE")
-        /*
+        
         uRef.child((currentUser?.uid)!).observe(.value, with: { snapshot in
             print(snapshot.value as Any)
         })
- */
+ 
         //let u = User(id: 10, favorites: [], userName: "User1")
         //writeNewUser(u) //stores their favorites locally (should be async)
         // Do any additional setup after loading the view.

@@ -31,6 +31,12 @@ class newUserScreen: UIViewController {
                 //let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
                 //let indVC = storyboard.instantiateViewController(withIdentifier: "favoritesScreen")
                 //self.present(indVC, animated : true)
+                
+                
+                /* ADD TO USERS */
+                
+                
+                
                 self.performSegue(withIdentifier: "toFavs", sender: nil)
             }
             else if error != nil {
