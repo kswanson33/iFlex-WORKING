@@ -88,9 +88,9 @@ class AddExercisesVC: UIViewController, UICollectionViewDataSource, UICollection
     
     /* Write draft workout to user's favorites */
     @IBAction func saveButton(_ sender: Any) {
-        writeNewWorkout(draftWorkout)
+        /*writeNewWorkout(draftWorkout)
         let u = loadLocal()
-        printUser(u!)
+        printUser(u!)*/
     }
 
     override func didReceiveMemoryWarning() {
