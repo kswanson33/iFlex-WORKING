@@ -55,6 +55,7 @@ class FavoriteWorkoutVC: UIViewController, UICollectionViewDelegate, UICollectio
                     let indVC = self.storyboard?.instantiateViewController(withIdentifier: "exerciseWOW") as! ExerciseVC
                     indVC.exercise = ex
                     self.navigationController!.pushViewController(indVC, animated : true)
+                    
                 }
             }
         }
