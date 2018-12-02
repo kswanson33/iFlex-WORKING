@@ -12,17 +12,25 @@ import Firebase
 
 class favoritesScreen: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     var user: User!
+    let currentUser = Auth.auth().currentUser
     let ref = Database.database().reference(withPath: "Workouts")
+    let uRef = Database.database().reference(withPath: "users")
     let usersRef = Database.database().reference(withPath: "online")
     override func viewDidLoad() {
         super.viewDidLoad()
         theCollectionView.dataSource = self
         theCollectionView.delegate = self
+        print("LOOK HERE")
+        /*
+        uRef.child((currentUser?.uid)!).observe(.value, with: { snapshot in
+            print(snapshot.value as Any)
+        })
+ */
         //let u = User(id: 10, favorites: [], userName: "User1")
         //writeNewUser(u) //stores their favorites locally (should be async)
         // Do any additional setup after loading the view.
         //SET MYFAVES BY DOING LOCAL STUFF
-        
+        /*
             let path = Bundle.main.path(forResource: "full-workout", ofType: "txt")
             guard  let data = try? Data(contentsOf: URL(fileURLWithPath: path!), options: []) else {return}
             do {
@@ -32,11 +40,10 @@ class favoritesScreen: UIViewController, UICollectionViewDelegate, UICollectionV
                 print("here")
                 print(error.localizedDescription)
             }
+ */
 //        print("Look here")
 //        let ref = Database.database().reference(withPath: "Workouts")
-//        ref.observe(.value, with: { snapshot in
-//            print(snapshot.value as Any)
-//        })
+
         Auth.auth().addStateDidChangeListener { auth, user in
             guard let user = user else { return }
             self.user = User(authData: user)

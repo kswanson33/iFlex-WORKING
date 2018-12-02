@@ -164,8 +164,8 @@
 		24AB61F721A4D27B00ACC513 /* iFlex-WORKING */ = {
 			isa = PBXGroup;
 			children = (
-				24AB61F821A4D27B00ACC513 /* AppDelegate.swift */,
 				24AB622621A4D2B300ACC513 /* browseNowScreen.swift */,
+				24AB61F821A4D27B00ACC513 /* AppDelegate.swift */,
 				9F01E27921AFD8570066C698 /* FavoriteWorkoutVC.swift */,
 				243DCA0321AB5C5F009EB608 /* CellContent.swift */,
 				9F01E27D21AFDB670066C698 /* WorkoutCell.swift */,

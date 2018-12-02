@@ -17,22 +17,22 @@ class loginScreen: UIViewController {
         
         /* Load default workouts */
         // Take out in place for Firebase
-        /*
+        
         let path = Bundle.main.path(forResource: "full-workout", ofType: "txt")
         guard  let data = try? Data(contentsOf: URL(fileURLWithPath: path!), options: []) else {return}
         do {
             let wo1 = try [JSONDecoder().decode(Workout.self, from: data)]
-            print ("Exercise 1 of Workout 1")
-            print(wo1[0].exercises[0])
-            print ("Exercise 1 of Workout 2")
-            print(wo1[0].exercises[1])
+            //print ("Exercise 1 of Workout 1")
+            //print(wo1[0].exercises[0])
+            //print ("Exercise 1 of Workout 2")
+            //print(wo1[0].exercises[1])
             //HERE IS A WORKING WORKOUT LOADED IN FROM THE TEXT FILE ATTACHED PLEASE STORE THIS SOMEWHERE IF YOU WANT TO RUN TESTING
            // writeToPublic(wo1)
-            writeWorkoutToDatabase(user:"z@k.com",wo1[0])
+            //writeWorkoutToDatabase(wo1[0])
         } catch let error{
             print(error.localizedDescription)
         }
-    */
+ 
         // Check to see if user is logged in the app. Will be true unless explictly logged out or first time user.
         // Then proceed to favorites screen.
         Auth.auth().addStateDidChangeListener() { auth, user in
@@ -40,7 +40,7 @@ class loginScreen: UIViewController {
                 self.performSegue(withIdentifier: "toFavsFromLogin", sender: nil)
                 self.userField.text = nil
                 let rootRef = Database.database().reference()
-                //rootRef.child("users").child((user?.email)!).setValue(["userEmail": user?.email])
+                //rootRef.child("users").child((user?.uid)!).setValue(["userName":user?.email])
                 //let wo1 = try [JSONDecoder().decode(Workout.self, from: data)]
                 //writeWorkoutToDatabase(user:"z@k.com",wo1[0])
             }
@@ -76,7 +76,8 @@ class loginScreen: UIViewController {
                     self.present(alert, animated: true, completion: nil)
                 }
                 if error == nil {
-                    self.performSegue(withIdentifier: "toFavsFromLogin", sender: nil)
+                    //self.performSegue(withIdentifier: "toFavsFromLogin", sender: nil)
+                    print("Transition")
                 }
             }
             

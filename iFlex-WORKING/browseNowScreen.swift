@@ -19,6 +19,7 @@ class browseNowScreen: UIViewController, UICollectionViewDataSource, UICollectio
         workoutCollection.dataSource = self
         
         /* Populate with sample data -- remove later */
+        
         if Workouts.count == 0 {
             let path = Bundle.main.path(forResource: "full-workout", ofType: "txt")
             guard  let data = try? Data(contentsOf: URL(fileURLWithPath: path!), options: []) else {return}
@@ -32,6 +33,8 @@ class browseNowScreen: UIViewController, UICollectionViewDataSource, UICollectio
                 print(error.localizedDescription)
             }
         }
+        
+        
         
     }
     
@@ -62,6 +65,8 @@ class browseNowScreen: UIViewController, UICollectionViewDataSource, UICollectio
         let indexNum = sender.tag
         print(Workouts[indexNum!].title)
         //writeNewWorkout(Workouts[indexNum!])
+        writeWorkoutToDatabase(Workouts[1])
+        
     }
     
     
