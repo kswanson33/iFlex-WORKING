@@ -11,11 +11,15 @@ import Foundation
 import Firebase
 
 class favoritesScreen: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
     var user: User!
     let currentUser = Auth.auth().currentUser
     let ref = Database.database().reference(withPath: "Workouts")
     let uRef = Database.database().reference(withPath: "users")
     let usersRef = Database.database().reference(withPath: "online")
+    var myFaves: [Workout]?
+    @IBOutlet weak var theCollectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         theCollectionView.dataSource = self
@@ -41,6 +45,20 @@ class favoritesScreen: UIViewController, UICollectionViewDelegate, UICollectionV
                 print(error.localizedDescription)
             }
  */
+        
+        user = getUserByUsername(username: "TheUser")
+        myFaves = user.favorites
+        
+        /* Populate sample data -- delete when myFaves is set with a working Firebase function */
+        let path = Bundle.main.path(forResource: "full-workout", ofType: "txt")
+        guard  let data = try? Data(contentsOf: URL(fileURLWithPath: path!), options: []) else {return}
+        do {
+            let wo1 = try [JSONDecoder().decode(Workout.self, from: data)]
+            myFaves = wo1
+        } catch let error{
+            print("here")
+            print(error.localizedDescription)
+        }
 //        print("Look here")
 //        let ref = Database.database().reference(withPath: "Workouts")
 
@@ -54,8 +72,6 @@ class favoritesScreen: UIViewController, UICollectionViewDelegate, UICollectionV
         }
     }
 
-    var myFaves: [Workout]?
-    
     func collectionView(_ collectionView: UICollectionView,
                         shouldSelectItemAt indexPath: IndexPath) -> Bool {
         if let numResults = (myFaves?.count)
@@ -78,7 +94,7 @@ class favoritesScreen: UIViewController, UICollectionViewDelegate, UICollectionV
         return false
     }
 
-    @IBOutlet weak var theCollectionView: UICollectionView!
+    
 
 
     //fileprivate let sectionInsets = UIEdgeInsets(top: 10.0, left: 10.0, bottom: 10.0, right: 10.0)
@@ -107,18 +123,20 @@ class favoritesScreen: UIViewController, UICollectionViewDelegate, UICollectionV
             cell.title.text = myW.title
             cell.favAdd.tag = indexPath.row
             cell.favAdd.addTarget(self, action: #selector(deleteFromFaves), for: UIControlEvents.touchUpInside)
-            var icon = myW.icon
+            let icon = myW.icon
             cell.workImage.image = workoutEnumToIcon(area: icon)
 
         }
         return cell
     }
+    
     @IBAction func deleteFromFaves(sender: AnyObject) -> Void {
-        var indexPathRow = sender.tag
+        let indexPathRow = sender.tag
         if let myW = myFaves?[indexPathRow!]{
             alert(title: myW.title, message: "Selected workout was deleted")
         }
     }
+    
     func alert(title: String, message: String)
     {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
