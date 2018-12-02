@@ -270,109 +270,101 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zqY-ZL-VOp">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Workout Detail View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9Y-6T-2Bj">
-                                                <rect key="frame" x="8" y="28" width="154" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ezn-eZ-OC7">
-                                                <rect key="frame" x="8" y="310" width="216" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KNj-4E-08i">
-                                                <rect key="frame" x="8" y="364" width="34" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hso-lT-dio">
-                                                <rect key="frame" x="262" y="10" width="105" height="88"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hso-lT-dio">
+                                                <rect key="frame" x="306" y="33" width="65" height="65"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="65" id="Xg7-QM-YrK"/>
+                                                    <constraint firstAttribute="width" constant="65" id="uFG-6c-9i4"/>
+                                                </constraints>
                                             </imageView>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9BX-jG-w3U">
-                                                <rect key="frame" x="0.0" y="563" width="375" height="406"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9BX-jG-w3U">
+                                                <rect key="frame" x="16" y="276" width="343" height="714"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.2499341643258427" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Tcp-ZW-B5H">
-                                                    <size key="itemSize" width="354" height="152"/>
+                                                    <size key="itemSize" width="343" height="152"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="mycell" id="o5D-eN-DXm" customClass="WorkoutCell" customModule="iFlex_WORKING" customModuleProvider="target">
-                                                        <rect key="frame" x="10.5" y="0.0" width="354" height="152"/>
+                                                        <rect key="frame" x="0.0" y="5" width="343" height="152"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                            <rect key="frame" x="0.0" y="0.0" width="354" height="152"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="152"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DHX-jg-EZE">
-                                                                    <rect key="frame" x="20" y="13" width="262" height="33"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHX-jg-EZE">
+                                                                    <rect key="frame" x="11" y="0.0" width="271" height="58"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                                    <nil key="textColor"/>
+                                                                    <attributedString key="attributedText">
+                                                                        <fragment content="Label">
+                                                                            <attributes>
+                                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <font key="NSFont" size="21" name="Thonburi"/>
+                                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                    </attributedString>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5g2-Gc-92T">
-                                                                    <rect key="frame" x="290" y="0.0" width="64" height="55"/>
+                                                                    <rect key="frame" x="294" y="1" width="60" height="60"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sets:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejQ-Gz-hEx">
-                                                                    <rect key="frame" x="29" y="66" width="39" height="21"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8Z-Sz-xkV">
-                                                                    <rect key="frame" x="73" y="66" width="33" height="21"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wkm-Sw-faF">
-                                                                    <rect key="frame" x="157" y="66" width="30" height="21"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XOF-5I-TIw">
-                                                                    <rect key="frame" x="276" y="66" width="43" height="21"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Weight:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4q-Ub-McN">
-                                                                    <rect key="frame" x="212" y="66" width="59" height="21"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reps:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O99-fE-Qpg">
-                                                                    <rect key="frame" x="110" y="66" width="43" height="21"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
                                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GS1-PF-ziq">
-                                                                    <rect key="frame" x="117" y="102" width="120" height="30"/>
+                                                                    <rect key="frame" x="110" y="104" width="133" height="28"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <state key="normal" title="Add Today's Data"/>
+                                                                    <color key="backgroundColor" red="0.95551217183852477" green="0.98813212036162623" blue="1" alpha="0.21594101123595505" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <state key="normal" title="Add Today's Data">
+                                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </state>
                                                                 </button>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="UIt-fm-1wk">
+                                                                    <rect key="frame" x="25" y="65" width="304" height="22.5"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Sets:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejQ-Gz-hEx">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="41.5" height="22.5"/>
+                                                                            <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
+                                                                            <color key="textColor" red="0.15626705786026196" green="0.15626705786026196" blue="0.15626705786026196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8Z-Sz-xkV">
+                                                                            <rect key="frame" x="56.5" y="0.0" width="23" height="22.5"/>
+                                                                            <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
+                                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Reps:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O99-fE-Qpg">
+                                                                            <rect key="frame" x="94.5" y="0.0" width="44.5" height="22.5"/>
+                                                                            <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
+                                                                            <color key="textColor" red="0.15626705790000001" green="0.15626705790000001" blue="0.15626705790000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="10" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wkm-Sw-faF">
+                                                                            <rect key="frame" x="154" y="0.0" width="23" height="22.5"/>
+                                                                            <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
+                                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Weight:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4q-Ub-McN">
+                                                                            <rect key="frame" x="192" y="0.0" width="63" height="22.5"/>
+                                                                            <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
+                                                                            <color key="textColor" red="0.15626705790000001" green="0.15626705790000001" blue="0.15626705790000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XOF-5I-TIw">
+                                                                            <rect key="frame" x="270" y="0.0" width="34" height="22.5"/>
+                                                                            <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
+                                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
                                                             </subviews>
                                                         </view>
+                                                        <color key="backgroundColor" red="0.60511626274880803" green="0.73655639852545429" blue="0.82983078602620086" alpha="0.756737183988764" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <connections>
                                                             <outlet property="Icon" destination="5g2-Gc-92T" id="EqJ-Lw-aqX"/>
                                                             <outlet property="addData" destination="GS1-PF-ziq" id="xgU-Dt-llS"/>
@@ -387,38 +379,94 @@
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GO9-Mj-Bq0">
-                                                <rect key="frame" x="8" y="213" width="319" height="100"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GO9-Mj-Bq0">
+                                                <rect key="frame" x="32" y="235" width="311" height="21"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="description">
+                                                        <attributes>
+                                                            <font key="NSFont" size="16" name="Thonburi"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="tags here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMa-sa-Trz">
-                                                <rect key="frame" x="88" y="157" width="158" height="48"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9Y-6T-2Bj">
+                                                <rect key="frame" x="0.0" y="21" width="302" height="88"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="302" id="3JP-bi-0Dh"/>
+                                                    <constraint firstAttribute="height" constant="88" id="j4J-TR-9ao"/>
+                                                </constraints>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Workout Detail View">
+                                                        <attributes>
+                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="22" name="Thonburi"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="tags" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFt-lZ-0lq">
-                                                <rect key="frame" x="21" y="171" width="34" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMa-sa-Trz">
+                                                <rect key="frame" x="95" y="121" width="250" height="48"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="250" id="Ije-4p-xdL"/>
+                                                    <constraint firstAttribute="height" constant="48" id="VQR-ur-VL1"/>
+                                                </constraints>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="tags here">
+                                                        <attributes>
+                                                            <font key="NSFont" size="17" name="Thonburi"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="time here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFv-0J-IsQ">
-                                                <rect key="frame" x="88" y="364" width="113" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tags:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5O-YY-zYF">
+                                                <rect key="frame" x="34" y="133" width="50" height="25"/>
+                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="19"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="233-im-E7l">
+                                                <rect key="frame" x="34" y="190" width="50.5" height="25"/>
+                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="19"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFv-0J-IsQ">
+                                                <rect key="frame" x="95" y="194" width="78.5" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="Um5-Pk-vbr"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.55549009680000005" green="0.67025182139999995" blue="0.75414506000000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
+                                            <constraint firstItem="233-im-E7l" firstAttribute="leading" secondItem="zqY-ZL-VOp" secondAttribute="leading" constant="34" id="6QA-oM-1tE"/>
+                                            <constraint firstAttribute="trailing" secondItem="Hso-lT-dio" secondAttribute="trailing" constant="4" id="6rz-4R-qpG"/>
+                                            <constraint firstItem="F9Y-6T-2Bj" firstAttribute="leading" secondItem="zqY-ZL-VOp" secondAttribute="leading" id="8J2-ds-JBp"/>
+                                            <constraint firstItem="9BX-jG-w3U" firstAttribute="top" secondItem="GO9-Mj-Bq0" secondAttribute="bottom" constant="20" id="8zD-s6-mGT"/>
+                                            <constraint firstItem="GO9-Mj-Bq0" firstAttribute="top" secondItem="RFv-0J-IsQ" secondAttribute="bottom" constant="20" id="Cx1-5u-FFf"/>
+                                            <constraint firstItem="233-im-E7l" firstAttribute="top" secondItem="K5O-YY-zYF" secondAttribute="bottom" constant="32" id="NYe-8T-vad"/>
+                                            <constraint firstItem="RFv-0J-IsQ" firstAttribute="top" secondItem="eMa-sa-Trz" secondAttribute="bottom" constant="25" id="Q9X-iR-bUM"/>
+                                            <constraint firstItem="eMa-sa-Trz" firstAttribute="top" secondItem="F9Y-6T-2Bj" secondAttribute="bottom" constant="12" id="bp8-5y-OaZ"/>
+                                            <constraint firstAttribute="bottom" secondItem="9BX-jG-w3U" secondAttribute="bottom" priority="750" constant="10" id="c85-jO-3na"/>
+                                            <constraint firstItem="Hso-lT-dio" firstAttribute="top" secondItem="zqY-ZL-VOp" secondAttribute="top" constant="33" id="gSn-oJ-vWW"/>
+                                            <constraint firstItem="F9Y-6T-2Bj" firstAttribute="top" secondItem="zqY-ZL-VOp" secondAttribute="top" constant="21" id="h6Q-2z-BCT"/>
+                                            <constraint firstItem="9BX-jG-w3U" firstAttribute="leading" secondItem="zqY-ZL-VOp" secondAttribute="leading" constant="16" id="hTr-6d-DLf"/>
+                                            <constraint firstItem="GO9-Mj-Bq0" firstAttribute="leading" secondItem="zqY-ZL-VOp" secondAttribute="leading" constant="32" id="jZf-kq-tRK"/>
+                                            <constraint firstAttribute="trailing" secondItem="9BX-jG-w3U" secondAttribute="trailing" constant="16" id="mNA-rX-8IC"/>
+                                            <constraint firstAttribute="trailing" secondItem="eMa-sa-Trz" secondAttribute="trailing" constant="30" id="ncO-6N-x3a"/>
                                             <constraint firstAttribute="height" constant="1000" id="tTK-J1-xbJ"/>
+                                            <constraint firstItem="K5O-YY-zYF" firstAttribute="top" secondItem="F9Y-6T-2Bj" secondAttribute="bottom" constant="24" id="uZU-TX-Cnf"/>
+                                            <constraint firstAttribute="trailing" secondItem="GO9-Mj-Bq0" secondAttribute="trailing" constant="32" id="uff-1b-PxA"/>
+                                            <constraint firstItem="K5O-YY-zYF" firstAttribute="leading" secondItem="zqY-ZL-VOp" secondAttribute="leading" constant="34" id="vEA-Wh-hE6"/>
+                                            <constraint firstItem="RFv-0J-IsQ" firstAttribute="leading" secondItem="233-im-E7l" secondAttribute="trailing" constant="10.5" id="zze-rn-YhV"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -478,100 +526,15 @@
                                                     <fragment content="[Selected Exercise]">
                                                         <attributes>
                                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <font key="NSFont" size="20" name="Thonburi"/>
+                                                            <font key="NSFont" size="22" name="Thonburi"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Qj-8k-Wgp">
-                                                <rect key="frame" x="42" y="488" width="291" height="16"/>
-                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <attributedString key="attributedText">
-                                                    <fragment content=" ">
-                                                        <attributes>
-                                                            <font key="NSFont" size="16" name="TamilSangamMN"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xOd-6e-G9U">
-                                                <rect key="frame" x="42" y="462" width="92" height="21"/>
-                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Equipment:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFf-Rh-YJB">
-                                                <rect key="frame" x="42" y="400" width="86.5" height="21"/>
-                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lak-F7-1Ux">
-                                                <rect key="frame" x="42" y="426" width="291" height="16"/>
-                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <attributedString key="attributedText">
-                                                    <fragment content=" ">
-                                                        <attributes>
-                                                            <font key="NSFont" size="16" name="TamilSangamMN"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tighteningFactorForTruncation="0.0"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="143" translatesAutoresizingMaskIntoConstraints="NO" id="MlL-qP-x3c">
-                                                <rect key="frame" x="42" y="359" width="291" height="21"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Difficulty:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6d5-cq-hf6">
-                                                        <rect key="frame" x="0.0" y="0.0" width="74" height="21"/>
-                                                        <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[dif]" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="38p-3b-SSb">
-                                                        <rect key="frame" x="217" y="2.5" width="74" height="16"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="16"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MFi-jh-V3F">
-                                                <rect key="frame" x="326" y="24" width="41" height="41"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="41" id="5Og-DE-s5T"/>
-                                                    <constraint firstAttribute="width" constant="41" id="Uxv-ot-Kjx"/>
-                                                </constraints>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fum-uD-Mrz">
-                                                <rect key="frame" x="42" y="101" width="291" height="179"/>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HME-js-KZz">
-                                                <rect key="frame" x="42" y="323" width="291" height="16"/>
-                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <attributedString key="attributedText">
-                                                    <fragment content=" ">
-                                                        <attributes>
-                                                            <font key="NSFont" size="16" name="TamilSangamMN"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tighteningFactorForTruncation="0.0"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Muscle groups:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grs-Cf-qZY">
-                                                <rect key="frame" x="42" y="297" width="115" height="21"/>
-                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="284" translatesAutoresizingMaskIntoConstraints="NO" id="vra-Zj-bGY">
-                                                <rect key="frame" x="42" y="550" width="291" height="16"/>
+                                                <rect key="frame" x="42" y="974" width="291" height="16"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content=" ">
@@ -584,11 +547,99 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Common mistakes: " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r2o-mf-AIb">
-                                                <rect key="frame" x="42" y="524" width="151.5" height="21"/>
+                                                <rect key="frame" x="42" y="948" width="151.5" height="21"/>
                                                 <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Qj-8k-Wgp">
+                                                <rect key="frame" x="42" y="912" width="291" height="16"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content=" ">
+                                                        <attributes>
+                                                            <font key="NSFont" size="16" name="TamilSangamMN"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xOd-6e-G9U">
+                                                <rect key="frame" x="42" y="886" width="92" height="21"/>
+                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Equipment:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFf-Rh-YJB">
+                                                <rect key="frame" x="42" y="824" width="86.5" height="21"/>
+                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lak-F7-1Ux">
+                                                <rect key="frame" x="42" y="850" width="291" height="16"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content=" ">
+                                                        <attributes>
+                                                            <font key="NSFont" size="16" name="TamilSangamMN"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="143" translatesAutoresizingMaskIntoConstraints="NO" id="MlL-qP-x3c">
+                                                <rect key="frame" x="42" y="360" width="291" height="444"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Difficulty:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6d5-cq-hf6">
+                                                        <rect key="frame" x="0.0" y="211.5" width="74" height="21"/>
+                                                        <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[dif]" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="38p-3b-SSb">
+                                                        <rect key="frame" x="217" y="214" width="74" height="16"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fum-uD-Mrz">
+                                                <rect key="frame" x="42" y="101" width="291" height="180"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="180" id="J9t-yd-zAG"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HME-js-KZz">
+                                                <rect key="frame" x="42" y="324" width="291" height="16"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content=" ">
+                                                        <attributes>
+                                                            <font key="NSFont" size="16" name="TamilSangamMN"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Muscle groups:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grs-Cf-qZY">
+                                                <rect key="frame" x="42" y="298" width="115" height="21"/>
+                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="16"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MFi-jh-V3F">
+                                                <rect key="frame" x="307" y="14" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="5Og-DE-s5T"/>
+                                                    <constraint firstAttribute="width" constant="60" id="Uxv-ot-Kjx"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.55549009680000005" green="0.67025182139999995" blue="0.75414506000000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -599,7 +650,6 @@
                                             <constraint firstItem="HME-js-KZz" firstAttribute="leading" secondItem="cJ1-oI-Pwp" secondAttribute="leading" constant="42" id="7Fj-dx-bcx"/>
                                             <constraint firstItem="Pl7-gz-cVb" firstAttribute="leading" secondItem="cJ1-oI-Pwp" secondAttribute="leading" id="7h8-7h-6U6"/>
                                             <constraint firstItem="lak-F7-1Ux" firstAttribute="top" secondItem="OFf-Rh-YJB" secondAttribute="bottom" constant="5" id="BUO-fm-DqO"/>
-                                            <constraint firstItem="MFi-jh-V3F" firstAttribute="top" secondItem="cJ1-oI-Pwp" secondAttribute="top" constant="24" id="ClZ-km-0Rp"/>
                                             <constraint firstAttribute="height" constant="1000" id="GHX-yZ-ma9"/>
                                             <constraint firstItem="OFf-Rh-YJB" firstAttribute="leading" secondItem="cJ1-oI-Pwp" secondAttribute="leading" constant="42" id="Gyp-1g-C8I"/>
                                             <constraint firstAttribute="trailing" secondItem="lak-F7-1Ux" secondAttribute="trailing" constant="42" id="J87-rD-fiO"/>
@@ -619,7 +669,7 @@
                                             <constraint firstItem="OFf-Rh-YJB" firstAttribute="top" secondItem="MlL-qP-x3c" secondAttribute="bottom" constant="20" id="g5D-pA-zDu"/>
                                             <constraint firstAttribute="trailing" secondItem="vra-Zj-bGY" secondAttribute="trailing" constant="42" id="ksW-oF-Pnc"/>
                                             <constraint firstAttribute="trailing" secondItem="fum-uD-Mrz" secondAttribute="trailing" constant="42" id="ljk-U2-b0y"/>
-                                            <constraint firstAttribute="bottom" secondItem="vra-Zj-bGY" secondAttribute="bottom" priority="250" constant="434" id="m9s-Na-O7R"/>
+                                            <constraint firstAttribute="bottom" secondItem="vra-Zj-bGY" secondAttribute="bottom" priority="250" constant="10" id="m9s-Na-O7R"/>
                                             <constraint firstItem="vra-Zj-bGY" firstAttribute="top" secondItem="r2o-mf-AIb" secondAttribute="bottom" constant="5" id="nr1-bg-NbD"/>
                                             <constraint firstItem="MlL-qP-x3c" firstAttribute="leading" secondItem="cJ1-oI-Pwp" secondAttribute="leading" constant="42" id="qpt-Ww-tfh"/>
                                             <constraint firstItem="4Qj-8k-Wgp" firstAttribute="leading" secondItem="cJ1-oI-Pwp" secondAttribute="leading" constant="42" id="r20-m1-qUJ"/>
@@ -642,6 +692,7 @@
                             <constraint firstItem="7e6-fF-UZa" firstAttribute="leading" secondItem="1K4-qK-mCL" secondAttribute="leading" id="H56-aG-brx"/>
                             <constraint firstItem="7e6-fF-UZa" firstAttribute="trailing" secondItem="1K4-qK-mCL" secondAttribute="trailing" id="g9n-us-xRf"/>
                             <constraint firstItem="7e6-fF-UZa" firstAttribute="top" secondItem="1K4-qK-mCL" secondAttribute="top" id="i3P-ah-CJp"/>
+                            <constraint firstItem="MFi-jh-V3F" firstAttribute="top" secondItem="1K4-qK-mCL" secondAttribute="top" constant="14" id="s2P-c7-DpG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1K4-qK-mCL"/>
                     </view>
