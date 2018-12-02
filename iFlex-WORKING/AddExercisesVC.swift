@@ -55,15 +55,33 @@ class AddExercisesVC: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     @IBAction func addToDraftWorkout(sender: AnyObject) -> Void {
-        let myEx = exercises[sender.tag!]
-        print(myEx.exercise.name)
-        draftWorkout.exercises.append(myEx)
+        let currentCell = exercisesCollectionView.cellForItem(at: IndexPath(row: sender.tag!, section: 0)) as! exCell
+        let currentButton = currentCell.favAdd
+        //print("TITLE: \(currentCell.title.text!)")
+        if currentButton?.titleLabel?.text == "Add to Workout" {
+            // Add exercise to workout
+            let myEx = exercises[sender.tag!]
+            draftWorkout.exercises.append(myEx)
+            // Update button
+            currentButton?.setTitle("Remove From Workout", for: .normal)
+            currentButton?.setTitleColor(.red, for: .normal)
+        } else {
+            // Remove from workout: find correct exercise to remove
+            var ind = 0
+            for e in 0..<draftWorkout.exercises.count {
+                let b = draftWorkout.exercises[e].exercise.name == exercises[sender.tag!].exercise.name
+                if b == true {
+                    ind = e
+                    break
+                }
+            }
+            draftWorkout.exercises.remove(at: ind)  // remove
+            // Update button
+            currentButton?.setTitle("Add to Workout", for: .normal)
+            let regblue = UIColor(red: 0.0, green: 122.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+            currentButton?.setTitleColor(regblue, for: .normal)
+        }
     }
-    
-    /* Action when collection view cell is clicked */
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        currentExercise = indexPath.row
-//    }
     
     func collectionView(_ collectionView: UICollectionView,
                         shouldSelectItemAt indexPath: IndexPath) -> Bool {
