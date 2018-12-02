@@ -14,7 +14,7 @@ class favoritesScreen: UIViewController, UICollectionViewDelegate, UICollectionV
     
     var user: User!
     let currentUser = Auth.auth().currentUser
-    let ref = Database.database().reference(withPath: "Workouts")
+    let publicWorkoutsRef = Database.database().reference(withPath: "Workouts")
     let uRef = Database.database().reference(withPath: "users")
     let usersRef = Database.database().reference(withPath: "online")
     var myFaves: [Workout]?
@@ -26,8 +26,9 @@ class favoritesScreen: UIViewController, UICollectionViewDelegate, UICollectionV
         theCollectionView.delegate = self
         print("LOOK HERE")
         
-        uRef.child((currentUser?.uid)!).observe(.value, with: { snapshot in
-            print(snapshot.value as Any)
+        publicWorkoutsRef.observe(.value, with: {
+            snapshot in
+                print(snapshot.value as Any)
         })
  
         //let u = User(id: 10, favorites: [], userName: "User1")

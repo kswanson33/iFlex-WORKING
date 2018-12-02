@@ -28,7 +28,11 @@ func writeWorkoutToDatabase(_ workout: Workout) {
 }
 
 
-func readWorkoutFromDatabase(_ workout: Workout) {
+// TO BE IMPLEMENTED: THANKS ZAYID!!!
+
+func writeWorkoutToFavorites(_ workout: Workout) {
+    // Called in addToFavs function in browseNowScreen.swift
+    // Should write a workout to the logged-in user's favorites.
     let ref = Database.database().reference()
     let workoutRef = ref.child("Workouts").child(workout.title)
     let currentUser = Auth.auth().currentUser
@@ -43,13 +47,7 @@ func readWorkoutFromDatabase(_ workout: Workout) {
         print(e.reps)
         //print(e.exercise.toAnyObject())
     }
-}
-
-// TO BE IMPLEMENTED: THANKS ZAYID!!!
-
-func writeWorkoutToFavorites(_ workout: Workout) {
-    // Called in addToFavs function in browseNowScreen.swift
-    // Should write a workout to the logged-in user's favorites.
+    
 }
 
 func getUserByUsername(username: String) -> User {

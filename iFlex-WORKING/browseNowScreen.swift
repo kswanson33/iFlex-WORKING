@@ -7,20 +7,25 @@
 //
 
 import UIKit
+import Firebase
 
 class browseNowScreen: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate  {
-
+    
+    let publicWorkoutsRef = Database.database().reference(withPath: "Workouts")
+    
     var Workouts: [Workout] = []
     @IBOutlet weak var workoutCollection: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         workoutCollection.delegate = self
         workoutCollection.dataSource = self
-        
         Workouts = getDefaultWorkouts()
         
         /* Populate with sample data -- comment out when getDefaultWorkouts works */
+        
+        /*
         if Workouts.count == 0 {
             let path = Bundle.main.path(forResource: "full-workout", ofType: "txt")
             guard  let data = try? Data(contentsOf: URL(fileURLWithPath: path!), options: []) else {return}
@@ -33,7 +38,7 @@ class browseNowScreen: UIViewController, UICollectionViewDataSource, UICollectio
                 print("here")
                 print(error.localizedDescription)
             }
-        }
+        }*/
         
         
         
