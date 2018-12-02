@@ -11,11 +11,13 @@ import UIKit
 
 class FavoriteWorkoutVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    
-    
-    
     var workout: Workout?
     @IBOutlet var workoutTitle: UILabel!
+    @IBOutlet weak var approxTime: UILabel!
+    @IBOutlet weak var icons: UIImageView!
+    @IBOutlet weak var putDescription: UILabel!
+    @IBOutlet weak var tags: UILabel!
+    @IBOutlet weak var theCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,9 +25,9 @@ class FavoriteWorkoutVC: UIViewController, UICollectionViewDelegate, UICollectio
         theCollectionView.delegate = self
         workoutTitle.text = workout?.title
         approxTime.text = String(workout!.time)
-        var icon = workout?.icon
+        let icon = workout?.icon
         icons.image = workoutEnumToIcon(area: icon!)
-        var diff = workout?.difficulty
+        let diff = workout?.difficulty
         var color: UIColor
         if diff! < 3 {
             color = UIColor.green
@@ -37,67 +39,44 @@ class FavoriteWorkoutVC: UIViewController, UICollectionViewDelegate, UICollectio
             color = UIColor.red
         }
         icons.backgroundColor = color
-        var st = workout?.tags[0]
+        let st = workout?.tags[0]
         tags.text = st
         putDescription.text = workout?.description
     }
     
-    @IBOutlet weak var approxTime: UILabel!
-    
-    
-    @IBOutlet weak var icons: UIImageView!
-    
-    @IBOutlet weak var putDescription: UILabel!
-    
-    @IBOutlet weak var tags: UILabel!
-    
-    
     func collectionView(_ collectionView: UICollectionView,
                         shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        if let numResults = (workout?.exercises.count)
-        {
-            
-            if numResults > indexPath.row
-            {
-                
-                if let ex = workout?.exercises[indexPath.row]{
+        if let numResults = (workout?.exercises.count) {
+            if numResults > indexPath.row {
+                if let ex = workout?.exercises[indexPath.row] {
                     print(ex)
                     print("!!!")
                     //let indVC = IndividualMovieController()
                     let indVC = self.storyboard?.instantiateViewController(withIdentifier: "exerciseWOW") as! ExerciseVC
                     indVC.exercise = ex
                     self.navigationController!.pushViewController(indVC, animated : true)
-                    
                 }
             }
-            
         }
         return false
     }
-    @IBOutlet weak var theCollectionView: UICollectionView!
-    
-    //fileprivate let sectionInsets = UIEdgeInsets(top: 10.0, left: 10.0, bottom: 10.0, right: 10.0)
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if let numResults = (workout?.exercises.count)
-        {
+        if let numResults = (workout?.exercises.count) {
             return numResults
         }
-        else
-        {
+        else {
             return 0
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "mycell", for: indexPath) as! WorkoutCell
-        
-        cell.backgroundColor = UIColor.red
+      //  cell.backgroundColor = UIColor.red
         if let myEx = workout?.exercises[indexPath.row]{
             cell.cellLabel.text = myEx.exercise.name
             cell.setsNum.text = String(myEx.sets)
@@ -109,9 +88,7 @@ class FavoriteWorkoutVC: UIViewController, UICollectionViewDelegate, UICollectio
             cell.addData.addTarget(self, action: #selector(addUserData), for: UIControlEvents.touchUpInside)
             
         }
-        
         return cell
-        
     }
     
     @IBAction func addUserData(sender: AnyObject) -> Void {
@@ -121,6 +98,7 @@ class FavoriteWorkoutVC: UIViewController, UICollectionViewDelegate, UICollectio
             alert(title: myEx.exercise.name, message: "Please add your sets, reps, and weight below", index: indexPathRow!)
         }
     }
+    
     func alert(title: String, message: String, index: Int)
     { //used www.simplifiedios.net/ios-dialog-box-with-input/
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -152,6 +130,8 @@ class FavoriteWorkoutVC: UIViewController, UICollectionViewDelegate, UICollectio
             }
             self.theCollectionView.reloadData()
             
+            // Update workout in favorites
+            updateFaveWorkout(self.workout!)
         }
         
         //the cancel action doing nothing
