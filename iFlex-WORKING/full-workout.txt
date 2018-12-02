@@ -5,7 +5,7 @@
 		{
 			"exercise": {
 				"name": "Foot Elevated Split Squat",
-				"instructionalVideo": "https://youtu.be/NpzqPBBn1qo",
+				"instructionalVideo": "NpzqPBBn1qo",
 				"directions": "The foot elevated squat is an exercise that helps strengthen your knees and isolate your quads. You must elevate your back foot and then do a split squat. This should be weighted. If you have issues with balance you may hold onto a pole to steady yourself and hold weight in one hand.",
 				"equipment": ["Step or Bench", "Dumbells", "Optional: Pole to steady self"],
 				"muscleGroups": [
@@ -26,7 +26,7 @@
 		{
 			"exercise": {
 				"name": "Barbell Romanian Deadlift",
-				"instructionalVideo": "https://youtu.be/XxM-QNjznF0",
+				"instructionalVideo": "XxM-QNjznF0",
 				"directions": "The barbell romanian deadlift focuses on isolating your hamstrings and glutes. With a slight bend in your knees safely pick up the barbell and stand up straight. With a straight back and tight core hinge at the hips until you feel a slight pull in the back of your legs, then push your hips forward to straighten. You should not move your legs throughout this exercise.",
 				"equipment": ["Barbell"],
 				"muscleGroups": [
@@ -46,7 +46,7 @@
 		{
 			"exercise": {
 				"name": "Front Dumbell Squat with Ankle Extension",
-				"instructionalVideo": "https://youtu.be/kiki_7Rdl_s",
+				"instructionalVideo": "kiki_7Rdl_s",
 				"directions": "Lift two dumbells to your shoulders and lower yourself into a squat. At the bottom explode up and on to your toes.",
 				"equipment": ["Dumbells", "Optional: chair"],
 				"muscleGroups": [
@@ -66,7 +66,7 @@
 		{
 			"exercise": {
 				"name": "Bosu Plantar Flex Hip Ups",
-				"instructionalVideo": "https://youtu.be/TA9OfDPNvCg",
+				"instructionalVideo": "TA9OfDPNvCg",
 				"directions": "Place your feet on the Bosu ball and do glute thrusts, can add weight if desired.",
 				"equipment": ["Bosu ball", "Optional: weight plate"],
 				"muscleGroups": [
@@ -87,7 +87,7 @@
 		{
 			"exercise": {
 				"name": "Standing Calf Raises",
-				"instructionalVideo": "https://youtu.be/XE_av0Vxcsk",
+				"instructionalVideo": "XE_av0Vxcsk",
 				"directions": "Position yourself on a step so that the top half of your feet are on the step and the heel drops down, with one dumbell in each hand lift yourself onto your toes and back down.",
 				"equipment": ["Dumbells", "Step"],
 				"muscleGroups": [
@@ -105,7 +105,7 @@
 		{
 			"exercise": {
 				"name": "Standing Hip Flexion",
-				"instructionalVideo": "https://youtu.be/PQAePRjGomM",
+				"instructionalVideo": "PQAePRjGomM",
 				"directions": "Put a foot on the bench and the other on the ground. With your foot flexed lift it off the bench and hold. Return to the bench and repeat.",
 				"equipment": ["Step"],
 				"muscleGroups": [
@@ -135,4 +135,144 @@
 	"sharedWith" : [],
 	"description": "This workout is part of the ultimate athlete project",
 	"icon": "Lower"
+    },
+    {
+    "title": "Lower Lift",
+    "time": 60,
+    "exercises": [
+    {
+    "exercise": {
+    "name": "Foot Elevated Split Squat",
+    "instructionalVideo": "NpzqPBBn1qo",
+    "directions": "The foot elevated squat is an exercise that helps strengthen your knees and isolate your quads. You must elevate your back foot and then do a split squat. This should be weighted. If you have issues with balance you may hold onto a pole to steady yourself and hold weight in one hand.",
+    "equipment": ["Step or Bench", "Dumbells", "Optional: Pole to steady self"],
+    "muscleGroups": [
+    "Hamstrings",
+    "Quads",
+    "Abductors",
+    "Glutes"
+    ],
+    "difficulty": 4,
+    "commonMistakes": "Keep your knee over your toes, do not bend too much over the toes. Also keep your back straight and abs tight.",
+    "substitutions": "Lunges, step-ups, and single leg romanian dead lifts",
+    "icon": "Quads"
+    },
+    "weight": 25,
+    "reps": 8,
+    "sets": 3
+    },
+    {
+    "exercise": {
+    "name": "Barbell Romanian Deadlift",
+    "instructionalVideo": "XxM-QNjznF0",
+    "directions": "The barbell romanian deadlift focuses on isolating your hamstrings and glutes. With a slight bend in your knees safely pick up the barbell and stand up straight. With a straight back and tight core hinge at the hips until you feel a slight pull in the back of your legs, then push your hips forward to straighten. You should not move your legs throughout this exercise.",
+    "equipment": ["Barbell"],
+    "muscleGroups": [
+    "LowerBack",
+    "Glutes",
+    "Hamstrings"
+    ],
+    "difficulty": 3,
+    "commonMistakes": "Do not arch your back.",
+    "substitutions": "Good mornings, Dumbell Romanian Deadlifts",
+    "icon": "Hamstrings"
+    },
+    "weight": 60,
+    "reps": 10,
+    "sets": 3
+    },
+    {
+    "exercise": {
+    "name": "Front Dumbell Squat with Ankle Extension",
+    "instructionalVideo": "kiki_7Rdl_s",
+    "directions": "Lift two dumbells to your shoulders and lower yourself into a squat. At the bottom explode up and on to your toes.",
+    "equipment": ["Dumbells", "Optional: chair"],
+    "muscleGroups": [
+    "Glutes",
+    "Quads",
+    "Calves"
+    ],
+    "difficulty": 3,
+    "commonMistakes": "Do not arch your back and keep your knees from going over your toes.",
+    "substitutions": "Goblet squat, Front squat",
+    "icon": "Quads"
+    },
+    "weight": 15,
+    "reps": 10,
+    "sets": 3
+    },
+    {
+    "exercise": {
+    "name": "Bosu Plantar Flex Hip Ups",
+    "instructionalVideo": "TA9OfDPNvCg",
+    "directions": "Place your feet on the Bosu ball and do glute thrusts, can add weight if desired.",
+    "equipment": ["Bosu ball", "Optional: weight plate"],
+    "muscleGroups": [
+    "Core",
+    "Abductors",
+    "Glutes",
+    "Hamstrings"
+    ],
+    "difficulty": 3,
+    "commonMistakes": "Don't perform these too quickly.",
+    "substitutions": "Glute thrusters",
+    "icon": "Glutes"
+    },
+    "weight": 25,
+    "reps": 10,
+    "sets": 3
+    },
+    {
+    "exercise": {
+    "name": "Standing Calf Raises",
+    "instructionalVideo": "XE_av0Vxcsk",
+    "directions": "Position yourself on a step so that the top half of your feet are on the step and the heel drops down, with one dumbell in each hand lift yourself onto your toes and back down.",
+    "equipment": ["Dumbells", "Step"],
+    "muscleGroups": [
+    "Calves"
+    ],
+    "difficulty": 3,
+    "commonMistakes": "Do these with both legs simultaneously.",
+    "substitutions": "Jump rope, Downward dog",
+    "icon": "Calves"
+    },
+    "weight": 25,
+    "reps": 10,
+    "sets": 3
+    },
+    {
+    "exercise": {
+    "name": "Standing Hip Flexion",
+    "instructionalVideo": "PQAePRjGomM",
+    "directions": "Put a foot on the bench and the other on the ground. With your foot flexed lift it off the bench and hold. Return to the bench and repeat.",
+    "equipment": ["Step"],
+    "muscleGroups": [
+    "Calves",
+    "Hips",
+    "Quads"
+    ],
+    "difficulty": 3,
+    "commonMistakes": "Not many, make sure to push all the way through.",
+    "substitutions": "Hip flexor stretch",
+    "icon": "Hips"
+    },
+    "weight": 0,
+    "reps": 10,
+    "sets": 3
     }
+
+    ],
+    "difficulty": 3,
+    "tags" : [
+    "Quads",
+    "Glutes",
+    "Hamstrings"
+    ],
+    "priv": false,
+    "numOfExercises": 6,
+    "sharedWith" : [],
+    "description": "This workout is part of the ultimate athlete project",
+    "icon": "Lower"
+    }
+
+
