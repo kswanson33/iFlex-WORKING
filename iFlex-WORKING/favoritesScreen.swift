@@ -127,6 +127,7 @@ class favoritesScreen: UIViewController, UICollectionViewDelegate, UICollectionV
             cell.favAdd.addTarget(self, action: #selector(deleteFromFaves), for: UIControlEvents.touchUpInside)
             let icon = myW.icon
             cell.workImage.image = workoutEnumToIcon(area: icon)
+            cell.workImage.layer.cornerRadius = cell.workImage.layer.frame.width/6
 
         }
         return cell

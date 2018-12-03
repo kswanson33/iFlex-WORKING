@@ -58,8 +58,10 @@ class browseNowScreen: UIViewController, UICollectionViewDataSource, UICollectio
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let newCell = collectionView.dequeueReusableCell(withReuseIdentifier: "exerCell", for: indexPath) as! exCell
+        newCell.layer.cornerRadius = newCell.layer.frame.width/45
         newCell.title.text = Workouts[indexPath.row].title
         newCell.workImage.image = workoutEnumToIcon(area: Workouts[indexPath.row].icon)
+        newCell.workImage.layer.cornerRadius = newCell.workImage.layer.frame.width/6
         newCell.favAdd.tag = indexPath.row
         newCell.favAdd.addTarget(self, action: #selector(addToFavs), for: UIControlEvents.touchUpInside)
         return newCell
