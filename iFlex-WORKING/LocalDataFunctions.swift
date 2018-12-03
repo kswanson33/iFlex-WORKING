@@ -12,7 +12,7 @@ import Foundation
 //let path = Bundle.main.path(forResource: "Favorites", ofType: "plist")
 
 /* Writes a new user to local plist */
-func writeNewUser(_ user: User) {
+func localLogin(_ user: User) {
     // called on login
     //DispatchQueue.global(qos: .background).async {
     let path = Bundle.main.path(forResource: "Favorites", ofType: "plist")
@@ -22,7 +22,7 @@ func writeNewUser(_ user: User) {
 }
 
 /* Load all local data. Expects local data to be either empty, or a single user. */
-func loadLocal() -> User? {
+func loadLocalPersonal() -> User? {
     // Retrieve current array of workouts
     let path = Bundle.main.path(forResource: "Favorites", ofType: "plist")
     // To make asynchonous, enclose in:
@@ -35,8 +35,8 @@ func loadLocal() -> User? {
 }
 
 /* Get favorites */
-func getFavorites() -> [Workout] {
-    return loadLocal()!.favorites!
+func getFavoritesFromLocal() -> [Workout] {
+    return loadLocalPersonal()!.favorites!
 }
 
 /* Writes an empty array to local plist root object */
@@ -47,10 +47,10 @@ func clearLocal() {
 }
 
 /* Adds a workout to the user's favorites */
-func writeLocalToFaves(_ workout: Workout) {
+func writeToLocalFaves(_ workout: Workout) {
     // retrieve data
     let path = Bundle.main.path(forResource: "Favorites", ofType: "plist")
-    guard var user = loadLocal() else {
+    guard var user = loadLocalPersonal() else {
         print("Cannot write workout to user who doesn't exist.")
         return
     }
@@ -68,13 +68,33 @@ func writeLocalToFaves(_ workout: Workout) {
     NSKeyedArchiver.archiveRootObject(data, toFile: path!)
 }
 
-func writeToPublic(_ workouts: [Workout]) {
-    let path = Bundle.main.path(forResource: "PublicWorkouts", ofType: "plist")
-    let data = try! PropertyListEncoder().encode(workouts)
+/* Overwrites workouts */
+func overwriteLocalFavorites(workouts: [Workout]) {
+    // retrieve data
+    let path = Bundle.main.path(forResource: "Favorites", ofType: "plist")
+    guard var user = loadLocalPersonal() else {
+        print("Cannot write workout to user who doesn't exist.")
+        return
+    }
+    user.favorites = workouts
+    let data = try! PropertyListEncoder().encode(user)
     NSKeyedArchiver.archiveRootObject(data, toFile: path!)
 }
 
-func loadFromPublic() -> [Workout] {
+func writeToLocalPublic() {
+    let path = Bundle.main.path(forResource: "full-workout", ofType: "txt")
+    guard  let data = try? Data(contentsOf: URL(fileURLWithPath: path!), options: []) else {
+        print("couldn't decode full-workout")
+        return
+    }
+    let wo1 = try! JSONDecoder().decode([Workout].self, from: data)
+    printWorkout(wo1[0])
+    let data2 = try! PropertyListEncoder().encode(wo1)
+    let path2 = Bundle.main.path(forResource: "PublicWorkouts", ofType: "plist")
+    NSKeyedArchiver.archiveRootObject(data2, toFile: path2!)
+}
+
+func readLocalPublic() -> [Workout] {
     let path = Bundle.main.path(forResource: "PublicWorkouts", ofType: "plist")
     // To make asynchonous, enclose in:
     //DispatchQueue.global(qos: .background).async {}
@@ -85,5 +105,10 @@ func loadFromPublic() -> [Workout] {
     return workouts
 }
 
-// Need a function to update user data for a single exercise
-
+func writeToLocalPublic(_ w: Workout) {
+    let path = Bundle.main.path(forResource: "PublicWorkouts", ofType: "plist")
+    var workouts = readLocalPublic()
+    workouts.append(w)
+    let data = try! PropertyListEncoder().encode(workouts)
+    NSKeyedArchiver.archiveRootObject(data, toFile: path!)
+}

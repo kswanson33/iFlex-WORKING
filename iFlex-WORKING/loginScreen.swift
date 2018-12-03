@@ -13,48 +13,8 @@ class loginScreen: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        /* Load default workouts */
-        // Take out in place for Firebase
-        
-        let path = Bundle.main.path(forResource: "full-workout", ofType: "txt")
-        guard  let data = try? Data(contentsOf: URL(fileURLWithPath: path!), options: []) else {return}
-        do {
-            let wo1 = try [JSONDecoder().decode(Workout.self, from: data)]
-            //print ("Exercise 1 of Workout 1")
-            //print(wo1[0].exercises[0])
-            //print ("Exercise 1 of Workout 2")
-            //print(wo1[0].exercises[1])
-            //HERE IS A WORKING WORKOUT LOADED IN FROM THE TEXT FILE ATTACHED PLEASE STORE THIS SOMEWHERE IF YOU WANT TO RUN TESTING
-           // writeToPublic(wo1)
-            //writeWorkoutToDatabase(wo1[0])
-        } catch let error{
-            print(error.localizedDescription)
-        }
- 
-        // Check to see if user is logged in the app. Will be true unless explictly logged out or first time user.
-        // Then proceed to favorites screen.
-        Auth.auth().addStateDidChangeListener() { auth, user in
-            if user != nil {
-                self.performSegue(withIdentifier: "toFavsFromLogin", sender: nil)
-                self.userField.text = nil
-                let rootRef = Database.database().reference()
-                //rootRef.child("users").child((user?.uid)!).setValue(["userName":user?.email])
-                //let wo1 = try [JSONDecoder().decode(Workout.self, from: data)]
-                //writeWorkoutToDatabase(user:"z@k.com",wo1[0])
-            }
-        }
- 
-        
-        /*
-        // Access to root reference of database
-        let rootRef = Database.database().reference()
-        // Access to child reference of databse
-        let childRef = Database.database().reference(withPath: "grocery-items")
-        let itemsRef = rootRef.child("grocery-items")
-        let milkRef = itemsRef.child("milk")
-        */
+        /* Populate local public */
+        writeToLocalPublic()
     }
 
     @IBOutlet weak var loginButton: UIButton!
@@ -62,31 +22,7 @@ class loginScreen: UIViewController {
     @IBOutlet weak var newUserButton: UIButton!
     
     @IBAction func loginPressed(_ sender: Any) {
-
-        if (userField.text?.count)! > 0 {
-            
-            Auth.auth().signIn(withEmail: userField.text!, password: "passWord") { user, error in
-                if let error = error, user == nil {
-                    let alert = UIAlertController(title: "Sign In Failed",
-                                                  message: error.localizedDescription,
-                                                  preferredStyle: .alert)
-                    
-                    alert.addAction(UIAlertAction(title: "OK", style: .default))
-                    
-                    self.present(alert, animated: true, completion: nil)
-                }
-                if error == nil {
-                    //self.performSegue(withIdentifier: "toFavsFromLogin", sender: nil)
-                    print("Transition")
-                }
-            }
-            
-        }
-        else {
-            print("No username")
-            alert(title: "Invalid Input", message: "Please enter a username")
-            return
-        }
+        localLogin(User(id: "??", userName: "doesn't matter"))
     }
     
     func alert(title: String, message: String)

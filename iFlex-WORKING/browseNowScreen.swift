@@ -21,35 +21,9 @@ class browseNowScreen: UIViewController, UICollectionViewDataSource, UICollectio
         
         workoutCollection.delegate = self
         workoutCollection.dataSource = self
-        //Workouts = getDefaultWorkouts()
-        publicWorkoutsRef.observe(.value, with: { snapshot in
-            //var newItems: [Workout] = []
-            for item in snapshot.children {
-                let wrk = Workout(snapshot: (item as? DataSnapshot)!)
-                self.Workouts.append(wrk)
-                self.workoutCollection.reloadData()
-            }
-        })
-        
-        /* Populate with sample data -- comment out when getDefaultWorkouts works */
-        
-        /*
-        if Workouts.count == 0 {
-            let path = Bundle.main.path(forResource: "full-workout", ofType: "txt")
-            guard  let data = try? Data(contentsOf: URL(fileURLWithPath: path!), options: []) else {return}
-            do {
-                let wo1 = try [JSONDecoder().decode(Workout.self, from: data)]
-                let Wrkout2 = Workout(title: "B", time: 0, exercises: [], difficulty: 1, tags: [], priv: false, numOfExercises: 5, sharedWith: [], description: "hello", icon: WorkoutTarget.Core)
-                Workouts = wo1
-                Workouts.append(Wrkout2)
-            } catch let error{
-                print("here")
-                print(error.localizedDescription)
-            }
-        }*/
-        
-        
-        
+        // Populate with placeholder data
+        Workouts = readLocalPublic()
+        printWorkout(Workouts[0])
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -75,11 +49,10 @@ class browseNowScreen: UIViewController, UICollectionViewDataSource, UICollectio
         self.navigationController!.pushViewController(wrkVC, animated: true)
     }
     
-    // Doesn't work yet -- will work when writeWorkoutToFavorites is implemented!
     @IBAction func addToFavs(_ sender: AnyObject) {
         let indexNum = sender.tag
         print(Workouts[indexNum!].title)
-        writeWorkoutToFavorites(Workouts[indexNum!])
+        writeToLocalFaves(Workouts[indexNum!])
     }
         
     override func didReceiveMemoryWarning() {

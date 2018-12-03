@@ -22,6 +22,7 @@ struct User: Codable {
     init(id: String, userName: String) {
         self.id = id
         self.userName = userName
+        self.favorites = []
     }
 }
 

@@ -8,10 +8,6 @@
 
 import UIKit
 
-// Currently sets title, difficulty, private, description, time, icon. Description text now wraps around. Icon now shows when it is selected.
-// TODO: Set sharedWith, tags; handle blank fields
-// Blank fields: Title definitely should not be allowed to be blank. Should others?
-
 class CreateNewViewController: UIViewController, UITextViewDelegate {
 
     /* Updated by the fields in this view */
@@ -40,6 +36,7 @@ class CreateNewViewController: UIViewController, UITextViewDelegate {
         if (gesture.view as? UIImageView) != nil {
             print("upper")
             draftWorkout.icon = .Upper
+            draftWorkout.tags.append("upper")
             showIconSelected(upperIcon)
         }
     }
@@ -47,6 +44,7 @@ class CreateNewViewController: UIViewController, UITextViewDelegate {
         if (gesture.view as? UIImageView) != nil {
             print("lower")
             draftWorkout.icon = .Lower
+            draftWorkout.tags.append("lower")
             showIconSelected(lowerIcon)
         }
     }
@@ -54,6 +52,7 @@ class CreateNewViewController: UIViewController, UITextViewDelegate {
         if (gesture.view as? UIImageView) != nil {
             print("core")
             draftWorkout.icon = .Core
+            draftWorkout.tags.append("core")
             showIconSelected(coreIcon)
         }
     }
@@ -61,6 +60,7 @@ class CreateNewViewController: UIViewController, UITextViewDelegate {
         if (gesture.view as? UIImageView) != nil {
             print("full body")
             draftWorkout.icon = .FullBody
+            draftWorkout.tags.append("full body")
             showIconSelected(fullBodyIcon)
         }
     }

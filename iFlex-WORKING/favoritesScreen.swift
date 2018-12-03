@@ -24,53 +24,13 @@ class favoritesScreen: UIViewController, UICollectionViewDelegate, UICollectionV
         super.viewDidLoad()
         theCollectionView.dataSource = self
         theCollectionView.delegate = self
-        print("LOOK HERE")
         
-        publicWorkoutsRef.observe(.value, with: {
-            snapshot in
-                print(snapshot.value as Any)
-        })
- 
-        //let u = User(id: 10, favorites: [], userName: "User1")
-        //writeNewUser(u) //stores their favorites locally (should be async)
-        // Do any additional setup after loading the view.
-        //SET MYFAVES BY DOING LOCAL STUFF
-        /*
-            let path = Bundle.main.path(forResource: "full-workout", ofType: "txt")
-            guard  let data = try? Data(contentsOf: URL(fileURLWithPath: path!), options: []) else {return}
-            do {
-                let wo1 = try [JSONDecoder().decode(Workout.self, from: data)]
-                myFaves = wo1
-            } catch let error{
-                print("here")
-                print(error.localizedDescription)
-            }
- */
-        
-        user = getUserByUsername(username: "TheUser")
-        myFaves = user.favorites
-        
-        /* Populate sample data -- delete when myFaves is set with a working Firebase function */
-        let path = Bundle.main.path(forResource: "full-workout", ofType: "txt")
-        guard  let data = try? Data(contentsOf: URL(fileURLWithPath: path!), options: []) else {return}
-        do {
-            let wo1 = try JSONDecoder().decode([Workout].self, from: data)
-            myFaves = wo1
-        } catch let error{
-            print("here")
-            print(error.localizedDescription)
-        }
-//        print("Look here")
-//        let ref = Database.database().reference(withPath: "Workouts")
-
-        Auth.auth().addStateDidChangeListener { auth, user in
-            guard let user = user else { return }
-            self.user = User(authData: user)
-            
-            let currentUserRef = self.usersRef.child(self.user.id)
-            currentUserRef.setValue(self.user.userName)
-            currentUserRef.onDisconnectRemoveValue()
-        }
+        myFaves = getFavoritesFromLocal()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        myFaves = getFavoritesFromLocal()
+        theCollectionView.reloadData()
     }
 
     func collectionView(_ collectionView: UICollectionView,
@@ -82,8 +42,6 @@ class favoritesScreen: UIViewController, UICollectionViewDelegate, UICollectionV
             {
 
                 if let wo = myFaves?[indexPath.row]{
-
-                    //let indVC = IndividualMovieController()
                     let indVC = self.storyboard?.instantiateViewController(withIdentifier: "workoutDeets") as! FavoriteWorkoutVC
                     indVC.workout = wo
                     self.navigationController!.pushViewController(indVC, animated : true)
@@ -94,32 +52,21 @@ class favoritesScreen: UIViewController, UICollectionViewDelegate, UICollectionV
         }
         return false
     }
-
     
-
-
-    //fileprivate let sectionInsets = UIEdgeInsets(top: 10.0, left: 10.0, bottom: 10.0, right: 10.0)
-
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if let numResults = (myFaves?.count)
-        {
+        if let numResults = (myFaves?.count) {
             return numResults
-        }
-        else
-        {
+        } else {
             return 0
         }
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "faveCell", for: indexPath) as! exCell
-
-      //  cell.backgroundColor = UIColor.red
         cell.layer.cornerRadius = cell.layer.frame.width/45
         if let myW = myFaves?[indexPath.row]{
             cell.title.text = myW.title
@@ -138,6 +85,7 @@ class favoritesScreen: UIViewController, UICollectionViewDelegate, UICollectionV
         if let myW = myFaves?[indexPathRow!]{
             alert(title: myW.title, message: "Selected workout was deleted")
             myFaves?.remove(at: indexPathRow!)
+            overwriteLocalFavorites(workouts: myFaves!)
         }
         theCollectionView.reloadData()
     }

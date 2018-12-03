@@ -27,6 +27,7 @@
                                 </state>
                                 <connections>
                                     <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U3a-uD-5qf"/>
+                                    <segue destination="RMX-9W-x0q" kind="show" id="OXf-b7-W2l"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ep6-xN-pzD">
@@ -99,7 +100,6 @@
                         <outlet property="loginButton" destination="hxW-07-U6b" id="hM0-uW-uLw"/>
                         <outlet property="newUserButton" destination="xN5-8I-jHe" id="eeo-z4-VZ6"/>
                         <outlet property="userField" destination="Ep6-xN-pzD" id="c2d-EQ-eNo"/>
-                        <segue destination="RMX-9W-x0q" kind="show" identifier="toFavsFromLogin" id="3Eb-uY-u7g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -152,6 +152,7 @@
                                 </state>
                                 <connections>
                                     <action selector="createButtonPressed:" destination="VaE-lC-ilk" eventType="touchUpInside" id="irJ-Ky-zj6"/>
+                                    <segue destination="RMX-9W-x0q" kind="show" id="rzH-RG-1QD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -180,7 +181,6 @@
                     <connections>
                         <outlet property="createButton" destination="VC0-I9-Pgd" id="dNn-bL-Czf"/>
                         <outlet property="userField" destination="U7H-Le-BEN" id="jar-4k-uSd"/>
-                        <segue destination="RMX-9W-x0q" kind="show" identifier="toFavs" id="b3Q-JU-9oO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8qm-OV-4kT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -197,6 +197,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="b3Q-JU-9oO"/>
+        <segue reference="rzH-RG-1QD"/>
     </inferredMetricsTieBreakers>
 </document>
