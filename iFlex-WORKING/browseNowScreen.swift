@@ -11,7 +11,7 @@ import Firebase
 
 class browseNowScreen: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate  {
     
-    let publicWorkoutsRef = Database.database().reference(withPath: "publicWorkouts")
+    let publicWorkoutsRef = Database.database().reference(withPath: "publicWorkouts/publicWorkouts")
     
     var Workouts: [Workout] = []
     @IBOutlet weak var workoutCollection: UICollectionView!
