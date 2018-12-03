@@ -251,7 +251,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="274-QY-oar">
                                 <rect key="frame" x="0.0" y="64" width="375" height="523"/>
                                 <color key="backgroundColor" red="0.0" green="0.014777161969999999" blue="0.027821370089999999" alpha="0.70597787919999999" colorSpace="custom" customColorSpace="sRGB"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="10" id="iU4-yf-vXD">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iU4-yf-vXD">
                                     <size key="itemSize" width="360" height="80"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
