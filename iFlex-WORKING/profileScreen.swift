@@ -135,12 +135,12 @@ class profileScreen: UIViewController {
     @IBAction func logOut(_ sender: Any) {
         
         // 1
-        let user = Auth.auth().currentUser!
+        //let user = Auth.auth().currentUser!
         
-        let onlineRef = Database.database().reference(withPath: "online/\(user.uid)")
+        //let onlineRef = Database.database().reference(withPath: "online/\(user.uid)")
         
         
-        onlineRef.removeValue { (error, _) in
+        /*onlineRef.removeValue { (error, _) in
             
             // 3
             if let error = error {
@@ -155,26 +155,10 @@ class profileScreen: UIViewController {
             } catch (let error) {
                 print("Auth sign out failed: \(error)")
             }
-         
+         */
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let indVC = storyboard.instantiateViewController(withIdentifier: "loginScreen")
         self.present(indVC, animated : true)
-        }
-    
-    
-}
-    
-    
-
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
-    */
+    
 }

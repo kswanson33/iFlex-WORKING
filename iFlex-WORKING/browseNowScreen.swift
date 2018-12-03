@@ -53,8 +53,15 @@ class browseNowScreen: UIViewController, UICollectionViewDataSource, UICollectio
         let indexNum = sender.tag
         print(Workouts[indexNum!].title)
         writeToLocalFaves(Workouts[indexNum!])
+        alert(title: "Success", message: "Added to favorites.")
     }
-        
+    
+    func alert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
+        self.present(alert, animated: true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
