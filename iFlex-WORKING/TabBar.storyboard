@@ -216,7 +216,7 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pSd-no-mva">
                                                     <rect key="frame" x="303" y="16" width="52" height="52"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.24993416430000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q4v-li-df2">
                                                     <rect key="frame" x="100" y="53" width="164" height="27"/>
@@ -378,7 +378,7 @@
                                                                 </stackView>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5g2-Gc-92T">
                                                                     <rect key="frame" x="292" y="13" width="40" height="40"/>
-                                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.24993416430000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="40" id="9f3-ny-EY9"/>
                                                                         <constraint firstAttribute="width" constant="40" id="weX-Bx-RmX"/>
@@ -476,7 +476,7 @@
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hso-lT-dio">
                                                 <rect key="frame" x="318" y="43" width="45" height="45"/>
-                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.24993416430000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="Xg7-QM-YrK"/>
                                                     <constraint firstAttribute="width" constant="45" id="uFG-6c-9i4"/>
@@ -637,6 +637,7 @@
                                             </stackView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fum-uD-Mrz">
                                                 <rect key="frame" x="42" y="101" width="291" height="180"/>
+                                                <color key="backgroundColor" red="0.19145188730000001" green="0.19314615169999999" blue="0.19314615169999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="180" id="J9t-yd-zAG"/>
                                                 </constraints>
@@ -655,11 +656,11 @@
                                             </label>
                                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L62-fI-taF">
                                                 <rect key="frame" x="35" y="98" width="305" height="183"/>
-                                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.19145188730000001" green="0.19314615169999999" blue="0.19314615169999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </webView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MFi-jh-V3F">
                                                 <rect key="frame" x="317" y="19" width="50" height="50"/>
-                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.24993416430000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="Qrd-Mh-BzM"/>
                                                     <constraint firstAttribute="width" constant="50" id="aXb-fX-FTv"/>
@@ -795,7 +796,7 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="30F-2n-hjr">
                                                     <rect key="frame" x="293" y="16" width="52" height="52"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.24993416430000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bFi-u4-hlR">
                                                     <rect key="frame" x="111" y="53" width="143" height="27"/>

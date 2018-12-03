@@ -29,6 +29,7 @@ class ExerciseVC: UIViewController{
         if let e = exercise {
             label.text = e.exercise.name
             iconImage.image = exerciseEnumToIcon(area: e.exercise.icon)
+            iconImage.layer.cornerRadius = iconImage.layer.frame.width/6
             desc.text = String(e.exercise.directions)
             mistakes.text = e.exercise.commonMistakes
             for eq in e.exercise.equipment {

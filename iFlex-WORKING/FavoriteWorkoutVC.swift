@@ -23,10 +23,12 @@ class FavoriteWorkoutVC: UIViewController, UICollectionViewDelegate, UICollectio
         super.viewDidLoad()
         theCollectionView.dataSource = self
         theCollectionView.delegate = self
+        theCollectionView.layer.cornerRadius = theCollectionView.layer.frame.width/45
         workoutTitle.text = workout?.title
         approxTime.text = String(workout!.time)
         let icon = workout?.icon
         icons.image = workoutEnumToIcon(area: icon!)
+        icons.layer.cornerRadius = icons.layer.frame.width/6
         let diff = workout?.difficulty
         var color: UIColor
         if diff! < 3 {
@@ -78,6 +80,7 @@ class FavoriteWorkoutVC: UIViewController, UICollectionViewDelegate, UICollectio
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "mycell", for: indexPath) as! WorkoutCell
       //  cell.backgroundColor = UIColor.red
+        cell.layer.cornerRadius = cell.layer.frame.width/45
         if let myEx = workout?.exercises[indexPath.row]{
             cell.cellLabel.text = myEx.exercise.name
             cell.setsNum.text = String(myEx.sets)
@@ -85,6 +88,7 @@ class FavoriteWorkoutVC: UIViewController, UICollectionViewDelegate, UICollectio
             cell.weightNum.text = String(myEx.weight)
             var icon = myEx.exercise.icon
             cell.Icon.image = exerciseEnumToIcon(area: icon)
+            cell.Icon.layer.cornerRadius = cell.Icon.layer.frame.width/6
             cell.addData.tag = indexPath.row
             cell.addData.addTarget(self, action: #selector(addUserData), for: UIControlEvents.touchUpInside)
             
