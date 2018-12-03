@@ -23,7 +23,7 @@ class AddExercisesVC: UIViewController, UICollectionViewDataSource, UICollection
         let path = Bundle.main.path(forResource: "full-workout", ofType: "txt")
         guard  let data = try? Data(contentsOf: URL(fileURLWithPath: path!), options: []) else {return}
         do {
-            let wo1 = try [JSONDecoder().decode(Workout.self, from: data)]
+            let wo1 = try JSONDecoder().decode([Workout].self, from: data)
             //writeToPublic(wo1)
             exercises = wo1[0].exercises
         } catch let error{

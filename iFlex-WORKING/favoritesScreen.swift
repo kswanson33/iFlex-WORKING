@@ -54,7 +54,7 @@ class favoritesScreen: UIViewController, UICollectionViewDelegate, UICollectionV
         let path = Bundle.main.path(forResource: "full-workout", ofType: "txt")
         guard  let data = try? Data(contentsOf: URL(fileURLWithPath: path!), options: []) else {return}
         do {
-            let wo1 = try [JSONDecoder().decode(Workout.self, from: data)]
+            let wo1 = try JSONDecoder().decode([Workout].self, from: data)
             myFaves = wo1
         } catch let error{
             print("here")
