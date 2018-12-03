@@ -11,7 +11,7 @@ import Firebase
 
 class browseNowScreen: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate  {
     
-    let publicWorkoutsRef = Database.database().reference(withPath: "Workouts")
+    let publicWorkoutsRef = Database.database().reference(withPath: "publicWorkouts")
     
     var Workouts: [Workout] = []
     @IBOutlet weak var workoutCollection: UICollectionView!
@@ -22,7 +22,15 @@ class browseNowScreen: UIViewController, UICollectionViewDataSource, UICollectio
         workoutCollection.delegate = self
         workoutCollection.dataSource = self
         Workouts = getDefaultWorkouts()
-        
+        publicWorkoutsRef.observe(.value, with: { snapshot in
+            var newItems: [Workout] = []
+            for item in snapshot.children {
+                let wrk = Workout(snapshot: (item as? DataSnapshot)!)
+                printWorkout(wrk)
+                newItems.append(wrk)
+            }
+            self.Workouts = newItems
+        })
         /* Populate with sample data -- comment out when getDefaultWorkouts works */
         
         /*

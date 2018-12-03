@@ -38,18 +38,21 @@ struct Workout: Codable {
     
     // Init for reading from Database snapshot
     init(snapshot: DataSnapshot) {
-        let snapshotValue = snapshot.value as! [String: AnyObject]
-        title = snapshotValue["title"] as! String
-        time  = snapshotValue["time "] as! Int
-        exercises = snapshotValue["exercises"] as! [MyExercise]
-        difficulty = snapshotValue["difficulty"] as! Int
-        tags = snapshotValue["tags"] as! [String]
-        priv = snapshotValue["priv"] as! Bool
-        difficulty = snapshotValue["difficulty"] as! Int
-        numOfExercises = snapshotValue["numOfExercises"] as! Int
-        sharedWith = snapshotValue["sharedWith"] as! [String]
-        description = snapshotValue["description"] as! String
-        icon = snapshotValue["icon"] as! WorkoutTarget
+        let snapshotValue = snapshot.value as? [String:AnyObject]
+        title = snapshotValue?["title"] as? String ?? ""
+        //exercises = snapshot.childSnapshot(forPath: "0/exercises/0/").value as! [MyExercise]
+        time  = snapshotValue?["time"] as? Int ?? 0
+        print("---------START--------------")
+        //print(title)
+        print("---------END--------------")
+        exercises = []
+        difficulty = snapshotValue?["difficulty"] as? Int ?? 0
+        tags = snapshotValue?["tags"] as? [String] ?? [""]
+        priv = snapshotValue?["priv"] as? Bool ?? true
+        numOfExercises = snapshotValue?["numOfExercises"] as? Int ?? 0
+        sharedWith = snapshotValue?["sharedWith"] as? [String] ?? [""]
+        description = snapshotValue?["description"] as? String ?? ""
+        icon = snapshotValue?["icon"] as? WorkoutTarget ?? WorkoutTarget.Core
     }
     
     // Func converting model for easier writing to database
