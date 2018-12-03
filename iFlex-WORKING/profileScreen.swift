@@ -5,15 +5,14 @@
 //  Created by labuser on 11/30/18.
 //  Copyright © 2018 Kendra Swanson. All rights reserved.
 //
-
 import UIKit
 import Firebase
 
 class profileScreen: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -21,7 +20,7 @@ class profileScreen: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     @IBOutlet weak var logOutButton: UIButton!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userWeight: UILabel!
@@ -131,23 +130,23 @@ class profileScreen: UIViewController {
         
         self.present(alert, animated: true)
     }
-
+    
     @IBAction func logOut(_ sender: Any) {
         
         // 1
-        //let user = Auth.auth().currentUser!
+        let user = Auth.auth().currentUser!
         
-        //let onlineRef = Database.database().reference(withPath: "online/\(user.uid)")
+        let onlineRef = Database.database().reference(withPath: "online/\(user.uid)")
         
         
-        /*onlineRef.removeValue { (error, _) in
+        onlineRef.removeValue { (error, _) in
             
             // 3
             if let error = error {
                 print("Removing online failed: \(error)")
                 return
             }
- 
+            
             // 4
             do {
                 try Auth.auth().signOut()
@@ -155,10 +154,25 @@ class profileScreen: UIViewController {
             } catch (let error) {
                 print("Auth sign out failed: \(error)")
             }
-         */
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let indVC = storyboard.instantiateViewController(withIdentifier: "loginScreen")
-        self.present(indVC, animated : true)
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let indVC = storyboard.instantiateViewController(withIdentifier: "loginScreen")
+            self.present(indVC, animated : true)
+        }
+        
+        
     }
     
+    
+    
+    
+    
+    /*
+     // MARK: - Navigation
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
 }

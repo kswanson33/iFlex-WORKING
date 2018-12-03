@@ -5,7 +5,6 @@
 //  Created by Kendra Swanson, Christina Stellwagen, Carla Beghin, Zayid Oyelami, Benji Gu on 11/26/18.
 //  Copyright © 2018 Kendra Swanson, Christina Stellwagen, Carla Beghin, Zayid Oyelami, Benji Gu. All rights reserved.
 //
-
 import UIKit
 import Firebase
 
@@ -13,16 +12,68 @@ class loginScreen: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        /* Populate local public */
+        
+        
+        /* Load default workouts */
+        // Take out in place for Firebase
+        
         writeToLocalPublic()
+        localLogin(User(id: "", userName: ""))
+        
+        // Check to see if user is logged in the app. Will be true unless explictly logged out or first time user.
+        // Then proceed to favorites screen.
+        Auth.auth().addStateDidChangeListener() { auth, user in
+            if user != nil {
+                self.performSegue(withIdentifier: "toFavsFromLogin", sender: nil)
+                self.userField.text = nil
+                let rootRef = Database.database().reference()
+                //rootRef.child("users").child((user?.uid)!).setValue(["userName":user?.email])
+                //let wo1 = try [JSONDecoder().decode(Workout.self, from: data)]
+                //writeWorkoutToDatabase(user:"z@k.com",wo1[0])
+            }
+        }
+        
+        
+        /*
+         // Access to root reference of database
+         let rootRef = Database.database().reference()
+         // Access to child reference of databse
+         let childRef = Database.database().reference(withPath: "grocery-items")
+         let itemsRef = rootRef.child("grocery-items")
+         let milkRef = itemsRef.child("milk")
+         */
     }
-
+    
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var userField: UITextField!
     @IBOutlet weak var newUserButton: UIButton!
     
     @IBAction func loginPressed(_ sender: Any) {
-        localLogin(User(id: "??", userName: "doesn't matter"))
+        
+        if (userField.text?.count)! > 0 {
+            
+            Auth.auth().signIn(withEmail: userField.text!, password: "passWord") { user, error in
+                if let error = error, user == nil {
+                    let alert = UIAlertController(title: "Sign In Failed",
+                                                  message: error.localizedDescription,
+                                                  preferredStyle: .alert)
+                    
+                    alert.addAction(UIAlertAction(title: "OK", style: .default))
+                    
+                    self.present(alert, animated: true, completion: nil)
+                }
+                if error == nil {
+                    //self.performSegue(withIdentifier: "toFavsFromLogin", sender: nil)
+                    print("Transition")
+                }
+            }
+            
+        }
+        else {
+            print("No username")
+            alert(title: "Invalid Input", message: "Please enter a username")
+            return
+        }
     }
     
     func alert(title: String, message: String)
@@ -38,7 +89,7 @@ class loginScreen: UIViewController {
     
     
     
-
+    
     
     
     
@@ -47,15 +98,15 @@ class loginScreen: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
+
