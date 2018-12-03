@@ -12,7 +12,7 @@ import Foundation
 
 func writeWorkoutToDatabase(_ workout: Workout) {
     let ref = Database.database().reference()
-    let workoutRef = ref.child("Workouts").child(workout.title)
+    let workoutRef = ref.child("publicWorkouts").child(workout.title)
     let currentUser = Auth.auth().currentUser
     let userRef = Database.database().reference(withPath: "users")
     if currentUser != nil

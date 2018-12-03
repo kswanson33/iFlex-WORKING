@@ -103,9 +103,13 @@ class AddExercisesVC: UIViewController, UICollectionViewDataSource, UICollection
     
     /* Write draft workout to user's favorites */
     @IBAction func saveButton(_ sender: Any) {
-        /*writeNewWorkout(draftWorkout)
-        let u = loadLocal()
-        printUser(u!)*/
+        if draftWorkout.priv == true {
+            // write workout to user's favorites
+        } else {
+            // write workout to user's favorites
+            writeWorkoutToDatabase(draftWorkout)
+        }
+        printWorkout(draftWorkout)
     }
 
     override func didReceiveMemoryWarning() {
