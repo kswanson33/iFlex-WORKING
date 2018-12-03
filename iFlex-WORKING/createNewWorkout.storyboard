@@ -241,15 +241,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0D-jg-foM">
-                                <rect key="frame" x="167" y="607" width="41" height="30"/>
-                                <state key="normal" title="Save"/>
+                                <rect key="frame" x="162" y="610" width="51" height="27"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.24993416430000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="15"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="saveButton:" destination="r1F-zi-Z11" eventType="touchUpInside" id="ABm-VQ-r2m"/>
                                     <segue destination="hsK-rA-n6S" kind="showDetail" id="0XG-Vp-6Bc"/>
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="274-QY-oar">
-                                <rect key="frame" x="0.0" y="64" width="375" height="523"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="526"/>
                                 <color key="backgroundColor" red="0.0" green="0.014777161969999999" blue="0.027821370089999999" alpha="0.70597787919999999" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iU4-yf-vXD">
                                     <size key="itemSize" width="360" height="80"/>
@@ -277,7 +282,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.24993416430000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="14"/>
-                                                    <state key="normal" title="Add to Workout"/>
+                                                    <state key="normal" title="Add to Workout">
+                                                        <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
                                                 </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LSo-8M-HPq">
                                                     <rect key="frame" x="294" y="10" width="60" height="60"/>
@@ -298,13 +305,13 @@
                         </subviews>
                         <color key="backgroundColor" red="0.55549009680000005" green="0.67025182139999995" blue="0.75414506000000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="bRm-1Q-Suz" firstAttribute="trailing" secondItem="D0D-jg-foM" secondAttribute="trailing" constant="167" id="Elt-EH-21h"/>
+                            <constraint firstItem="bRm-1Q-Suz" firstAttribute="trailing" secondItem="D0D-jg-foM" secondAttribute="trailing" constant="162" id="Elt-EH-21h"/>
                             <constraint firstItem="bRm-1Q-Suz" firstAttribute="bottom" secondItem="D0D-jg-foM" secondAttribute="bottom" constant="30" id="GAt-LB-LGV"/>
                             <constraint firstItem="274-QY-oar" firstAttribute="top" secondItem="bRm-1Q-Suz" secondAttribute="top" id="JAL-UW-sUg"/>
                             <constraint firstItem="D0D-jg-foM" firstAttribute="top" secondItem="274-QY-oar" secondAttribute="bottom" constant="20" id="N7v-b3-qtd"/>
                             <constraint firstItem="274-QY-oar" firstAttribute="leading" secondItem="bRm-1Q-Suz" secondAttribute="leading" id="bTZ-vo-GiW"/>
                             <constraint firstItem="bRm-1Q-Suz" firstAttribute="trailing" secondItem="274-QY-oar" secondAttribute="trailing" id="q14-BB-lv6"/>
-                            <constraint firstItem="D0D-jg-foM" firstAttribute="leading" secondItem="bRm-1Q-Suz" secondAttribute="leading" constant="167" id="yAs-og-zKB"/>
+                            <constraint firstItem="D0D-jg-foM" firstAttribute="leading" secondItem="bRm-1Q-Suz" secondAttribute="leading" constant="162" id="yAs-og-zKB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bRm-1Q-Suz"/>
                     </view>
