@@ -104,7 +104,7 @@ class CreateNewViewController: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         descriptionTextView.delegate = self
-        draftWorkout = Workout(title: "", time: 0, exercises: [], difficulty: 0, tags: [], priv: true, numOfExercises: 0, sharedWith: [], description: "", icon: WorkoutTarget.Upper)
+        draftWorkout = Workout(title: "", time: 0, exercises: [], difficulty: 1, tags: [], priv: true, numOfExercises: 0, sharedWith: [], description: "", icon: WorkoutTarget.Upper)
         showIconSelected(upperIcon)
         
         // create tap gesture recognizer
@@ -172,13 +172,20 @@ class CreateNewViewController: UIViewController, UITextViewDelegate {
         lastInput = timeField.text
     }
     
-    /* Pass draft workout to AddExercises view */
-    /* Source: https://learnappmaking.com/pass-data-between-view-controllers-swift-how-to/ */
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.destination is AddExercisesVC {
-            let vc = segue.destination as? AddExercisesVC
-            vc?.draftWorkout = self.draftWorkout
+    @IBAction func selectExerciseButton(_ sender: Any) {
+        if titleField.text == "" {
+            alert(title: "No title", message: "Please add a title for your workout")
+            return
         }
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "addNew") as! AddExercisesVC
+        vc.draftWorkout = draftWorkout
+        self.navigationController!.pushViewController(vc, animated : true)
+    }
+    
+    func alert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
+        self.present(alert, animated: true)
     }
     
     override func didReceiveMemoryWarning() {
