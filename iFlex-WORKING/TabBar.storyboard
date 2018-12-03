@@ -263,7 +263,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Favorites" id="byY-7E-Xfm">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="icons8-plus-40" id="lCh-S5-lrA">
-                            <color key="tintColor" red="0.191" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.19145188730000001" green="0.19314615169999999" blue="0.19314615169999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="rVv-6H-kvK" kind="show" id="CVe-cw-5CR"/>
                             </connections>
@@ -842,7 +842,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Browse" id="92W-XB-4SW">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="icons8-plus-40" id="kMK-Wz-kTK">
-                            <color key="tintColor" red="0.191" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.19145188730000001" green="0.19314615169999999" blue="0.19314615169999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="XJ7-Bc-EzF" kind="show" id="QTj-3M-WLw"/>
                             </connections>
