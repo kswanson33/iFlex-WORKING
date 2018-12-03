@@ -135,7 +135,9 @@ class favoritesScreen: UIViewController, UICollectionViewDelegate, UICollectionV
         let indexPathRow = sender.tag
         if let myW = myFaves?[indexPathRow!]{
             alert(title: myW.title, message: "Selected workout was deleted")
+            myFaves?.remove(at: indexPathRow!)
         }
+        theCollectionView.reloadData()
     }
     
     func alert(title: String, message: String)
