@@ -21,16 +21,16 @@ class browseNowScreen: UIViewController, UICollectionViewDataSource, UICollectio
         
         workoutCollection.delegate = self
         workoutCollection.dataSource = self
-        Workouts = getDefaultWorkouts()
+        //Workouts = getDefaultWorkouts()
         publicWorkoutsRef.observe(.value, with: { snapshot in
-            var newItems: [Workout] = []
+            //var newItems: [Workout] = []
             for item in snapshot.children {
                 let wrk = Workout(snapshot: (item as? DataSnapshot)!)
-                printWorkout(wrk)
-                newItems.append(wrk)
+                self.Workouts.append(wrk)
+                self.workoutCollection.reloadData()
             }
-            self.Workouts = newItems
         })
+        
         /* Populate with sample data -- comment out when getDefaultWorkouts works */
         
         /*
