@@ -40,6 +40,7 @@ class CreateNewViewController: UIViewController, UITextViewDelegate {
         if (gesture.view as? UIImageView) != nil {
             print("upper")
             draftWorkout.icon = .Upper
+            draftWorkout.tags = ["Chest","Back","Arms"]
             showIconSelected(upperIcon)
         }
     }
@@ -47,6 +48,7 @@ class CreateNewViewController: UIViewController, UITextViewDelegate {
         if (gesture.view as? UIImageView) != nil {
             print("lower")
             draftWorkout.icon = .Lower
+            draftWorkout.tags = ["Quads","Glutes","Abductors"]
             showIconSelected(lowerIcon)
         }
     }
@@ -54,12 +56,14 @@ class CreateNewViewController: UIViewController, UITextViewDelegate {
         if (gesture.view as? UIImageView) != nil {
             print("core")
             draftWorkout.icon = .Core
+            draftWorkout.tags = ["Core","LowerBack"]
             showIconSelected(coreIcon)
         }
     }
     @objc func fullBodyTapped(gesture: UIGestureRecognizer) {
         if (gesture.view as? UIImageView) != nil {
             print("full body")
+            draftWorkout.tags = ["Legs","Arms","Core"]
             draftWorkout.icon = .FullBody
             showIconSelected(fullBodyIcon)
         }
