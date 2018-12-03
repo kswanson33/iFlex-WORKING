@@ -41,8 +41,11 @@ class FavoriteWorkoutVC: UIViewController, UICollectionViewDelegate, UICollectio
             color = UIColor.red
         }
         icons.backgroundColor = color
-        let st = workout?.tags[0]
-        tags.text = st
+        tags.text = ""
+        for tag in (workout?.tags)! {
+            tags.text?.append(tag + "  " )
+        }
+        
         putDescription.text = workout?.description
     }
     
