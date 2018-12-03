@@ -12,12 +12,13 @@ import Foundation
 
 func writeWorkoutToDatabase(_ workout: Workout) {
     let ref = Database.database().reference()
-    let workoutRef = ref.child("publicWorkouts").child(workout.title)
+    let workoutRef = ref.child("publicWorkouts/publicWorkouts")
     let currentUser = Auth.auth().currentUser
     let userRef = Database.database().reference(withPath: "users")
     if currentUser != nil
     {
     userRef.child((currentUser?.uid)!).child("myFavWorkouts").child(workout.title).setValue(workout.toAnyObject())
+        workoutRef.child(workout.title).setValue(workout.toAnyObject())
     }
     print("Start of Database function")
     for e in workout.exercises{
