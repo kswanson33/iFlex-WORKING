@@ -103,13 +103,14 @@ class AddExercisesVC: UIViewController, UICollectionViewDataSource, UICollection
     
     /* Write draft workout to user's favorites */
     @IBAction func saveButton(_ sender: Any) {
+        printWorkout(draftWorkout)
         if draftWorkout.priv == true {
             // write workout to user's favorites
         } else {
             // write workout to user's favorites
             writeWorkoutToDatabase(draftWorkout)
+            print("Wrote workout to publicWorkouts")
         }
-        printWorkout(draftWorkout)
     }
 
     override func didReceiveMemoryWarning() {

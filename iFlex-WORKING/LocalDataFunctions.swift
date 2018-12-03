@@ -34,6 +34,11 @@ func loadLocal() -> User? {
     return user
 }
 
+/* Get favorites */
+func getFavorites() -> [Workout] {
+    return loadLocal()!.favorites!
+}
+
 /* Writes an empty array to local plist root object */
 func clearLocal() {
     // called on logout
@@ -42,7 +47,7 @@ func clearLocal() {
 }
 
 /* Adds a workout to the user's favorites */
-func writeNewWorkout(_ workout: Workout) {
+func writeLocalToFaves(_ workout: Workout) {
     // retrieve data
     let path = Bundle.main.path(forResource: "Favorites", ofType: "plist")
     guard var user = loadLocal() else {
